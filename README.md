@@ -31,7 +31,7 @@ Welcome to the official corporate portal of **Parallax Dynamics**, an integrated
   - **Onix** — *Director of Xenobiology & Medical Research*
   - **Reggie** — *Chief Security Marshal & Fleet Protector*
 - **📜 Corporate Doctrine: The Axioms (`/axioms`)**: The seven core principles guiding all Parallax initiatives (*Axiom VII: "We go forward. Retreat is mathematically incompatible with corporate policy."*).
-- **📂 Declassified Operations Archive (`/operations`)**: Deep-dive mission dossiers with full timelines, personnel assignments, incident logs, compliance commentary, and Captain's logs (e.g., `PD-0101`: *A City Without Dawn*).
+- **📂 Declassified Operations Archive (`/operations`)**: Deep-dive mission reports with full timelines, personnel assignments, incident logs, compliance commentary, and Captain's logs (e.g., `PD-0101`: *A City Without Dawn*).
 - **🔊 Procedural Sci-Fi Audio Engine**: Zero-asset, Web Audio API sound synthesizer providing interactive mechanical clicks, telemetry blips, and hover tones.
 - **✨ Canvas Starfield & Particle Systems**: Dynamic, responsive HTML5 canvas background rendering star trails and celestial depth.
 

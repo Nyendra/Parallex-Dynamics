@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import {
   CANONICAL_OPERATIONAL_RECORDS,
@@ -28,9 +28,16 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return CANONICAL_OPERATIONAL_RECORDS.map((rec) => ({
-    id: rec.slug,
-  }));
+  const params: { id: string }[] = [];
+  for (const rec of CANONICAL_OPERATIONAL_RECORDS) {
+    params.push({ id: rec.slug });
+    if (rec.id.toLowerCase() !== rec.slug.toLowerCase()) {
+      params.push({ id: rec.id });
+    } else if (rec.id !== rec.slug) {
+      params.push({ id: rec.id });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -39,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!record) {
     return {
-      title: "Operational Record Not Found | Parallax Dynamics",
+      title: "Operational Report Not Found | Parallax Dynamics",
     };
   }
 
@@ -66,6 +73,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function OperationalRecordPage({ params }: PageProps) {
   const { id } = await params;
+  if (id !== id.toLowerCase()) {
+    redirect(`/operations/${id.toLowerCase()}`);
+  }
   const record = getOperationalRecord(id);
 
   if (!record) {
@@ -85,7 +95,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
         </Link>
 
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded bg-space-darkest/90 border border-cyan-accent/30 text-cyan-accent font-mono text-xs tracking-widest uppercase">
-          <span>CLASSIFIED FILE // {record.id}</span>
+          <span>CLASSIFIED REPORT // {record.id}</span>
         </div>
       </div>
 

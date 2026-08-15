@@ -50,18 +50,10 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
             </div>
 
             <div className="flex items-center space-x-2">
-              <Link
-                href={`/operations/${record.slug}`}
-                onClick={handleClose}
-                className="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-cyan-accent/15 text-cyan-accent border border-cyan-accent/40 text-xs font-mono hover:bg-cyan-accent/25 transition-colors"
-              >
-                <span>Full Dossier</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </Link>
-
               <button
                 onClick={handleClose}
                 className="p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                aria-label="Close dialog"
               >
                 <X className="w-5 h-5" />
               </button>

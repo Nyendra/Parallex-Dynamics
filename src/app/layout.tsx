@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Orbitron, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { StarfieldCanvas } from "@/components/StarfieldCanvas";
+import { LowercaseRedirect } from "@/components/LowercaseRedirect";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -47,6 +49,10 @@ export default function RootLayout({
       className={`dark scroll-smooth ${orbitron.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-parallax-dark text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500/30 selection:text-cyan-200 font-sans">
+        <Suspense fallback={null}>
+          <LowercaseRedirect />
+        </Suspense>
+
         {/* Animated canvas starfield */}
         <StarfieldCanvas />
 
