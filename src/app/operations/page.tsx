@@ -8,7 +8,7 @@ import {
   OperationalRecord,
 } from "@/data/operationsData";
 import { soundEngine } from "@/utils/soundEngine";
-import { Search, ShieldAlert, MapPin, ChevronRight, ExternalLink } from "lucide-react";
+import { Search, ShieldAlert, MapPin, ChevronRight, ExternalLink, AlertTriangle } from "lucide-react";
 
 const CATEGORIES = [
   "ALL",
@@ -163,6 +163,12 @@ export default function OperationsPage() {
             </p>
           </div>
         )}
+
+        {/* Sealed Records Notice Bar */}
+        <div className="p-3.5 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-300 text-xs font-mono flex items-center space-x-2.5">
+          <AlertTriangle className="w-4 h-4 flex-shrink-0 text-amber-400" />
+          <span>RECORDS PD-0001 THROUGH PD-0100 // SEALED BY ORDER OF THE BOARD</span>
+        </div>
       </div>
 
       {/* Record Drawer / Modal */}
