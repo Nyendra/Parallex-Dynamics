@@ -22,6 +22,11 @@ export interface NotableFinding {
   bullets?: string[];
 }
 
+export interface PropertyDamageEntry {
+  items: string[];
+  outcome?: string;
+}
+
 export interface OperationalRecord {
   id: string;
   slug: string;
@@ -33,11 +38,14 @@ export interface OperationalRecord {
   classification: string;
   classificationFootnote?: string;
   summary: string;
+  metaDescription?: string;
   fullMissionSummary: string[];
   personnelList: PersonnelEntry[];
+  associatedPersonnel?: PersonnelEntry[];
   timeline: TimelineEntry[];
   notableFindings: NotableFinding[];
   incidents: IncidentEntry[];
+  propertyDamage?: PropertyDamageEntry;
   personnelNotes: { name: string; note: string }[];
   complianceNotes: string[];
   anomalousFindings: string[];
@@ -53,6 +61,304 @@ export interface OperationalRecord {
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0102",
+    slug: "pd-0102",
+    title: "The Fracture Below",
+    status: "PARTIAL SUCCESS",
+    location: "Nebuch Exclusion Perimeter — Broken Blade Forward Lodge / Sharan Estate District",
+    detailedLocation: "Nebuch Exclusion Perimeter — Broken Blade Forward Lodge / Sharan Estate District",
+    type: "CLASSIFIED",
+    classification: "LEVEL 5 CLASSIFIED // PARTIAL SUCCESS",
+    classificationFootnote: "* Direct visual observation of geometric wall fracture strictly prohibited pending development of remote instrumentation.",
+    summary:
+      "A covert acquisition beneath the Sharan Estate District exposes a geometric fracture capable of physically restructuring those who observe it, an unopened dual-credential vault, and archival evidence of historical erasure.",
+    metaDescription:
+      "A classified Paradallax Initiative acquisition operation beneath the Sharan Estate District uncovers a dangerous geometric fracture and a sealed inner vault.",
+    fullMissionSummary: [
+      "Following the Initiative's compulsory removal from the subterranean city of Nebuch by Sharan security personnel, operational staff withdrew to the Broken Blade Forward Lodge and began reassessing regional objectives.",
+      "Chief Operations Officer Flint Duskbourne conducted an immediate review of a proposed assignment from Vorth concerning the recovery of ceremonial weapons associated with Shar. The assignment required Initiative personnel to submit to a Sharan oath and permanent identifying brand prior to deployment. After reviewing both the conditions and the projected survival profile, Duskbourne classified the proposal as an unacceptable expenditure of senior personnel and declined participation.",
+      "Duskbourne separately advised Uot that further subterranean construction should be reconsidered following the recent energetic event beneath Nebuch. Uot confirmed that preparations at the lodge were already underway for a long-range phase-transfer installation. The current approach relies on resonance patterns being engraved directly into the local stone substrate. Final construction data is expected from Thorn, although the region's reliance on physical courier networks places the estimated correspondence delay at approximately two weeks.",
+      "Chief Science Officer Quill Varon continued analysis of materials previously secured from the Library of Varnessa. His review identified evidence of a Sharan institutional program known as the Veiled Audit: a systematic effort to remove selected genealogical and theological records from the historical archive. The scale and intentionality of the deletions indicate that the Sharan theocracy has not merely restricted information but has actively modified the surviving historical record.",
+      "While the primary camp established communications and infrastructure, Vice President Fenn and Director Cass initiated a separate acquisition procedure within the Sharan Estate District. The objective was a hexagonal metallic interface component believed to be stored inside a heavily secured private residence.",
+      "Cass entered the estate carrying Fenn inside a compact fold-space containment device. An environmental suppression field within the residence disabled Cass's optical concealment shortly after entry. Fenn consequently exited containment and adopted the appearance of a male household servant using the identity Tug, allowing both executives to continue through an extensive private gathering without provoking immediate security intervention.",
+      "The team reached a basement vault after implementing an alternative access procedure on a heavy iron door. During the procedure, a field blade was damaged beyond operational use.",
+      "Inside the vault, Fenn detected a narrow fracture running through one wall. The phenomenon presented as a shifting, multicolored discontinuity with no visible depth and an internally repeating hexagonal structure.",
+      "Direct visual examination caused an immediate anomalous injury.",
+      "Fenn's ocular tissue developed a corresponding geometric segmentation pattern, producing severe visual trauma and complete loss of sight in the affected eye. Emergency medical treatment stabilized the injury but did not restore vision. Attempts to disrupt or suppress the fracture produced no measurable effect.",
+      "Additional examination of the chamber revealed two circular interface points embedded in the floor. Cass inserted an electron puck recovered during prior operations into one interface and confirmed partial system activation. Full access required a second puck.",
+      "Rather than withdraw, the acquisition team elected to remain concealed inside the basement pending further developments.",
+      "The required second credential subsequently arrived without Initiative intervention.",
+      "Two men, one identified as Wallaby, entered the basement carrying the paired electron pucks necessary to activate the inner access mechanism. An attempted non-lethal containment action failed. The resulting confrontation escalated rapidly. Fenn deployed a fluidic restraint system followed by a directed energy discharge, killing one entrant. Cass neutralized the second through direct bioenergetic extraction.",
+      "Estate security personnel arrived moments later.",
+      "A guard equipped with a gold-colored neural suppression instrument successfully immobilized Fenn, who was restrained using high-mass security cuffs. Cass avoided detection through renewed optical concealment and used the interruption to secure two dark-metal containers from the vault shelving.",
+      "Cass then appropriated a single-use phase-translation device from Fenn's equipment and activated it while maintaining physical contact with her. Both executives were displaced approximately 150 meters vertically and laterally from the vault, emerging on the roof of the estate.",
+      "After Fenn recovered sufficient motor control, adaptive morphogenic alteration allowed her to reduce her frame enough to escape the restraints. Both personnel resumed optical concealment and departed the Sharan Estate District without further direct contact.",
+      "They reached the Broken Blade camp shortly before dawn with the two recovered containers.",
+      "The original inner chamber remains unopened."
+    ],
+    personnelList: [
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer",
+        duty: "Operational oversight, strategic review, and personnel protection."
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer",
+        duty: "Archival analysis of Library of Varnessa materials; identification of the Veiled Audit."
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations",
+        duty: "Covert estate infiltration (persona: Tug), vault reconnaissance, containment engagement."
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions",
+        duty: "Estate infiltration, interface authentication testing, container acquisition, and emergency extraction."
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer",
+        duty: "Field infrastructure, forge construction, and stone-integrated phase-transfer planning."
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research",
+        duty: "Expedition overwatch and communications coordination."
+      },
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal",
+        duty: "Camp security and field forge construction."
+      }
+    ],
+    associatedPersonnel: [
+      {
+        name: "Uot",
+        role: "Broken Blade Infrastructure Coordinator",
+        duty: "Supervises lodge preparations for stone-integrated phase-transfer installation."
+      },
+      {
+        name: "Shalia",
+        role: "Local Contact",
+        duty: "Broken Blade regional liaison."
+      },
+      {
+        name: "Tamira",
+        role: "Local Contact",
+        duty: "Broken Blade regional liaison."
+      },
+      {
+        name: "Elveh",
+        role: "Local Contact",
+        duty: "Broken Blade camp resident and custodian of an undeclared aerial organism."
+      },
+      {
+        name: "Thorn",
+        role: "Remote Infrastructure Contact",
+        duty: "Remote engineering contact providing phase-transfer calculation data via courier."
+      },
+      {
+        name: "Vorth",
+        role: "Sharan Intermediary",
+        duty: "Proposer of high-risk ceremonial weapon recovery contract."
+      },
+      {
+        name: "Hazard",
+        role: "Camp Resident",
+        duty: "Juvenile resident of the Broken Blade camp."
+      },
+      {
+        name: "Wallaby",
+        role: "Deceased Vault Entrant",
+        duty: "Deceased unidentified vault entrant carrying paired electron puck credentials."
+      },
+      {
+        name: "Unidentified Male Associate",
+        role: "Deceased Vault Entrant",
+        duty: "Deceased unidentified vault entrant and associate of Wallaby."
+      }
+    ],
+    timeline: [
+      {
+        time: "01",
+        title: "Forced Withdrawal from Nebuch",
+        event: "Sharan authorities remove Initiative personnel from the underground city. Broken Blade Forward Lodge becomes the temporary operational center."
+      },
+      {
+        time: "02",
+        title: "Sharan Recovery Contract Rejected",
+        event: "Flint Duskbourne rejects Vorth's proposed recovery operation after determining that its oath, branding requirement, and survival profile exceed acceptable operational parameters."
+      },
+      {
+        time: "03",
+        title: "Infrastructure & Archival Work Begins",
+        event: "Kant Vixit and Reggie establish a field forge while Quill Varon studies Library of Varnessa material and identifies evidence of the Sharan Veiled Audit."
+      },
+      {
+        time: "04",
+        title: "Estate Penetration",
+        event: "Fenn and Cass enter a private Sharan estate under concealment, adapt following failure of their initial infiltration system, and reach the subterranean vault."
+      },
+      {
+        time: "05",
+        title: "Geometric Fracture Discovered",
+        event: "Direct observation of a kaleidoscopic wall anomaly causes severe geometric trauma to Fenn's eye. Conventional suppression methods fail."
+      },
+      {
+        time: "06",
+        title: "Inner Access Identified",
+        event: "A paired electron-puck authentication system is discovered. The Initiative possesses only one required credential."
+      },
+      {
+        time: "07",
+        title: "Vault Confrontation",
+        event: "Wallaby and a second entrant arrive with the missing credentials. Both are killed during the resulting confrontation. Estate security captures Fenn temporarily."
+      },
+      {
+        time: "08",
+        title: "Emergency Extraction",
+        event: "Cass secures two unidentified dark-metal containers and executes a short-range phase translation with Fenn. Both personnel evade subsequent pursuit and return to the Broken Blade camp."
+      }
+    ],
+    notableFindings: [
+      {
+        title: "The Veiled Audit",
+        description:
+          "Recovered Varnessa archival material indicates that the Sharan theocracy conducted a coordinated program of genealogical and historical erasure.",
+        bullets: [
+          "The removed records appear selective rather than incidental.",
+          "Further comparison against surviving family histories, religious lineages, and pre-Audit archives is recommended.",
+          "The possibility that presently accepted Sharan history is the result of deliberate institutional editing should now be treated as operationally credible."
+        ]
+      },
+      {
+        title: "Geometric Wall Fracture",
+        description: "A narrow spatial or energetic discontinuity was observed inside the estate vault. Known characteristics:",
+        bullets: [
+          "Presents as a continuously shifting kaleidoscopic fracture.",
+          "Exhibits persistent hexagonal geometry.",
+          "Produces severe biological effects through direct observation.",
+          "Appears capable of imposing its geometry upon exposed ocular tissue.",
+          "Resisted available field suppression techniques.",
+          "Was located immediately adjacent to a separately secured inner chamber.",
+          "Origin and intended function remain unknown."
+        ]
+      },
+      {
+        title: "Paired Electron-Puck Interface",
+        description:
+          "The inner vault uses two circular access credentials simultaneously. One Initiative-held electron puck successfully engaged half of the mechanism. Two external entrants later demonstrated possession of a functioning pair.",
+        bullets: [
+          "Whether the access system is associated with the geometric fracture remains unconfirmed."
+        ]
+      },
+      {
+        title: "Recovered Containers",
+        description:
+          "Cass removed two sealed dark-metal containers from vault storage during the emergency extraction. Contents remain pending controlled examination. Acquisition documentation has been retroactively generated."
+      }
+    ],
+    incidents: [
+      {
+        title: "Ocular Anomaly Exposure — Fenn",
+        severity: "Severe",
+        details: [
+          "Direct examination of the basement fracture caused immediate restructuring of visible ocular tissue into repeating hexagonal segments accompanied by loss of vision.",
+          "Emergency treatment prevented further acute deterioration but did not reverse the effect.",
+          "Long-term prognosis is undetermined."
+        ]
+      },
+      {
+        title: "Vault Fatalities",
+        severity: "Fatal (2 external casualties)",
+        details: [
+          "Wallaby: Fatal",
+          "Unidentified Associate: Fatal",
+          "Both casualties occurred following failed containment during unauthorized entry into the already unauthorized Initiative work area.",
+          "No additional fatalities were recorded during extraction."
+        ]
+      },
+      {
+        title: "Temporary Detainment",
+        severity: "Operational capture; resolved",
+        details: [
+          "Fenn was immobilized using a gold-colored Sharan suppression device and secured in heavy restraints.",
+          "Cass remained undetected and facilitated extraction before formal Sharan questioning could begin."
+        ]
+      }
+    ],
+    propertyDamage: {
+      items: [
+        "One field blade destroyed during lock access.",
+        "Basement security lock damaged.",
+        "Minor vault disturbance.",
+        "Two dark-metal storage containers removed for off-site evaluation.",
+        "No structural damage to the geometric fracture despite attempted suppression."
+      ],
+      outcome: "The Paradallax Initiative considers the absence of structural collapse a positive facilities outcome."
+    },
+    personnelNotes: [
+      {
+        name: "Flint Duskbourne",
+        note: "Duskbourne's refusal of the proposed Sharan recovery contract represents an unusually explicit operational veto based on projected personnel loss. The assessment is considered justified. His warning against further underground construction was documented before the lodge proceeded with preparations for a stone-integrated phase-transfer system. This distinction may become administratively relevant."
+      },
+      {
+        name: "Quill Varon",
+        note: "Varon's archival analysis has elevated the Veiled Audit from historical rumor to a credible program of institutional information control. Further acquisition of Sharan archival material is approved where legally available. The definition of 'available' remains governed by existing Initiative procurement policy."
+      },
+      {
+        name: "Fenn",
+        note: "Despite severe visual trauma, Fenn remained operational through the subsequent confrontation, detention, and extraction. Medical evaluation is mandatory before future exposure to geometrically active surfaces. No prohibition has been issued regarding ordinary hexagons."
+      },
+      {
+        name: "Cass",
+        note: "Cass demonstrated successful contingency adaptation following concealment failure, security escalation, partner immobilization, and loss of the planned exit route. The two recovered containers were not part of the stated acquisition objective. They have nevertheless been entered into Initiative inventory."
+      },
+      {
+        name: "Reggie & Kant Vixit",
+        note: "Construction of a field forge at the Broken Blade camp progressed successfully until nighttime operations disturbed local residents. Following intervention by Flint Duskbourne, forging activity was suspended until daylight. A grindstone was temporarily confiscated by camp personnel."
+      },
+      {
+        name: "Onix",
+        note: "Onix maintained local observation and communications support during Duskbourne's negotiations and logistical coordination. No xenobiological intervention was required."
+      }
+    ],
+    complianceNotes: [
+      "The Paradallax Initiative acknowledges that the Sharan Estate District operation involved entry into privately controlled property without documented local authorization.",
+      "Internal review has determined that personnel implemented an alternative access procedure under emerging acquisition requirements.",
+      "During transit through the estate, an unidentified attendee also appropriated personal garments belonging to Initiative personnel.",
+      "No recovery action was attempted. This was the correct prioritization of corporate resources.",
+      "The presence of a large private gathering materially reduced the effectiveness of conventional infiltration procedures while substantially improving plausible deniability.",
+      "The Initiative does not currently recognize 'the other party had the second electron puck' as an approved credential acquisition strategy."
+    ],
+    anomalousFindings: [
+      "A narrow spatial or energetic discontinuity was observed inside the estate vault, presenting as a continuously shifting kaleidoscopic fracture with persistent hexagonal geometry.",
+      "Direct visual observation produced severe biological effects, imposing repeating geometric segmentation onto exposed ocular tissue.",
+      "The Initiative presently has insufficient evidence to determine whether the phenomenon is technological, dimensional, psionic, biological, or a combination thereof.",
+      "Direct visual observation is prohibited pending development of remote instrumentation."
+    ],
+    captainsLog: {
+      author: "Flint Duskbourne, Chief Operations Officer",
+      text: [
+        "We were removed from one underground city, declined a contract that appeared designed to kill us, discovered that the Sharan government has been deleting parts of history, and then sent two executives into a stranger's basement looking for a metal hexagon.",
+        "The wall reorganized Fenn's eye.",
+        "Two people died over a door we still did not open.",
+        "Cass came back with two boxes nobody had asked for.",
+        "Meanwhile, Reggie built a forge loudly enough to wake a child and Flint had to resolve the situation with a teddy bear.",
+        "The official assessment is Partial Success.",
+        "This is technically defensible."
+      ]
+    },
+    finalAssessment: {
+      verdict: "PARTIAL SUCCESS",
+      description:
+        "The original acquisition objective remains unresolved and the inner vault was not accessed. However, the operation produced four material gains: confirmation of a previously unknown anomalous fracture, identification of the vault's paired authentication architecture, recovery of two unidentified dark-metal containers, and evidence that Sharan historical records have undergone deliberate institutional purging. Both Initiative executives escaped Sharan custody and returned to the Broken Blade Forward Lodge. The geometric fracture remains active.",
+      conclusion: "INVESTIGATION RECOMMENDED. // Axiom IV — Progress requires uncertainty."
+    }
+  },
   {
     id: "PD-0101",
     slug: "pd-0101",

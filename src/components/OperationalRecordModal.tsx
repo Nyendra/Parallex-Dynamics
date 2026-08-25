@@ -14,6 +14,7 @@ import {
   ExternalLink,
   Users,
   Compass,
+  Wrench,
 } from "lucide-react";
 import { soundEngine } from "@/utils/soundEngine";
 import { OperationalRecord } from "@/data/operationsData";
@@ -170,6 +171,28 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                     </div>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* Property Damage Assessment */}
+            {record.propertyDamage && (
+              <div className="p-4 rounded-xl bg-slate-950/80 border border-amber-500/30 space-y-2">
+                <h3 className="font-mono text-xs text-amber-400 tracking-widest uppercase flex items-center">
+                  <Wrench className="w-4 h-4 mr-2 text-amber-400" /> Property Damage Assessment
+                </h3>
+                <ul className="space-y-1 text-xs text-slate-300">
+                  {record.propertyDamage.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start space-x-2">
+                      <span className="text-amber-400 font-bold">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                {record.propertyDamage.outcome && (
+                  <p className="text-xs text-cyan-400 italic pt-1 border-t border-slate-800">
+                    {record.propertyDamage.outcome}
+                  </p>
+                )}
               </div>
             )}
 

@@ -21,6 +21,8 @@ import {
   CheckCircle2,
   FileCheck2,
   Lock,
+  Wrench,
+  Users,
 } from "lucide-react";
 
 interface PageProps {
@@ -28,16 +30,9 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  const params: { id: string }[] = [];
-  for (const rec of CANONICAL_OPERATIONAL_RECORDS) {
-    params.push({ id: rec.slug });
-    if (rec.id.toLowerCase() !== rec.slug.toLowerCase()) {
-      params.push({ id: rec.id });
-    } else if (rec.id !== rec.slug) {
-      params.push({ id: rec.id });
-    }
-  }
-  return params;
+  return CANONICAL_OPERATIONAL_RECORDS.map((rec) => ({
+    id: rec.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -52,7 +47,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const pageTitle = `${record.id} — ${record.title} | Paradallax Initiative`;
   const pageDescription =
-    "Paradallax Initiative discovers a concealed city beneath the Sharren ruins, where an ancient temple reconstruction becomes lethally aware of its observers.";
+    record.metaDescription ||
+    record.summary ||
+    "Paradallax Initiative operational archive record.";
 
   return {
     title: pageTitle,
@@ -73,14 +70,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function OperationalRecordPage({ params }: PageProps) {
   const { id } = await params;
-  if (id !== id.toLowerCase()) {
-    redirect(`/operations/${id.toLowerCase()}`);
-  }
   const record = getOperationalRecord(id);
 
   if (!record) {
     notFound();
   }
+
+  const isClassified = record.type === "CLASSIFIED";
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
@@ -94,18 +90,28 @@ export default async function OperationalRecordPage({ params }: PageProps) {
           <span>RETURN TO OPERATIONS ARCHIVE</span>
         </Link>
 
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded bg-space-darkest/90 border border-cyan-accent/30 text-cyan-accent font-mono text-xs tracking-widest uppercase">
+        <div className={`inline-flex items-center space-x-2 px-3 py-1 rounded bg-space-darkest/90 border font-mono text-xs tracking-widest uppercase ${
+          isClassified ? "border-purple-500/40 text-purple-300" : "border-cyan-accent/30 text-cyan-accent"
+        }`}>
           <span>CLASSIFIED REPORT // {record.id}</span>
         </div>
       </div>
 
       {/* Hero Header Section */}
-      <div className="rounded-3xl glass-panel border border-cyan-accent/30 p-8 sm:p-12 space-y-8 relative overflow-hidden shadow-2xl">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-accent/5 rounded-full blur-3xl pointer-events-none" />
+      <div className={`rounded-3xl glass-panel p-8 sm:p-12 space-y-8 relative overflow-hidden shadow-2xl ${
+        isClassified ? "border border-purple-500/30 shadow-[0_0_50px_rgba(139,92,246,0.15)]" : "border border-cyan-accent/30"
+      }`}>
+        <div className={`absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl pointer-events-none ${
+          isClassified ? "bg-purple-600/10" : "bg-cyan-accent/5"
+        }`} />
 
         <div className="space-y-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 font-mono text-xs">
-            <span className="px-3 py-1 rounded bg-cyan-accent/20 text-cyan-accent border border-cyan-accent/40 font-bold tracking-wider">
+            <span className={`px-3 py-1 rounded font-bold tracking-wider ${
+              isClassified
+                ? "bg-purple-500/20 text-purple-300 border border-purple-500/40 shadow-[0_0_15px_rgba(168,85,247,0.2)]"
+                : "bg-cyan-accent/20 text-cyan-accent border border-cyan-accent/40"
+            }`}>
               {record.type}
             </span>
             <span className="px-3 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold tracking-wider">
@@ -171,6 +177,35 @@ export default async function OperationalRecordPage({ params }: PageProps) {
             </div>
           ))}
         </div>
+
+        {record.associatedPersonnel && record.associatedPersonnel.length > 0 && (
+          <div className="space-y-4 pt-4">
+            <div className="flex items-center space-x-2">
+              <Users className="w-4 h-4 text-cyan-accent" />
+              <h3 className="font-mono text-xs text-cyan-accent uppercase tracking-widest font-bold">
+                ASSOCIATED PERSONNEL & REGIONAL CONTACTS
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {record.associatedPersonnel.map((p, idx) => (
+                <div
+                  key={idx}
+                  className="p-3.5 rounded-xl bg-space-darkest/50 border border-white/5 space-y-1.5 hover:border-white/20 transition-colors"
+                >
+                  <div className="flex flex-col">
+                    <span className="font-orbitron font-semibold text-xs sm:text-sm text-slate-100">
+                      {p.name}
+                    </span>
+                    <span className="font-mono text-[11px] text-slate-400">{p.role}</span>
+                  </div>
+                  <p className="text-xs text-slate-400 font-sans leading-relaxed">
+                    {p.duty}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* SECTION 2: FULL MISSION SUMMARY */}
@@ -306,7 +341,35 @@ export default async function OperationalRecordPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* SECTION 6: PERSONNEL NOTES */}
+      {/* SECTION 6: PROPERTY DAMAGE */}
+      {record.propertyDamage && (
+        <section className="space-y-6">
+          <div className="flex items-center space-x-2 border-b border-white/10 pb-3">
+            <Wrench className="w-5 h-5 text-amber-400" />
+            <h2 className="font-orbitron font-bold text-xl sm:text-2xl text-white tracking-wide">
+              PROPERTY & FACILITIES DAMAGE
+            </h2>
+          </div>
+
+          <div className="p-6 sm:p-8 rounded-3xl glass-panel border border-amber-500/20 space-y-4">
+            <ul className="space-y-2 text-xs sm:text-sm font-mono text-slate-300">
+              {record.propertyDamage.items.map((item, idx) => (
+                <li key={idx} className="flex items-start space-x-2.5">
+                  <span className="text-amber-400 font-bold">•</span>
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+            {record.propertyDamage.outcome && (
+              <p className="text-xs sm:text-sm text-cyan-accent font-sans italic pt-3 border-t border-white/10">
+                {record.propertyDamage.outcome}
+              </p>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* SECTION 7: PERSONNEL NOTES */}
       <section className="space-y-6">
         <div className="flex items-center space-x-2 border-b border-white/10 pb-3">
           <UserCheck className="w-5 h-5 text-cyan-accent" />
