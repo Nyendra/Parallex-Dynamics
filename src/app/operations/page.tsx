@@ -41,7 +41,7 @@ export default function OperationsPage() {
       <div className="space-y-4 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full glass-panel border border-cyan-accent/30 text-cyan-accent font-mono text-xs tracking-widest uppercase">
           <span className="font-bold">&gt;&gt;</span>
-          <span>PARALLAX OPERATIONS ARCHIVE</span>
+          <span>PARADALLAX OPERATIONS ARCHIVE</span>
         </div>
 
         <h1 className="font-orbitron font-extrabold text-4xl sm:text-6xl text-white tracking-tight">
@@ -53,7 +53,7 @@ export default function OperationsPage() {
         </p>
 
         <p className="text-sm text-slate-300 leading-relaxed font-sans font-light">
-          Parallax maintains operational records for active and completed assignments across its expeditionary, scientific, diplomatic, and security divisions. Some records may be restricted, amended, or unavailable due to ongoing review.
+          Paradallax maintains operational records for active and completed assignments across its expeditionary, scientific, diplomatic, and security divisions. Some records may be restricted, amended, or unavailable due to ongoing review.
         </p>
 
         <p className="text-xs font-mono text-slate-500 italic">

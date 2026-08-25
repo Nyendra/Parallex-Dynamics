@@ -203,7 +203,7 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
 
           {/* Footer Bar */}
           <div className="px-6 py-3.5 bg-slate-950 border-t border-slate-800 flex flex-wrap justify-between items-center gap-3 text-xs font-mono text-slate-500">
-            <span>PARALLAX ARCHIVE CONTROL // LEVEL 5 ACCESS</span>
+            <span>PARADALLAX ARCHIVE CONTROL // LEVEL 5 ACCESS</span>
             <div className="flex items-center space-x-3">
               <Link
                 href={`/operations/${record.slug}`}

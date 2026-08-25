@@ -46,13 +46,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!record) {
     return {
-      title: "Operational Report Not Found | Parallax Dynamics",
+      title: "Operational Report Not Found | Paradallax Initiative",
     };
   }
 
-  const pageTitle = `${record.id} — ${record.title} | Parallax Dynamics`;
+  const pageTitle = `${record.id} — ${record.title} | Paradallax Initiative`;
   const pageDescription =
-    "Parallax Dynamics discovers a concealed city beneath the Sharren ruins, where an ancient temple reconstruction becomes lethally aware of its observers.";
+    "Paradallax Initiative discovers a concealed city beneath the Sharren ruins, where an ancient temple reconstruction becomes lethally aware of its observers.";
 
   return {
     title: pageTitle,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: pageTitle,
       description: pageDescription,
       type: "article",
-      siteName: "Parallax Dynamics",
+      siteName: "Paradallax Initiative",
     },
     twitter: {
       card: "summary_large_image",

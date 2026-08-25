@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Axioms | Parallax Dynamics",
+  title: "The Axioms | Paradallax Initiative",
   description:
     "The seven fundamental principles guiding every voyage, experiment, and corporate initiative across known space.",
 };

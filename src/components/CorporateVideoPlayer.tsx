@@ -11,7 +11,7 @@ const VIDEO_SCENES = [
     title: "1. LUXURY INTERSTELLAR TRANSIT",
     subtext: "Experience Five-Star Comfort Across Lightyears.",
     narration:
-      "From panoramic observation lounges to quantum stasis suites, Parallax Dynamics turns impossible distances into routine afternoon voyages.",
+      "From panoramic observation lounges to quantum stasis suites, Paradallax Initiative turns impossible distances into routine afternoon voyages.",
     disclaimer:
       "* Stasis wake-up protocols and biological containment procedures subject to local solar jurisdiction.",
     image: "/media/broadcast/broadcast-parallax-public.jpg",
@@ -22,7 +22,7 @@ const VIDEO_SCENES = [
     narration:
       "Our Odyssey research platforms investigate anomalous spatial distortions and ancient orbital phenomena that conventional science considers impossible.",
     disclaimer:
-      "* Research specimens remain the sole intellectual and biological property of Parallax Dynamics Genesis Division.",
+      "* Research specimens remain the sole intellectual and biological property of Paradallax Initiative Genesis Division.",
     image: "/media/fleet/odyssey.jpg",
   },
   {
@@ -67,7 +67,7 @@ export const CorporateVideoPlayer: React.FC = () => {
         <div className="flex items-center space-x-2.5">
           <Radio className="w-3.5 h-3.5 text-cyan-accent animate-pulse" />
           <span className="text-white font-bold tracking-wider">
-            PARALLAX CORPORATE COMMUNICATIONS
+            PARADALLAX CORPORATE COMMUNICATIONS
           </span>
           <span className="text-slate-600">//</span>
           <span className="text-cyan-accent">PUBLIC INFORMATION BROADCAST</span>
@@ -117,7 +117,7 @@ export const CorporateVideoPlayer: React.FC = () => {
             <ChevronMotif size="md" />
           </div>
           <h3 className="font-orbitron font-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-widest uppercase drop-shadow-[0_8px_25px_rgba(0,0,0,0.9)]">
-            THIS IS <span className="text-gradient-cyan">PARALLAX</span>
+            THIS IS <span className="text-gradient-cyan">PARADALLAX</span>
           </h3>
           <p className="font-orbitron font-bold text-[10px] sm:text-xs md:text-sm text-cyan-300 tracking-[0.25em] mt-2 sm:mt-3 uppercase drop-shadow">
             THE FUTURE DOESN&apos;T WAIT
@@ -137,7 +137,7 @@ export const CorporateVideoPlayer: React.FC = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-white/10 pt-2 gap-1 font-mono text-[10px]">
                   <span className="text-cyan-accent tracking-wider uppercase font-semibold">
-                    CORPORATE SPOKESPERSON // PARALLAX COMMUNICATIONS
+                    CORPORATE SPOKESPERSON // PARADALLAX COMMUNICATIONS
                   </span>
                   <span className="text-amber-400/90 italic flex items-center">
                     <AlertCircle className="w-3 h-3 mr-1 flex-shrink-0" />

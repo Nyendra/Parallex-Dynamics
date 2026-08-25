@@ -26,11 +26,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Parallax Dynamics >> Beyond Distance.",
+  title: "Paradallax Initiative >> Beyond Distance.",
   description:
-    "Parallax Dynamics provides advanced interstellar transportation, scientific exploration, frontier logistics, engineering, and security throughout known space.",
+    "Paradallax Initiative provides advanced interstellar transportation, scientific exploration, frontier logistics, engineering, and security throughout known space.",
   keywords: [
-    "Parallax Dynamics",
+    "Paradallax Initiative",
     "Interstellar Travel",
     "Space Exploration",
     "Frontier Logistics",
@@ -48,7 +48,7 @@ export default function RootLayout({
       lang="en"
       className={`dark scroll-smooth ${orbitron.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="bg-parallax-dark text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500/30 selection:text-cyan-200 font-sans">
+      <body className="bg-paradallax-dark text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500/30 selection:text-cyan-200 font-sans">
         <Suspense fallback={null}>
           <LowercaseRedirect />
         </Suspense>

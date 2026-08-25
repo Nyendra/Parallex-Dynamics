@@ -238,7 +238,7 @@ export default function FoundersPage() {
         </p>
 
         <p className="text-sm text-slate-300 leading-relaxed font-sans font-light">
-          Parallax Dynamics remains privately controlled by its seven original founders, driving unprecedented interstellar innovation through focused leadership.
+          Paradallax Initiative remains privately controlled by its seven original founders, driving unprecedented interstellar innovation through focused leadership.
         </p>
 
         <p className="text-xs font-mono text-slate-500 italic">

@@ -28,6 +28,17 @@ export default {
           glow: "#7000ff",
           subtle: "rgba(112, 0, 255, 0.15)",
         },
+        paradallax: {
+          dark: "#05070c",
+          navy: "#0a0f1d",
+          graphite: "#121929",
+          slate: "#1a2336",
+          cyan: "#00f0ff",
+          "cyan-glow": "rgba(0, 240, 255, 0.3)",
+          purple: "#7928ca",
+          "purple-glow": "rgba(121, 40, 202, 0.35)",
+          accent: "#00d8f6",
+        },
         parallax: {
           dark: "#05070c",
           navy: "#0a0f1d",

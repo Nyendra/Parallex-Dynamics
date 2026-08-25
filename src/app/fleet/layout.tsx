@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fleet Catalogue | Parallax Dynamics",
+  title: "Fleet Catalogue | Paradallax Initiative",
   description:
-    "Explore the Parallax Dynamics starship fleet, including Horizon-Class Cruisers, Atlas Colony Carriers, Odyssey Science Vessels, and Hammerhead Corvettes.",
+    "Explore the Paradallax Initiative starship fleet, including Horizon-Class Cruisers, Atlas Colony Carriers, Odyssey Science Vessels, and Hammerhead Corvettes.",
 };
 
 export default function FleetLayout({

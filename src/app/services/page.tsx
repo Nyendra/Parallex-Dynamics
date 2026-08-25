@@ -44,7 +44,7 @@ const SERVICES: ServiceItem[] = [
     footnote: "* Passenger lounge access subject to gravitational stability index.",
     icon: Rocket,
     image: "/media/services/interstellar-travel.jpg",
-    altText: "Parallax passenger observation lounge overlooking a sapphire ringed planet with an orbiting cruiser.",
+    altText: "Paradallax passenger observation lounge overlooking a sapphire ringed planet with an orbiting cruiser.",
     objectPosition: "center 42%",
   },
   {
@@ -57,7 +57,7 @@ const SERVICES: ServiceItem[] = [
     footnote: "* Colony arrival dates subject to hyperspace corridor traffic.",
     icon: Globe,
     image: "/media/services/colony-transport.jpg",
-    altText: "Massive Parallax colony unloading staging area with habitat containers, cranes, and an Atlas carrier in low orbit.",
+    altText: "Massive Paradallax colony unloading staging area with habitat containers, cranes, and an Atlas carrier in low orbit.",
     objectPosition: "center 52%",
   },
   {
@@ -67,7 +67,7 @@ const SERVICES: ServiceItem[] = [
     title: "SCIENTIFIC EXPEDITIONS",
     description:
       "Research journeys investigating stellar phenomena, alien ecosystems, ancient orbital structures, unusual biological environments, and quantum anomalies.",
-    footnote: "* Research artifacts remain sole property of Parallax Genesis Division.",
+    footnote: "* Research artifacts remain sole property of Paradallax Genesis Division.",
     icon: Microscope,
     image: "/media/services/scientific-expeditions.jpg",
     altText: "Odyssey scientific research platform equipped with observation bio-domes investigating a swirling quantum anomaly.",
@@ -80,7 +80,7 @@ const SERVICES: ServiceItem[] = [
     title: "DEEP SPACE EXPLORATION",
     quote: "Go where maps end.",
     description:
-      "Parallax expeditionary fleets operate beyond established navigational boundaries to chart unknown systems, scout mineral-rich solar belts, and establish initial warp relays.",
+      "Paradallax expeditionary fleets operate beyond established navigational boundaries to chart unknown systems, scout mineral-rich solar belts, and establish initial warp relays.",
     footnote: "* Return routes subject to continued existence of departure topology.",
     icon: Compass,
     image: "/media/services/deep-space-exploration.jpg",
@@ -136,7 +136,7 @@ export default function ServicesPage() {
       <div className="text-center space-y-4 max-w-3xl mx-auto">
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border border-cyan-accent/30 text-cyan-accent font-mono text-xs tracking-widest uppercase shadow-[0_0_15px_rgba(0,240,255,0.2)]">
           <span className="font-bold">&gt;&gt;</span>
-          <span>PARALLAX CORE DIVISIONS & SERVICES</span>
+          <span>PARADALLAX CORE DIVISIONS & SERVICES</span>
         </div>
 
         <h1 className="font-orbitron font-extrabold text-4xl sm:text-6xl text-white tracking-tight">
@@ -144,11 +144,11 @@ export default function ServicesPage() {
         </h1>
 
         <p className="font-orbitron font-bold text-lg sm:text-xl text-gradient-cyan">
-          "If space presents an obstacle, Parallax builds the bridge."
+          "If space presents an obstacle, Paradallax builds the bridge."
         </p>
 
         <p className="text-sm text-slate-300 leading-relaxed font-sans font-light">
-          Parallax Dynamics integrates transportation, scientific exploration, industrial extraction, defense, and specialized procurement under a single corporate umbrella.
+          Paradallax Initiative integrates transportation, scientific exploration, industrial extraction, defense, and specialized procurement under a single corporate umbrella.
         </p>
       </div>
 
@@ -235,7 +235,7 @@ export default function ServicesPage() {
             SPECIAL ACQUISITIONS
           </h2>
           <p className="text-slate-300 text-base leading-relaxed font-sans font-light">
-            Certain missions require resources, artifacts, or solutions unavailable through conventional procurement channels. Parallax Special Acquisitions provides discreet, highly efficient resolution.
+            Certain missions require resources, artifacts, or solutions unavailable through conventional procurement channels. Paradallax Special Acquisitions provides discreet, highly efficient resolution.
           </p>
         </div>
 
@@ -312,7 +312,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="p-3 bg-purple-accent/15 border border-purple-accent/30 rounded text-[11px] text-purple-200 leading-relaxed">
-                By submitting this request, you agree that Parallax Dynamics may retroactively reclassify your jurisdiction to an un-chartered territory during asset recovery operations.
+                By submitting this request, you agree that Paradallax Initiative may retroactively reclassify your jurisdiction to an un-chartered territory during asset recovery operations.
               </div>
 
               <Button type="submit" variant="purple" size="md" className="w-full justify-center">

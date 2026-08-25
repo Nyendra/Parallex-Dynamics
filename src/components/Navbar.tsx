@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
           <LogoBadge size={scrolled ? "sm" : "md"} animated />
           <div className="flex flex-col">
             <span className="font-orbitron font-bold tracking-widest text-base sm:text-lg text-white group-hover:text-cyan-accent transition-colors">
-              PARALLAX <span className="text-cyan-accent font-light">DYNAMICS</span>
+              PARADALLAX <span className="text-cyan-accent font-light">INITIATIVE</span>
             </span>
             <span
               className={`font-mono text-[9px] uppercase tracking-[0.25em] text-slate-400 transition-all ${

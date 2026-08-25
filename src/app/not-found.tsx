@@ -32,7 +32,7 @@ export default function NotFound() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base font-sans font-light leading-relaxed max-w-xl mx-auto">
-            The requested operational report, coordinate sequence, or personnel record cannot be located within the Parallax Dynamics archives. In accordance with Corporate Compliance Protocol 404, unverified events remain strictly unacknowledged.
+            The requested operational report, coordinate sequence, or personnel record cannot be located within the Paradallax Initiative archives. In accordance with Corporate Compliance Protocol 404, unverified events remain strictly unacknowledged.
           </p>
 
           <p className="text-xs font-mono text-slate-500 italic pt-2">

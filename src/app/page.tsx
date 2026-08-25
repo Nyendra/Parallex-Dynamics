@@ -49,7 +49,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/media/hero/hero-parallax-transit.jpg"
-            alt="Parallax Dynamics Interstellar Transit Gateway"
+            alt="Paradallax Initiative Interstellar Transit Gateway"
             fill
             className="object-cover object-[70%_center] lg:object-center filter brightness-100 contrast-105"
             priority
@@ -87,7 +87,7 @@ export default function HomePage() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto">
             <Button href="/services" variant="primary" size="lg" className="w-full sm:w-auto">
-              Discover Parallax
+              Discover Paradallax
             </Button>
             <Button href="/operations" variant="secondary" size="lg" className="w-full sm:w-auto">
               View Operations
@@ -116,7 +116,7 @@ export default function HomePage() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-sans font-light mt-6">
-            Parallax Dynamics operates one of humanity's largest integrated interstellar transportation and exploration networks. From civilian travel to deep-space research, Parallax provides the infrastructure required to move people, knowledge, and industry beyond established space.
+            Paradallax Initiative operates one of humanity's largest integrated interstellar transportation and exploration networks. From civilian travel to deep-space research, Paradallax provides the infrastructure required to move people, knowledge, and industry beyond established space.
           </p>
 
           <p className="text-xs font-mono text-slate-500 italic mt-6 pt-6 border-t border-white/10">
@@ -155,7 +155,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-3">
           <span className="font-mono text-xs text-cyan-accent tracking-widest uppercase block">
-            // DIVISIONS OF PARALLAX
+            // DIVISIONS OF PARADALLAX
           </span>
           <h2 className="font-orbitron font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
             Integrated Interstellar Operations

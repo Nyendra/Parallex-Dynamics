@@ -30,7 +30,7 @@ const FLEET: Starship[] = [
     registry: "PD-HZN-001",
     name: "HORIZON-CLASS CRUISER",
     class: "Luxury Interstellar Passenger Cruiser",
-    division: "PARALLAX HORIZON // PASSENGER OPERATIONS",
+    division: "PARADALLAX HORIZON // PASSENGER OPERATIONS",
     role: "Civilian Transit & Interstellar Tourism",
     length: "1,240 Meters",
     crew: "380 Personnel",
@@ -55,7 +55,7 @@ const FLEET: Starship[] = [
     registry: "PD-ATL-004",
     name: "ATLAS COLONY CARRIER",
     class: "Heavy Logistics & Colony Carrier",
-    division: "PARALLAX LOGISTICS // HEAVY INFRASTRUCTURE",
+    division: "PARADALLAX LOGISTICS // HEAVY INFRASTRUCTURE",
     role: "Frontier Resupply & Modular Transport",
     length: "2,850 Meters",
     crew: "650 Personnel",
@@ -80,7 +80,7 @@ const FLEET: Starship[] = [
     registry: "PD-VLK-011",
     name: "VALKYRIE EXPEDITION VESSEL",
     class: "Long-Range Exploration Vessel",
-    division: "PARALLAX FRONTIER // EXPEDITIONARY WING",
+    division: "PARADALLAX FRONTIER // EXPEDITIONARY WING",
     role: "Frontier Charting & Reconnaissance",
     length: "890 Meters",
     crew: "180 Specialists",
@@ -104,7 +104,7 @@ const FLEET: Starship[] = [
     registry: "PD-HMR-007",
     name: "HAMMERHEAD SECURITY FRIGATE",
     class: "Vanguard Tactical Security Frigate",
-    division: "PARALLAX VANGUARD // TACTICAL SECURITY",
+    division: "PARADALLAX VANGUARD // TACTICAL SECURITY",
     role: "Escort, Defense & Emergency Response",
     length: "620 Meters",
     crew: "220 Combat Personnel",
@@ -128,7 +128,7 @@ const FLEET: Starship[] = [
     registry: "PD-ODY-014",
     name: "ODYSSEY SCIENCE VESSEL",
     class: "Deep-Space Science Platform",
-    division: "PARALLAX GENESIS // SCIENTIFIC RESEARCH",
+    division: "PARADALLAX GENESIS // SCIENTIFIC RESEARCH",
     role: "Anomalous Research & Laboratory Testing",
     length: "1,100 Meters",
     crew: "310 Scientists & Engineers",
@@ -164,7 +164,7 @@ export default function FleetPage() {
       <div className="text-center space-y-4 max-w-3xl mx-auto">
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border border-cyan-accent/30 text-cyan-accent font-mono text-xs tracking-widest uppercase shadow-[0_0_15px_rgba(0,240,255,0.2)]">
           <span className="font-bold">&gt;&gt;</span>
-          <span>PARALLAX FLEET CATALOGUE // ISSUE 2226</span>
+          <span>PARADALLAX FLEET CATALOGUE // ISSUE 2226</span>
         </div>
 
         <h1 className="font-orbitron font-extrabold text-4xl sm:text-6xl text-white tracking-tight">
@@ -176,7 +176,7 @@ export default function FleetPage() {
         </p>
 
         <p className="text-sm text-slate-300 leading-relaxed font-sans font-light">
-          Parallax Dynamics operates one of the most technologically unified starship fleets in known space. Every vessel class is built to exacting Parallax industrial design standards.
+          Paradallax Initiative operates one of the most technologically unified starship fleets in known space. Every vessel class is built to exacting Paradallax industrial design standards.
         </p>
       </div>
 

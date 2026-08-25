@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <LogoBadge size="md" />
               <span className="font-orbitron font-bold tracking-widest text-2xl text-white">
-                PARALLAX <span className="text-cyan-accent font-light">DYNAMICS</span>
+                PARADALLAX <span className="text-cyan-accent font-light">INITIATIVE</span>
               </span>
             </div>
             <p className="font-orbitron text-xl font-bold text-gradient-cyan tracking-wider">
@@ -86,9 +86,9 @@ export const Footer: React.FC = () => {
 
         {/* Satirical Corporate Fine Print */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs font-mono text-slate-500 gap-4">
-          <p>© 2226 Parallax Dynamics. All rights reserved across all charted solar systems.</p>
+          <p>© 2226 Paradallax Initiative. All rights reserved across all charted solar systems.</p>
           <p className="text-center md:text-right text-[11px] text-slate-500 max-w-lg">
-            * Parallax Dynamics — Moving humanity forward, subject to applicable restrictions. 
+            * Paradallax Initiative — Moving humanity forward, subject to applicable restrictions. 
             Availability of return transportation may vary by destination topology.
           </p>
         </div>

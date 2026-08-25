@@ -1,14 +1,14 @@
-# 🌌 PARALLAX DYNAMICS // BEYOND DISTANCE.
+# 🌌 PARADALLAX INITIATIVE // BEYOND DISTANCE.
 
 > *"We don't predict humanity's future. We make it reachable."*
 
-Welcome to the official corporate portal of **Parallax Dynamics**, an integrated interstellar transportation, deep-space exploration, planetary logistics, and frontier security conglomerate operating throughout known space and beyond.
+Welcome to the official corporate portal of **Paradallax Initiative**, an integrated interstellar transportation, deep-space exploration, planetary logistics, and frontier security conglomerate operating throughout known space and beyond.
 
 ---
 
 ## 🛰️ Project Overview
 
-**Parallax Dynamics** is an immersive, sci-fi megacorporation web platform built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**. It combines a slick corporate aesthetic, interactive starfield canvases, real-time telemetry, procedural audio feedback, and rich campaign/worldbuilding lore.
+**Paradallax Initiative** is an immersive, sci-fi megacorporation web platform built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**. It combines a slick corporate aesthetic, interactive starfield canvases, real-time telemetry, procedural audio feedback, and rich campaign/worldbuilding lore.
 
 ### ✨ Key Features
 
@@ -30,7 +30,7 @@ Welcome to the official corporate portal of **Parallax Dynamics**, an integrated
   - **Kant Vixit** — *Chief Engineering Officer & Chief Inventor*
   - **Onix** — *Director of Xenobiology & Medical Research*
   - **Reggie** — *Chief Security Marshal & Fleet Protector*
-- **📜 Corporate Doctrine: The Axioms (`/axioms`)**: The seven core principles guiding all Parallax initiatives (*Axiom VII: "We go forward. Retreat is mathematically incompatible with corporate policy."*).
+- **📜 Corporate Doctrine: The Axioms (`/axioms`)**: The seven core principles guiding all Paradallax initiatives (*Axiom VII: "We go forward. Retreat is mathematically incompatible with corporate policy."*).
 - **📂 Declassified Operations Archive (`/operations`)**: Deep-dive mission reports with full timelines, personnel assignments, incident logs, compliance commentary, and Captain's logs (e.g., `PD-0101`: *A City Without Dawn*).
 - **🔊 Procedural Sci-Fi Audio Engine**: Zero-asset, Web Audio API sound synthesizer providing interactive mechanical clicks, telemetry blips, and hover tones.
 - **✨ Canvas Starfield & Particle Systems**: Dynamic, responsive HTML5 canvas background rendering star trails and celestial depth.
@@ -55,7 +55,7 @@ Welcome to the official corporate portal of **Parallax Dynamics**, an integrated
 ## 📂 Project Structure
 
 ```text
-ParallaxDynamics/
+ParadallaxInitiative/
 ├── profiles/                 # High-resolution character portraits & founder art
 ├── public/
 │   └── media/
@@ -140,5 +140,5 @@ npm run start
 ---
 
 <div align="center">
-  <sub>PARALLAX DYNAMICS // REGISTERED WITH THE INTERSTELLAR COMMERCE COMMISSION // ALL RIGHTS RESERVED</sub>
+  <sub>PARADALLAX INITIATIVE // REGISTERED WITH THE INTERSTELLAR COMMERCE COMMISSION // ALL RIGHTS RESERVED</sub>
 </div>

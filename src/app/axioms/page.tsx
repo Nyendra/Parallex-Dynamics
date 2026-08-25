@@ -54,7 +54,7 @@ export default function AxiomsPage() {
       <section className="min-h-[70vh] flex flex-col justify-center items-center text-center px-4 max-w-4xl mx-auto space-y-6 pt-16">
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border border-cyan-accent/30 text-cyan-accent font-mono text-xs tracking-widest uppercase">
           <span className="font-bold">&gt;&gt;</span>
-          <span>PARALLAX CORPORATE DOCTRINE</span>
+          <span>PARADALLAX CORPORATE DOCTRINE</span>
         </div>
 
         <h1 className="font-orbitron font-extrabold text-5xl sm:text-7xl text-white tracking-tight">
@@ -112,10 +112,10 @@ export default function AxiomsPage() {
           THE PATH IS FORWARD
         </h3>
         <p className="text-sm font-sans font-light text-slate-300 leading-relaxed">
-          The Axioms are non-negotiable pillars of Parallax Dynamics operations. They govern every starship departure, planetary contract, and scientific endeavor across the cosmos.
+          The Axioms are non-negotiable pillars of Paradallax Initiative operations. They govern every starship departure, planetary contract, and scientific endeavor across the cosmos.
         </p>
         <div className="font-mono text-xs text-cyan-accent tracking-widest">
-          PARALLAX DYNAMICS // BEYOND DISTANCE.
+          PARADALLAX INITIATIVE // BEYOND DISTANCE.
         </div>
       </section>
     </div>

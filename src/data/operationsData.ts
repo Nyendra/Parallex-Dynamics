@@ -66,7 +66,7 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
     summary:
       "A concealed passage beneath the Sharren archives exposes an immaculate subterranean city, an interactive record of an ancient massacre, and a boundary that appears designed to keep something inside.",
     fullMissionSummary: [
-      "Parallax personnel were conducting an extended survey of the buried Sharren archival complex when operational priorities temporarily diverged.",
+      "Paradallax personnel were conducting an extended survey of the buried Sharren archival complex when operational priorities temporarily diverged.",
       "Chief Operations Officer Flint Duskbourne remained within the recovered library to examine surviving Charon historical and theological records, while Chief Science Officer Quill Varon concentrated on documents concerning divine and mortal lineages. Director Onix maintained observation from an elevated structural position near the excavation. Elsewhere, Fenn, Reggie, and Kant returned to the original descent zone to recover usable material from the wreckage of the Hammer & Cog, a previous expedition asset lost during access to the site.",
       "The salvage operation produced one item of immediate scientific interest: Chief Engineering Officer Kant Vixit isolated a minute residual grain from a shattered Starshard. Although the fragment no longer possessed the structural integrity of the original material, instrumentation continued to register an energetic residue inconsistent with ordinary mineral or reactor products. The sample was secured for controlled analysis.",
       "During the same interval, Director of Special Acquisitions Cass extended reconnaissance beyond the known library perimeter. A faint but persistent air current led him down a sloping natural passage and toward what appeared to be a deliberately constructed terminal wall. Inspection revealed that the barrier's visible surface did not correspond to its physical boundary. Cass proceeded through the occlusion layer and emerged onto an elevated stone platform overlooking a previously undocumented subterranean city.",
@@ -79,21 +79,21 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
       "Translucent doors formed across the temple entrances. Silver-robed figures entered and assembled as if participating in a historical service. A priest followed and delivered an address in an archaic Primordial dialect praising Selûne and warning the congregation of an approaching eclipse.",
       "The manifestation initially behaved like an environmental reconstruction or preserved event. That interpretation became untenable when an initiate identified as Shanara Nayalara approached the podium.",
       "Nayalara's eyes developed a pronounced red luminescence. She openly declared allegiance to Shar, generated two large violet crescent-shaped energy structures, and used them to kill the presiding priest and the assembled congregation.",
-      "The historical sequence then acknowledged the presence of Parallax personnel.",
+      "The historical sequence then acknowledged the presence of Paradallax personnel.",
       "Nayalara and additional violet manifestations redirected their attention toward Fenn and Reggie and began producing repeated high-velocity crescent attacks with measurable physical effects. Both personnel sustained significant laceration injuries during the initial contact.",
       "Fenn initiated an emergency short-range displacement procedure, relocating himself and Reggie to a neighboring rooftop. The maneuver created temporary distance but did not terminate pursuit. Multiple spectral entities emerged throughout the surrounding district, while additional armed figures carrying curved blades began occupying likely escape routes.",
       "Reggie assumed primary responsibility for physical extraction. While shielding Fenn from incoming attacks, he carried him across one of the city's larger structural gaps using high-impulse mobility equipment, then continued the withdrawal through elevated streets and stair systems as manifested personnel climbed surrounding structures in pursuit.",
       "At the upper access level, Fenn and Reggie crossed the original occlusion boundary under a final concentrated attack.",
       "All pursuing manifestations and emitted crescent structures terminated immediately upon reaching the boundary.",
       "The two personnel returned to the Sharren archive with moderate-to-severe injuries and substantial new information regarding the site's lower strata.",
-      "Their arrival coincided with an escalating dispute between Captain Dark Eye and Flint Duskbourne. The Sharren security commander attributed recently observed disturbances within the ruins to unauthorized Parallax activity and asserted that Fenn and Reggie had, in practical terms, 'awakened the dead.' Proposed disciplinary measures included execution under local heresy provisions.",
-      "Flint stabilized Reggie's condition using available field medical equipment before addressing the jurisdictional issue. He invoked Parallax diplomatic standing, the expedition's existing authorization, and the authority of Nightseer Vauthry to prevent immediate punitive action.",
+      "Their arrival coincided with an escalating dispute between Captain Dark Eye and Flint Duskbourne. The Sharren security commander attributed recently observed disturbances within the ruins to unauthorized Paradallax activity and asserted that Fenn and Reggie had, in practical terms, 'awakened the dead.' Proposed disciplinary measures included execution under local heresy provisions.",
+      "Flint stabilized Reggie's condition using available field medical equipment before addressing the jurisdictional issue. He invoked Paradallax diplomatic standing, the expedition's existing authorization, and the authority of Nightseer Vauthry to prevent immediate punitive action.",
       "Local security ultimately accepted de-escalation.",
-      "Parallax personnel were escorted from the subterranean complex using the excavation's manually operated lift system. Sharren medical personnel treated and cleaned the injured staff at the surface installation.",
+      "Paradallax personnel were escorted from the subterranean complex using the excavation's manually operated lift system. Sharren medical personnel treated and cleaned the injured staff at the surface installation.",
       "Further entry into the concealed city was suspended pending review.",
       "The expedition relocated to the Broken Blade Lodge for recovery and analysis of the findings.",
       "During departure, Chief Science Officer Quill Varon also secured a satchel containing several Sharren archival volumes for off-site examination. Available documentation indicates that the transfer was performed discreetly and without introducing unnecessary administrative dependencies.",
-      "Parallax Dynamics continues to classify this as an exploration success with unresolved environmental complications."
+      "Paradallax Initiative continues to classify this as an exploration success with unresolved environmental complications."
     ],
     personnelList: [
       {
@@ -186,7 +186,7 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
       {
         time: "08",
         title: "Diplomatic Extraction",
-        event: "Captain Dark Eye threatens punitive action over the disturbance. Flint invokes Nightseer Vauthry's authority and expedition standing, preventing escalation. Parallax withdraws to the Broken Blade Lodge.",
+        event: "Captain Dark Eye threatens punitive action over the disturbance. Flint invokes Nightseer Vauthry's authority and expedition standing, preventing escalation. Paradallax withdraws to the Broken Blade Lodge.",
       },
     ],
     notableFindings: [
@@ -245,7 +245,7 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
       {
         title: "Jurisdictional Dispute",
         details: [
-          "Captain Dark Eye attributed the site's anomalous activity to Parallax personnel and threatened execution under Sharren religious law.",
+          "Captain Dark Eye attributed the site's anomalous activity to Paradallax personnel and threatened execution under Sharren religious law.",
           "Chief Operations Officer Duskbourne resolved the matter without additional casualties, detentions, or changes in local leadership.",
           "Corporate Relations has categorized the exchange as a successful clarification of operational jurisdiction.",
         ],
@@ -283,7 +283,7 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
     ],
     complianceNotes: [
       "Entry into the concealed urban complex was not part of the original excavation plan.",
-      "No Parallax employee was authorized to intentionally activate ancient religious infrastructure.",
+      "No Paradallax employee was authorized to intentionally activate ancient religious infrastructure.",
       "Current evidence does not establish that intentional activation occurred.",
       "The site's apparent dead population should not be considered harmless solely on the basis of being dead.",
       "Local theological prohibitions remain in force for subsequent visits.",
@@ -293,7 +293,7 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
     anomalousFindings: [
       "The most significant discovery is not the presence of holographic imagery but the manifestation's ability to become causally responsive.",
       "The temple sequence contained identifiable people, consistent ceremonial behavior, spoken language, ideological context, and a discrete violent event involving Shanara Nayalara. After completing or partially completing that sequence, the phenomenon recognized Fenn and Reggie as external participants and produced attacks capable of damaging contemporary biological tissue.",
-      "Equally important is the behavior of the city's access boundary. Hostile manifestations pursued Parallax personnel to the precise point at which they crossed the concealed wall. Emitted projectiles dissipated at or immediately beyond that interface.",
+      "Equally important is the behavior of the city's access boundary. Hostile manifestations pursued Paradallax personnel to the precise point at which they crossed the concealed wall. Emitted projectiles dissipated at or immediately beyond that interface.",
       "The simplest working conclusion is that the barrier serves more than a concealment function. Whether it is a containment boundary, jurisdictional limit within a larger anomalous system, or physical edge of the phenomenon remains unresolved.",
       "Science Division recommends future instrumentation on both sides of the boundary before additional inhabited testing is approved.",
       "Axiom IV remains applicable: 'Progress requires uncertainty.' For clarity, this is not authorization to manufacture additional uncertainty."
@@ -306,7 +306,7 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
         "Fenn and Reggie then discovered a temple capable of replaying a centuries-old massacre and, more importantly, capable of noticing when someone new entered the room. Whatever happened there was not satisfied with being history.",
         "Dark Eye wanted them executed for waking the dead.",
         "I objected primarily because they are our dead to wake while operating under a valid expedition agreement.",
-        "We are leaving the city alone until everyone has stopped bleeding and Quill finishes insisting that the books in his bag became Parallax property through 'custodial momentum.'",
+        "We are leaving the city alone until everyone has stopped bleeding and Quill finishes insisting that the books in his bag became Paradallax property through 'custodial momentum.'",
         "We will return.",
         "There is always something beyond the horizon.",
         "Apparently, sometimes the horizon is underground."
@@ -315,7 +315,7 @@ export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
     finalAssessment: {
       verdict: "PARTIAL SUCCESS",
       description:
-        "A previously undocumented Sharren urban complex was discovered and its access route confirmed. Parallax obtained evidence of an anomalous historical phenomenon capable of physically interacting with contemporary observers, recovered a residual Starshard sample, preserved valuable archival material for further study, and extracted all personnel alive. The lower city remains unexplored. The nature of its inhabitants, the purpose of its containment boundary, the mechanism behind the temple manifestation, and the historical role of Shanara Nayalara remain unresolved.",
+        "A previously undocumented Sharren urban complex was discovered and its access route confirmed. Paradallax obtained evidence of an anomalous historical phenomenon capable of physically interacting with contemporary observers, recovered a residual Starshard sample, preserved valuable archival material for further study, and extracted all personnel alive. The lower city remains unexplored. The nature of its inhabitants, the purpose of its containment boundary, the mechanism behind the temple manifestation, and the historical role of Shanara Nayalara remain unresolved.",
       conclusion: "INVESTIGATION CONTINUES.",
     },
   },
