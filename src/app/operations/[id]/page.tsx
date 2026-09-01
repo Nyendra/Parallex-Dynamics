@@ -23,6 +23,7 @@ import {
   Lock,
   Wrench,
   Users,
+  Globe,
 } from "lucide-react";
 
 interface PageProps {
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const pageTitle = `${record.id} — ${record.title} | Paradallax Initiative`;
+  const pageTitle = `${record.title} — ${record.id} | Paradallax Initiative`;
   const pageDescription =
     record.metaDescription ||
     record.summary ||
@@ -415,6 +416,24 @@ export default async function OperationalRecordPage({ params }: PageProps) {
           </ul>
         </div>
       </section>
+
+      {/* SECTION: DIPLOMATIC CONSEQUENCES */}
+      {record.diplomaticConsequences && record.diplomaticConsequences.length > 0 && (
+        <section className="space-y-6">
+          <div className="flex items-center space-x-2 border-b border-white/10 pb-3">
+            <Globe className="w-5 h-5 text-cyan-accent" />
+            <h2 className="font-orbitron font-bold text-xl sm:text-2xl text-white tracking-wide">
+              DIPLOMATIC CONSEQUENCES
+            </h2>
+          </div>
+
+          <div className="p-6 sm:p-8 rounded-3xl glass-panel border border-cyan-accent/20 space-y-4 text-slate-300 text-xs sm:text-sm leading-relaxed font-sans font-light">
+            {record.diplomaticConsequences.map((para, idx) => (
+              <p key={idx}>{para}</p>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* SECTION 8: ANOMALOUS / SCIENTIFIC FINDINGS */}
       <section className="space-y-6">

@@ -15,6 +15,7 @@ import {
   Users,
   Compass,
   Wrench,
+  Globe,
 } from "lucide-react";
 import { soundEngine } from "@/utils/soundEngine";
 import { OperationalRecord } from "@/data/operationsData";
@@ -193,6 +194,20 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                     {record.propertyDamage.outcome}
                   </p>
                 )}
+              </div>
+            )}
+
+            {/* Diplomatic Consequences */}
+            {record.diplomaticConsequences && record.diplomaticConsequences.length > 0 && (
+              <div className="p-4 rounded-xl bg-slate-950/80 border border-cyan-500/20 space-y-2">
+                <h3 className="font-mono text-xs text-cyan-400 tracking-widest uppercase flex items-center">
+                  <Globe className="w-4 h-4 mr-2 text-cyan-400" /> Diplomatic Consequences
+                </h3>
+                <div className="space-y-1.5 text-xs text-slate-300 font-sans leading-relaxed">
+                  {record.diplomaticConsequences.map((item, idx) => (
+                    <p key={idx}>{item}</p>
+                  ))}
+                </div>
               </div>
             )}
 

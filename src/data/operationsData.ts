@@ -31,7 +31,7 @@ export interface OperationalRecord {
   id: string;
   slug: string;
   title: string;
-  status: "PARTIAL SUCCESS" | "CONCLUDED" | "RESTRICTED" | "UNDER REVIEW" | "ACTIVE" | "MISSION SUCCESSFUL";
+  status: "PARTIAL SUCCESS" | "CONCLUDED" | "RESTRICTED" | "UNDER REVIEW" | "ACTIVE" | "MISSION SUCCESSFUL" | "OBJECTIVE ACHIEVED";
   location: string;
   detailedLocation?: string;
   type: "EXPLORATION" | "SCIENCE" | "SECURITY" | "DIPLOMATIC" | "LOGISTICS" | "CLASSIFIED";
@@ -47,6 +47,7 @@ export interface OperationalRecord {
   incidents: IncidentEntry[];
   propertyDamage?: PropertyDamageEntry;
   personnelNotes: { name: string; note: string }[];
+  diplomaticConsequences?: string[];
   complianceNotes: string[];
   anomalousFindings: string[];
   captainsLog: {
@@ -61,6 +62,280 @@ export interface OperationalRecord {
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0103",
+    slug: "pd-0103",
+    title: "The Line in the Dust",
+    status: "OBJECTIVE ACHIEVED",
+    location: "Gwynplain Children’s Refuge, Sharan Territory",
+    detailedLocation: "Gwynplain Children’s Refuge, Sharan Territory",
+    type: "SECURITY",
+    classification: "SECURITY ARCHIVE // OBJECTIVE ACHIEVED",
+    summary:
+      "A hostile Sharan demonstration threatens the Gwynplain Children’s refuge, forcing Paradallax personnel to establish a defensive perimeter before civil unrest becomes a massacre. The incident ends with the enclave secured, Lathander relief operative Gabriel Vale attached to the team, and preparations underway for a star-shard expedition toward Darkigez.",
+    metaDescription:
+      "A hostile Sharan demonstration threatens the Gwynplain Children’s refuge as Paradallax secures the enclave, recruits Gabriel Vale, and prepares an expedition toward a star shard near Darkigez.",
+    fullMissionSummary: [
+      "Morning operations at the Gwynplain Children’s Refuge began with a significant deterioration in local relations.",
+      "A large group of Sharan civilians assembled outside the enclave perimeter, condemning the Gwynplain Children for refusing submission to Sharr and the Nightseer. The demonstration rapidly exceeded the parameters of peaceful theological disagreement. Reggie, Flint, Onix, and Quill moved to reinforce the primary gate while refuge personnel withdrew younger residents from the immediate area.",
+      "Reggie established a physical exclusion boundary in the dust outside the entrance and informed the gathering that crossing it constituted defiance of Sha’s will. The legal and theological basis for this declaration remains unverified. Its immediate effectiveness was considerably easier to measure.",
+      "Quill supplemented the warning with a directional acoustic projection resembling distant thunder.",
+      "The situation destabilized when a projectile thrown from the crowd struck one of the children.",
+      "Paradallax personnel immediately transitioned from deterrence to active crowd containment. Reggie and Flint held the entrance, restrained advancing civilians, and prevented the confrontation from penetrating the refuge. Quill redirected the crowd’s own accusations against its most aggressive members, publicly identifying those attacking children as the more credible candidates for heresy.",
+      "Sharan security personnel eventually arrived and dispersed the gathering. Their intervention was effective, although not sufficiently immediate to prevent additional localized violence. Paradallax personnel recovered the wounded and returned all endangered refuge residents behind the perimeter.",
+      "The enclave remained secure.",
+      "Shortly thereafter, a young Arakocra resident announced the arrival of an individual known locally as “Master Vale.” The visitor identified himself as Gabriel Vale, an armored field chaplain and trauma specialist operating under the Lathander Relief Order.",
+      "Standard Paradallax visitor screening procedures were applied. Reggie temporarily secured Vale’s warhammer while Quill escorted him into the refuge.",
+      "Vale immediately requested permission to assist the injured.",
+      "Working alongside Uot, he treated casualties from the confrontation, stabilized a young tiefling with significant facial trauma, and established an orderly medical queue without requiring additional direction from Paradallax personnel. His combination of discipline, field medicine, and willingness to work inside an organization with unusually flexible definitions of clinical research warranted further evaluation.",
+      "During the subsequent briefing, Vale was introduced to several ongoing Paradallax medical programs.",
+      "These included Onix’s integration of troll-derived regenerative marrow into Reggie’s already unconventional physiology and the replacement limb currently employed by Quill. Vale displayed concern appropriate to a conventional medical professional but did not withdraw from the conversation.",
+      "More importantly, he outlined his allegiance to Lathander and his objective of providing aid to populations subjected to religious oppression.",
+      "Paradallax personnel disclosed the broader intention to remove the Gwynplain Children from Sharr’s influence.",
+      "Vale agreed with the objective and formally attached himself to the expeditionary group.",
+      "This proved immediately useful.",
+      "Fenn and Cass emerged later that morning from a temporary field shelter in which they had remained following activities conducted the previous night. Prior to joining the others, Fenn had destroyed several blood-contaminated garments and attempted multiple counter-anomaly treatments on a severely damaged eye.",
+      "Neither treatment had succeeded.",
+      "Vale examined the injury and identified extensive damage to the iris and pupil consistent with exposure to highly focused, refracted energy. Fenn described the cause as a paid experimental procedure performed by an independent back-alley surgeon operating without meaningful oversight.",
+      "Paradallax personnel collectively recommended discontinuing that particular provider relationship.",
+      "Vale applied a Lathander photonic restoration technique and completely restored Fenn’s vision.",
+      "No further ocular degradation was observed.",
+      "With immediate security and medical concerns resolved, Reggie and Quill presented the group with a specialized astronomical tracking map associated with the Choir of the True Firmament. The Choir maintains that conventional planar boundaries are shifting and has tracked a number of anomalous objects commonly referred to as star shards falling across known territories.",
+      "The nearest accessible signature was identified near Darkigez.",
+      "After reviewing distance, supplies, and expected travel conditions, Paradallax personnel selected the Darkigez signature as the next expeditionary objective. The journey is expected to require several weeks. Vale volunteered to provide field sustenance support, materially reducing conventional food and water requirements.",
+      "Onix subsequently conducted a private compatibility discussion with Vale regarding his anti-necrotic capabilities. Reggie’s stabilized post-mortem physiology creates several obvious concerns when operating beside personnel equipped to suppress or destroy undead biological states.",
+      "Vale confirmed that his system is selectively controlled and stated that he would not deploy it against allied personnel.",
+      "Onix accepted this assurance.",
+      "Preparation for departure occupied the remainder of the operational period.",
+      "Quill fabricated a specialized control matrix for Onix, who used it to establish a link with a newly manifested celestial corvid reconnaissance organism. Fenn and Cass examined two intricate mechanical cipher devices, making progress on both before an internal reset mechanism erased part of their work.",
+      "Reggie spent approximately four hours restoring twelve captured weapons to resale-ready condition.",
+      "Flint separately met with Lia and formally declined the Nightseer’s proposed oath of allegiance, making Paradallax’s position toward the local religious authority considerably less ambiguous.",
+      "Cass requested information concerning the whereabouts of her patron, Viserys. Flint agreed to relay a message should contact be established.",
+      "Before departure preparations concluded, Vale visited the northern Lathander altar, transferred his remaining conventional medical supplies to Uot, and received a discreet private communication whose contents were not entered into the operational file.",
+      "Reggie, Fenn, and Vale then loaded the refurbished weapons aboard the Flaming Francine and departed for the regional market.",
+      "The recovered hostile materiel was scheduled for commercial liquidation, with proceeds redirected toward expeditionary supplies.",
+      "Paradallax Initiative recognizes this as an efficient circular security economy.",
+      "Kant and Flint remained at the Gwynplain enclave to supervise their respective projects while final preparations for Darkigez continued."
+    ],
+    personnelList: [
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer",
+        duty: "Field command, perimeter defense coordination, formal rejection of the Nightseer’s oath."
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer",
+        duty: "Acoustic projection crowd deterrence, star-map analysis, celestial corvid control matrix fabrication."
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations",
+        duty: "Mechanical cipher analysis, ocular restoration recipient, commercial liquidation transport."
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions",
+        duty: "Mechanical cipher examination and intelligence inquiry regarding Viserys."
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research",
+        duty: "Perimeter gate defense, celestial corvid link establishment, anti-necrotic compatibility assessment."
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer",
+        duty: "Enclave engineering supervision and expedition logistical preparation."
+      },
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal",
+        duty: "Exclusion boundary enforcement, crowd containment, hostile weapon refurbishment and liquidation."
+      },
+      {
+        name: "Gabriel Vale",
+        role: "Lathander Relief Order Field Chaplain & Trauma Specialist",
+        duty: "Newly attached expeditionary personnel; field casualty stabilization, Lathander photonic ocular restoration, expeditionary medical & sustenance support."
+      }
+    ],
+    associatedPersonnel: [
+      {
+        name: "Uot",
+        role: "Gwynplain Refuge Medical Coordinator",
+        duty: "Enclave medical coordination and recipient of transferred field medical supplies."
+      },
+      {
+        name: "Lia",
+        role: "Gwynplain Refuge Liaison",
+        duty: "Gwynplain Refuge liaison and intermediary for local authority communications."
+      }
+    ],
+    timeline: [
+      {
+        time: "01",
+        title: "Perimeter Disturbance",
+        event: "Sharan civilians assembled outside the Gwynplain Children’s Refuge and demanded renewed obedience to Sharr and the Nightseer."
+      },
+      {
+        time: "02",
+        title: "Security Line Established",
+        event: "Reggie established a physical exclusion boundary while Quill employed acoustic projection to reinforce the warning. Violence began after a thrown projectile struck a child."
+      },
+      {
+        time: "03",
+        title: "Crowd Contained",
+        event: "Reggie and Flint prevented the disturbance from entering the enclave. Sharan security eventually dispersed the remaining civilians, and wounded refuge residents were recovered."
+      },
+      {
+        time: "04",
+        title: "Vale Arrival",
+        event: "Gabriel Vale of the Lathander Relief Order arrived, passed Paradallax security screening, treated injured children alongside Uot, and subsequently joined the expeditionary group."
+      },
+      {
+        time: "05",
+        title: "Ocular Restoration",
+        event: "Vale successfully repaired Fenn’s severe experimental eye injury after previous counter-anomaly treatments had failed."
+      },
+      {
+        time: "06",
+        title: "Darkigez Selected",
+        event: "The Choir of the True Firmament star-shard map identified the nearest viable anomaly near Darkigez. Paradallax committed to a multi-week expedition toward the site."
+      },
+      {
+        time: "07",
+        title: "Expedition Preparation",
+        event: "Quill and Onix established a celestial corvid reconnaissance asset, Reggie refurbished captured weapons, Flint rejected the Nightseer’s oath, and additional logistical preparations were completed."
+      },
+      {
+        time: "08",
+        title: "Procurement Run",
+        event: "Reggie, Fenn, and Vale departed aboard the Flaming Francine to convert recovered weapons into expeditionary funding and purchase travel supplies."
+      }
+    ],
+    notableFindings: [
+      {
+        title: "Choir of the True Firmament Star Map",
+        description:
+          "The recovered tracking system continues to identify anomalous objects described as star shards across multiple regions.",
+        bullets: [
+          "The Choir maintains that these events correspond with movement or instability between planar boundaries.",
+          "Paradallax has not independently verified the Choir’s complete cosmological model.",
+          "The existence of the tracked objects themselves is considered sufficiently interesting that methodological disagreement has been postponed until after acquisition.",
+          "The nearest active lead is located in the vicinity of Darkigez."
+        ]
+      },
+      {
+        title: "Gabriel Vale",
+        description:
+          "Vale demonstrated advanced restorative capabilities capable of repairing structural ocular trauma that had resisted previous treatments.",
+        bullets: [
+          "His Lathander-derived techniques may have substantial medical applications if successfully documented, replicated, licensed, or otherwise made available for institutional use.",
+          "Vale also possesses anti-necrotic capabilities with possible implications for Reggie’s condition.",
+          "Target discrimination has been verbally confirmed."
+        ]
+      },
+      {
+        title: "Celestial Corvid Asset",
+        description:
+          "Using a control matrix fabricated by Quill, Onix successfully established a link with a celestial crow suitable for reconnaissance and observation.",
+        bullets: [
+          "Its biological classification remains pending.",
+          "Onix has requested that nobody refer to it as “just a bird” until testing is complete."
+        ]
+      }
+    ],
+    incidents: [
+      {
+        title: "Gwynplain Civil Disturbance",
+        severity: "Moderate (Security / Civil Disorder)",
+        details: [
+          "A hostile civilian gathering escalated into direct violence against residents of the Gwynplain Children’s Refuge.",
+          "Paradallax personnel prevented a perimeter breach and removed injured minors from the confrontation.",
+          "No Paradallax fatalities were recorded."
+        ]
+      },
+      {
+        title: "Fenn — Ocular Trauma",
+        severity: "Severe, resolved (Pre-existing Experimental Injury)",
+        details: [
+          "Fenn sustained extensive damage to one eye following an independently commissioned experimental procedure involving concentrated refracted energy.",
+          "Self-administered countermeasures were ineffective.",
+          "Gabriel Vale achieved complete restoration of function.",
+          "The provider responsible for the original procedure is not approved under any known Paradallax medical procurement framework. This distinction has not historically prevented anything."
+        ]
+      }
+    ],
+    propertyDamage: {
+      items: [
+        "Enclave perimeter barrier sustained superficial impact damage from thrown civilian projectiles.",
+        "Twelve captured hostile weapons recovered and restored to operational resale condition.",
+        "Fenn’s blood-contaminated garments destroyed prior to evidence review."
+      ],
+      outcome: "Recovered hostile materiel converted to expeditionary funding aboard the Flaming Francine under circular security economy guidelines."
+    },
+    personnelNotes: [
+      {
+        name: "Reggie",
+        note: "Demonstrated effective perimeter control and restraint during a rapidly escalating civilian confrontation. Later restored twelve captured weapons to high operational condition before their planned resale. The Security Office has described this as “asset recovery.” Finance has elected not to challenge the terminology."
+      },
+      {
+        name: "Gabriel Vale",
+        note: "Initial field performance was highly favorable. Vale treated civilians without hesitation, adapted rapidly to Paradallax operating conditions, and accepted expeditionary assignment after being briefed on the Gwynplain situation. His comparatively conventional ethical framework should provide useful observational data."
+      },
+      {
+        name: "Fenn",
+        note: "Vision fully restored. Destruction of blood-contaminated clothing occurred before formal evidence review. No request has been submitted asking why."
+      },
+      {
+        name: "Flint Duskbourne",
+        note: "Formally declined the Nightseer’s proposed oath through liaison Lia. This decision clarifies Paradallax’s position regarding Sharan religious authority and may increase local political friction."
+      },
+      {
+        name: "Cass",
+        note: "Continues seeking information regarding Viserys. Flint has agreed to pass along a message should contact occur."
+      }
+    ],
+    diplomaticConsequences: [
+      "Relations with Sharr-aligned civilians have deteriorated significantly.",
+      "Paradallax’s defense of the Gwynplain Children, combined with Flint’s formal rejection of the Nightseer’s oath, makes continued political neutrality increasingly implausible.",
+      "The Gwynplain enclave remains under Paradallax protection.",
+      "Local Sharan security ultimately assisted in dispersing the hostile gathering, indicating that institutional relations have not yet deteriorated to the same degree as public sentiment.",
+      "Further friction should be anticipated."
+    ],
+    complianceNotes: [
+      "Recovered weapons are being sold to finance expeditionary procurement. This has been categorized as responsible materiel recycling.",
+      "Fenn’s independent experimental ophthalmic procedure was not performed by Paradallax Medical.",
+      "Fenn’s subsequent destruction of compromised clothing occurred before any evidence-retention request was issued.",
+      "Reggie’s physiology remains medically incompatible with several conventional anti-necrotic safety systems.",
+      "Gabriel Vale has verbally confirmed selective targeting capability.",
+      "Paradallax accepts no liability for theological conclusions reached by hostile crowds following Chief Security Marshal Reggie’s field interpretation of divine intent."
+    ],
+    anomalousFindings: [
+      "The Choir of the True Firmament tracking apparatus indicates that planar boundaries are destabilizing, producing localized star-shard impacts across regional sectors including Darkigez.",
+      "Gabriel Vale’s Lathander photonic restoration represents a non-standard therapeutic mechanism capable of reversing geometric ocular degradation. Further clinical documentation is advised.",
+      "A celestial corvid reconnaissance organism has been bonded via a specialized control matrix fabricated by Science Division."
+    ],
+    captainsLog: {
+      author: "Flint Duskbourne, Chief Operations Officer",
+      text: [
+        "The crowd was one thrown rock away from becoming something much worse.",
+        "Reggie drew a line in the dirt because there are moments when a boundary means more than another speech. Quill made the sky answer him. I am still undecided whether that improved the situation, but nobody crossed the gate.",
+        "Gabriel worries me less than most people who arrive wearing that much armor.",
+        "He walked into a camp full of strangers, treated the children first, listened to Onix explain what we have done to Reggie and Quill, repaired Fenn’s eye, and then agreed to come with us.",
+        "Either he is exactly the kind of person we need or he has not yet understood us.",
+        "We leave for Darkigez soon.",
+        "There is apparently a piece of the sky waiting for us there.",
+        "After today, that sounds almost straightforward."
+      ]
+    },
+    finalAssessment: {
+      verdict: "OBJECTIVE ACHIEVED",
+      description:
+        "The Gwynplain Children’s Refuge remained secure following a significant civil disturbance. Injured residents were stabilized, Gabriel Vale was successfully integrated into the expeditionary group, Fenn’s ocular injury was resolved, and the nearest star-shard signature was identified near Darkigez. Paradallax personnel have begun final preparations for a multi-week expedition. The immediate threat has been contained. The next one has been located.",
+      conclusion: "WE GO FORWARD."
+    }
+  },
   {
     id: "PD-0102",
     slug: "pd-0102",
