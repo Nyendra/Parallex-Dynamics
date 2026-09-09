@@ -8,7 +8,7 @@ import {
   OperationalRecord,
 } from "@/data/operationsData";
 import { soundEngine } from "@/utils/soundEngine";
-import { Search, ShieldAlert, MapPin, ChevronRight, ExternalLink, AlertTriangle } from "lucide-react";
+import { Search, ShieldAlert, MapPin, ChevronRight, AlertTriangle } from "lucide-react";
 
 const CATEGORIES = [
   "ALL",
@@ -112,13 +112,13 @@ export default function OperationsPage() {
                 key={record.id}
                 role="button"
                 tabIndex={0}
-                aria-label={`Inspect operational record ${record.id}: ${record.title}`}
+                aria-label={`Open summary for operational record ${record.id}: ${record.title}`}
                 onClick={() => {
                   soundEngine?.playClick();
                   setActiveRecord(record);
                 }}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
+                  if (e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) {
                     e.preventDefault();
                     soundEngine?.playClick();
                     setActiveRecord(record);
@@ -157,9 +157,21 @@ export default function OperationsPage() {
                   <span className="text-amber-400 text-[11px] truncate max-w-[140px]">
                     {record.classification}
                   </span>
-                  <span className="text-cyan-accent group-hover:translate-x-1 transition-transform flex items-center">
-                    Inspect Record <ChevronRight className="w-4 h-4 ml-1" />
-                  </span>
+                  <Link
+                    href={`/operations/${record.slug}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      soundEngine?.playClick();
+                    }}
+                    onKeyDown={(e) => {
+                      e.stopPropagation();
+                    }}
+                    aria-label={`Inspect full record ${record.id}: ${record.title}`}
+                    className="text-cyan-accent hover:text-white transition-colors flex items-center group-hover:translate-x-1 transition-transform p-1 -m-1 rounded focus:outline-none focus:ring-1 focus:ring-cyan-accent"
+                  >
+                    <span>Inspect Record</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </Link>
                 </div>
               </div>
             ))}

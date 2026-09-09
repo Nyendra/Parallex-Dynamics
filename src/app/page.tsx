@@ -138,7 +138,7 @@ export default function HomePage() {
               <span className="font-bold mr-2">&gt;&gt;</span> OPERATIONAL RECORD // ARCHIVE INITIALIZATION
             </span>
             <h3 className="font-orbitron font-bold text-xl sm:text-2xl text-white">
-              Public mission records pending release.
+              Selected operational records have been cleared for public review.
             </h3>
             <p className="text-xs font-sans text-slate-400 max-w-xl">
               Inspect archived records for expeditionary, scientific, diplomatic, and security operations.
