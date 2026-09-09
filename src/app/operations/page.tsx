@@ -110,12 +110,22 @@ export default function OperationsPage() {
             {filteredRecords.map((record) => (
               <div
                 key={record.id}
+                role="button"
+                tabIndex={0}
+                aria-label={`Inspect operational record ${record.id}: ${record.title}`}
                 onClick={() => {
                   soundEngine?.playClick();
                   setActiveRecord(record);
                 }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    soundEngine?.playClick();
+                    setActiveRecord(record);
+                  }
+                }}
                 onMouseEnter={() => soundEngine?.playHover()}
-                className="p-6 rounded-2xl glass-panel glass-panel-hover flex flex-col justify-between space-y-6 cursor-pointer border border-white/10 group relative"
+                className="p-6 rounded-2xl glass-panel glass-panel-hover flex flex-col justify-between space-y-6 cursor-pointer border border-white/10 group relative focus:outline-none focus:border-cyan-accent/50 focus:ring-1 focus:ring-cyan-accent/50"
               >
                 <div className="space-y-3">
                   {/* Card Header */}
@@ -123,8 +133,8 @@ export default function OperationsPage() {
                     <span className="text-cyan-accent font-bold tracking-widest flex items-center">
                       <span className="mr-1.5">&gt;&gt;</span> {record.id}
                     </span>
-                    <span className="px-2 py-0.5 rounded bg-space-darkest text-cyan-accent border border-cyan-accent/30 text-[10px]">
-                      {record.status}
+                    <span className="px-2 py-0.5 rounded bg-space-darkest text-cyan-accent border border-cyan-accent/30 text-[10px] whitespace-nowrap flex-shrink-0">
+                      {record.statusBadge || record.status}
                     </span>
                   </div>
 

@@ -20,6 +20,15 @@ export interface NotableFinding {
   title: string;
   description?: string;
   bullets?: string[];
+  notes?: string[];
+}
+
+export interface AnomalousFindingEntry {
+  title: string;
+  description?: string;
+  resultHeader?: string;
+  bullets?: string[];
+  notes?: string[];
 }
 
 export interface PropertyDamageEntry {
@@ -31,7 +40,16 @@ export interface OperationalRecord {
   id: string;
   slug: string;
   title: string;
-  status: "PARTIAL SUCCESS" | "CONCLUDED" | "RESTRICTED" | "UNDER REVIEW" | "ACTIVE" | "MISSION SUCCESSFUL" | "OBJECTIVE ACHIEVED";
+  status:
+    | "PARTIAL SUCCESS"
+    | "CONCLUDED"
+    | "RESTRICTED"
+    | "UNDER REVIEW"
+    | "ACTIVE"
+    | "MISSION SUCCESSFUL"
+    | "OBJECTIVE ACHIEVED"
+    | "COMPLETE — RESTRICTED INTERNAL DISTRIBUTION";
+  statusBadge?: string;
   location: string;
   detailedLocation?: string;
   type: "EXPLORATION" | "SCIENCE" | "SECURITY" | "DIPLOMATIC" | "LOGISTICS" | "CLASSIFIED";
@@ -46,22 +64,293 @@ export interface OperationalRecord {
   notableFindings: NotableFinding[];
   incidents: IncidentEntry[];
   propertyDamage?: PropertyDamageEntry;
-  personnelNotes: { name: string; note: string }[];
+  personnelNotes: { name: string; note: string | string[] }[];
   diplomaticConsequences?: string[];
   complianceNotes: string[];
-  anomalousFindings: string[];
+  anomalousFindings: (string | AnomalousFindingEntry)[];
   captainsLog: {
     author: string;
     text: string[];
   };
   finalAssessment: {
     verdict: string;
-    description: string;
+    description: string | string[];
     conclusion: string;
   };
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0104",
+    slug: "pd-0104",
+    title: "A Key for Every Cage",
+    status: "OBJECTIVE ACHIEVED",
+    location: "Nebuch Metropolitan Zone",
+    detailedLocation:
+      "Nebuch Metropolitan Zone — Old Town, Red Road Exchange, Gwynplaine's Children Forward Camp",
+    type: "CLASSIFIED",
+    classification: "LEVEL 5 CLASSIFIED // COMPLETE — RESTRICTED INTERNAL DISTRIBUTION",
+    summary:
+      "During final expedition preparations in Nebuch, Paradallax operatives execute a covert acquisition in the Red Road Exchange to recover a captive juvenile owlbear. The operation results in fatal defensive contact with broker Boris, the liberation of surviving inventory, and the recovery of anomalous spatial-translocation devices.",
+    metaDescription:
+      "A classified Paradallax Initiative acquisition operation in Nebuch's Red Road Exchange recovers a captive juvenile owlbear, reveals anomalous spatial-access keys, and ends in the fatal engagement of broker Boris.",
+    fullMissionSummary: [
+      "Paradallax personnel used the final operational window in Nebuch to replenish supplies, liquidate repaired equipment, conduct limited research, and prepare Gwynplaine's Children for its continued southbound expedition. Chief Security Marshal Reggie successfully transferred twelve refurbished weapons to an Old Town fabricator, receiving both compensation and unsolicited criticism regarding his finishing technique. The fabricator expressed conditional willingness to discuss further professional instruction should Reggie return to Nebuch.",
+      "Procurement activities subsequently moved into the Red Road Exchange, an unofficial commercial district whose understanding of product provenance remains usefully flexible. Reggie, Fenn, and Gabriel acquired medical supplies and specialist access equipment while surveying vendors. During this process, Reggie and Gabriel encountered an exotic-fauna dealer operating under the name Boris. Behind the dealer's conventional transport enclosure was a spatially concealed biological inventory containing several high-value organisms, including griffin and drake embryos, a juvenile displacer organism, and a juvenile owlbear.",
+      "The organisms appeared to be maintained primarily as luxury commodities. Reggie developed an immediate interest in recovering the owlbear juvenile and expressed substantial concern regarding the broker's treatment of his inventory. Following consultation with Fenn and Cass, a pre-dawn Special Acquisition was authorized at the field level. No surviving documentation identifies the executive who authorized it, which is operationally convenient.",
+      "The recovery team returned to the Red Road under altered identities. Reggie employed a subdermal adaptive-disguise system to assume the appearance of a trapper using the name \"Norris.\" Cass entered under optical concealment, while Fenn adopted a separate synthetic identity profile. The plan called for Boris to be displaced from his transport enclosure long enough for the team to access the concealed inventory.",
+      "Boris did not cooperate with the intended sequence. Upon answering the disturbance, he became physically aggressive and attempted to drag Reggie into the transport compartment. Reggie responded with force. During the resulting close-quarters struggle, Boris sustained catastrophic cervical trauma and died immediately.",
+      "With the operation's original parameters no longer applicable, Fenn and Cass entered the enclosure and secured the site. A keyring recovered from Boris contained two anomalously active access devices. Field scanning indicated strong spatial-translocation signatures. One device opened access to an architecturally impossible marble bathing suite occupying considerably more internal volume than the transport platform could physically contain. The second exposed a similarly displaced biological holding facility containing Boris's caged inventory.",
+      "The owlbear juvenile was located alive. Cass applied a temporary morphogenic transformation, reducing the organism to a mouse-scale biological form so it could be moved safely within Fenn's dimensional storage system. Once the priority organism had been secured, the team opened the remaining containment units and released Boris's surviving stock into the surrounding district rather than leave them confined.",
+      "Boris's remains were placed temporarily inside the same dimensional storage network to prevent immediate discovery at the scene. The team then returned to Gwynplaine's Children without further contact.",
+      "Chief Engineering Officer Kant immediately identified significant behavioral distress in Reggie on his return. Cass described the incident as an acquisition attempt followed by defensive force after Boris initiated physical contact. Flint registered clear concern regarding the explanation but elected to prioritize expedition readiness and the immediate departure from Nebuch. Kant later informed Reggie privately that, based on the circumstances presented, he regarded the fatal response as self-defense.",
+      "Parallel work at the forward camp continued throughout the operation. Kant replenished fabrication stock, energetic compounds, scrap materials, and ignition components. Flint completed maintenance on expedition armor and weapons. Gabriel and Onix manufactured basic regenerative compounds, while Quill continued analysis of recovered archival material.",
+      "Before departure, Quill identified two sites warranting investigation along the planned southern route. The first, Maglandak, is a valley associated with reports of lithic formations that appear to breathe, disembodied voices or acoustic echoes without obvious sources, and an exceptionally preserved scale-like artifact capable of shifting color. Farther along the route lies a reported Baphomet remnant, the nature of which remains unresolved.",
+      "Gabriel and Onix additionally tested a conventional regenerative field against Onix's atypical necrobiological physiology. The field produced neither the destructive response that some models predicted nor any measurable restoration of Onix's vitality.",
+      "Following completion of loading and maintenance, Paradallax personnel departed Nebuch aboard Gwynplaine's Children and continued south."
+    ],
+    personnelList: [
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal",
+        duty: "Primary field operative during the Red Road acquisition. Conducted initial reconnaissance, direct engagement, and recovery of the target organism."
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations",
+        duty: "Provided acquisition support, identity obfuscation, anomalous scanning, and secure dimensional storage."
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions",
+        duty: "Provided covert entry capability and specialist assistance during extraction."
+      },
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer",
+        duty: "Maintained expedition readiness at the forward camp and managed departure preparations following the incident."
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer",
+        duty: "Conducted archival analysis and identified two significant locations along the expedition's southern route."
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer",
+        duty: "Acquired additional engineering materials and provided post-incident personnel support."
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research",
+        duty: "Assisted with production and testing of expeditionary medical compounds."
+      },
+      {
+        name: "Gabriel",
+        role: "Expedition Associate",
+        duty: "Supported Red Road procurement activity and medical-compound preparation."
+      }
+    ],
+    associatedPersonnel: [
+      {
+        name: "Lia",
+        role: "Expedition Associate",
+        duty: "Present at Gwynplaine's Children during final equipment servicing and departure preparations."
+      },
+      {
+        name: "Boris",
+        role: "Independent Exotic Fauna Broker",
+        duty: "Operator of an unregistered exotic-organism dealership within the Red Road Exchange. Deceased during the acquisition incident."
+      }
+    ],
+    timeline: [
+      {
+        time: "01",
+        title: "Old Town Equipment Transfer",
+        event: "Reggie sells twelve refurbished weapons to a local fabricator and establishes the possibility of future technical instruction."
+      },
+      {
+        time: "02",
+        title: "Red Road Procurement",
+        event: "Medical compounds and specialist intrusion equipment are acquired. Boris's concealed exotic-fauna inventory is discovered."
+      },
+      {
+        time: "03",
+        title: "Acquisition Planning",
+        event: "Reggie, Fenn, and Cass agree to recover the juvenile owlbear during the pre-dawn period using covert identities and concealment systems."
+      },
+      {
+        time: "04",
+        title: "Fatal Contact",
+        event: "Boris becomes physically aggressive during the diversion. Reggie engages him at close range, resulting in fatal cervical trauma."
+      },
+      {
+        time: "05",
+        title: "Spatial Compartments Identified",
+        event: "Two anomalous access keys reveal impossible-volume spaces hidden within Boris's transport unit: a private bathing facility and an exotic-organism holding complex."
+      },
+      {
+        time: "06",
+        title: "Xenofauna Recovery",
+        event: "Cass temporarily reduces the owlbear juvenile to a transportable morphology. Fenn secures it in dimensional storage. Remaining captive organisms are released."
+      },
+      {
+        time: "07",
+        title: "Internal Debrief",
+        event: "The team returns to Gwynplaine's Children. Kant recognizes Reggie's distress, Flint questions the circumstances, and preparations for immediate departure continue."
+      },
+      {
+        time: "08",
+        title: "Southern Route Confirmed",
+        event: "Quill briefs the expedition on Maglandak and the Baphomet remnant. Paradallax leaves Nebuch and proceeds south."
+      }
+    ],
+    notableFindings: [
+      {
+        title: "Boris Spatial Access Keys",
+        description:
+          "Two compact access devices recovered from Boris produced measurable anomalous signatures.",
+        bullets: [
+          "One provided entry to a marble bathing complex whose internal dimensions cannot be reconciled with the external volume of the transport enclosure.",
+          "The second provided access to a concealed biological holding area containing multiple large organisms.",
+          "The keys appear to function less as mechanical access devices and more as authentication anchors for spatially displaced environments.",
+          "Further examination was not performed prior to departure."
+        ]
+      },
+      {
+        title: "Exotic Biological Inventory",
+        description: "Confirmed inventory included:",
+        bullets: [
+          "one griffin-class embryo",
+          "one drake-class embryo",
+          "one juvenile displacer organism",
+          "one juvenile owlbear",
+          "additional captive fauna of lesser operational interest"
+        ],
+        notes: [
+          "The juvenile owlbear was recovered by Paradallax personnel.",
+          "Other surviving organisms were released from confinement."
+        ]
+      }
+    ],
+    anomalousFindings: [
+      {
+        title: "Maglandak",
+        description:
+          "Archival analysis conducted by Chief Science Officer Quill identifies Maglandak as a potentially significant anomalous zone along the expedition's southern route. Reports consistently reference:",
+        bullets: [
+          "stone formations exhibiting rhythmic movement comparable to respiration",
+          "voices or echoes without identifiable speakers",
+          "a pristine scale-like artifact displaying active chromatic variation"
+        ],
+        notes: [
+          "The reliability and common origin of these reports remain undetermined.",
+          "Maglandak has been marked for potential field investigation."
+        ]
+      },
+      {
+        title: "Baphomet Remnant",
+        description:
+          "Records also indicate the existence of a surviving Baphomet-associated structure, entity, or technological remnant farther along the same route.",
+        notes: [
+          "Available information is insufficient for classification.",
+          "Investigation remains pending."
+        ]
+      },
+      {
+        title: "Necrobiological Regeneration Trial",
+        description:
+          "Gabriel and Onix performed a limited test of a standard regenerative effect against Onix's necrobiological condition.",
+        resultHeader: "Observed result:",
+        bullets: [
+          "no destructive interaction",
+          "no physiological restoration",
+          "no measurable improvement in vitality"
+        ],
+        notes: [
+          "The test establishes that incompatibility does not necessarily imply toxicity.",
+          "Further study is authorized when appropriate."
+        ]
+      }
+    ],
+    incidents: [
+      {
+        title: "RED ROAD FATALITY — BORIS",
+        severity: "Critical / Fatal",
+        details: [
+          "Boris initiated physical contact while attempting to forcibly pull Chief Security Marshal Reggie into his transport enclosure.",
+          "Reggie responded immediately.",
+          "The engagement resulted in catastrophic cervical trauma to Boris and instantaneous death.",
+          "No evidence indicates that the fatal outcome was planned prior to contact.",
+          "The body was removed from the site to delay discovery of the acquisition operation."
+        ]
+      }
+    ],
+    personnelNotes: [
+      {
+        name: "Chief Security Marshal Reggie",
+        note: [
+          "Reggie demonstrated significant post-incident distress following the death of Boris.",
+          "Personnel familiar with his prior decision-making also observed a noticeable reduction in his reluctance toward extralegal action during planning for the acquisition. His stated motivations combined concern for the captive organism with a strong personal desire to retain it as a long-term companion.",
+          "These motives are not considered mutually exclusive.",
+          "No immediate restriction of duties was imposed."
+        ]
+      },
+      {
+        name: "Chief Engineering Officer Kant Vixit",
+        note: [
+          "Kant was the first member of the wider expedition to recognize Reggie's altered demeanor after the operation.",
+          "He later provided direct reassurance that the fatal encounter constituted self-defense according to the version of events disclosed to him."
+        ]
+      },
+      {
+        name: "Chief Operations Officer Flint Duskbourne",
+        note: [
+          "Flint displayed visible concern regarding the returning team's explanation and the timing of the operation.",
+          "He nevertheless prioritized securing Gwynplaine's Children and removing expedition personnel from Nebuch before local circumstances could evolve further.",
+          "This decision substantially improved schedule adherence."
+        ]
+      }
+    ],
+    complianceNotes: [
+      "Special Acquisition Classification: Retroactively applicable.",
+      "The term \"recovery\" in this record describes the physical movement of biological assets and does not constitute a legal determination regarding ownership.",
+      "Paradallax Initiative does not endorse trafficking in sentient, near-sentient, endangered, anomalous, weaponized, emotionally compelling, or unusually marketable organisms unless all appropriate internal acquisition procedures have been followed.",
+      "At the time of this operation, several such procedures had not yet been written.",
+      "The liberation of Boris's remaining inventory was not part of the original acquisition objective but is considered an acceptable mitigation measure.",
+      "Removal of the deceased broker from the incident location was conducted for operational-security purposes and should not be interpreted as evidence of procedural anxiety."
+    ],
+    captainsLog: {
+      author: "Chief Security Marshal Reggie",
+      text: [
+        "I wanted the cub.",
+        "That's the detail the clean version of this will never make less important.",
+        "Boris kept those creatures in cages and was asking enough money for them that nobody buying one was going to think of it as anything except property. I decided that made taking one acceptable. Maybe it did. Maybe I just wanted a reason that sounded better than wanting it.",
+        "He grabbed me first.",
+        "I remember that clearly.",
+        "I also remember how little force it took after that.",
+        "Kant says it was self-defense. Cass says the same thing in more professional language. Flint didn't say much at all.",
+        "The cub is alive.",
+        "The others aren't in cages anymore.",
+        "Boris is dead.",
+        "All three of those things can be true at once."
+      ]
+    },
+    finalAssessment: {
+      verdict: "OBJECTIVE ACHIEVED",
+      description: [
+        "Priority organism successfully recovered.",
+        "Additional captive organisms released.",
+        "Exotic spatial-access technology identified.",
+        "No Paradallax personnel lost.",
+        "Nebuch operations concluded ahead of local investigative response.",
+        "Expedition successfully resumed its southern route.",
+        "Next prospective investigation: Maglandak."
+      ],
+      conclusion:
+        "Axiom II — Knowledge belongs to those willing to seek it. // Paradallax Initiative notes that the Axiom contains no explicit procurement guidance."
+    }
+  },
   {
     id: "PD-0103",
     slug: "pd-0103",

@@ -269,7 +269,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className={`grid grid-cols-1 ${record.notableFindings.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"} gap-6`}>
           {record.notableFindings.map((finding, idx) => (
             <div
               key={idx}
@@ -293,6 +293,13 @@ export default async function OperationalRecordPage({ params }: PageProps) {
                       </li>
                     ))}
                   </ul>
+                )}
+                {finding.notes && finding.notes.length > 0 && (
+                  <div className="space-y-1.5 pt-2 border-t border-white/10 text-xs font-sans text-slate-300">
+                    {finding.notes.map((note, nIdx) => (
+                      <p key={nIdx}>{note}</p>
+                    ))}
+                  </div>
                 )}
               </div>
             </div>
@@ -388,9 +395,17 @@ export default async function OperationalRecordPage({ params }: PageProps) {
               <span className="font-orbitron font-bold text-sm text-cyan-accent block">
                 {pn.name}
               </span>
-              <p className="text-xs text-slate-300 font-sans leading-relaxed">
-                {pn.note}
-              </p>
+              {Array.isArray(pn.note) ? (
+                <div className="space-y-2 text-xs text-slate-300 font-sans leading-relaxed">
+                  {pn.note.map((p, pIdx) => (
+                    <p key={pIdx}>{p}</p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-xs text-slate-300 font-sans leading-relaxed whitespace-pre-line">
+                  {pn.note}
+                </p>
+              )}
             </div>
           ))}
         </div>
@@ -444,10 +459,43 @@ export default async function OperationalRecordPage({ params }: PageProps) {
           </h2>
         </div>
 
-        <div className="p-8 rounded-3xl bg-space-darkest/90 border border-purple-accent/30 space-y-4 text-slate-300 text-xs sm:text-sm leading-relaxed font-sans">
-          {record.anomalousFindings.map((finding, idx) => (
-            <p key={idx}>{finding}</p>
-          ))}
+        <div className="p-8 rounded-3xl bg-space-darkest/90 border border-purple-accent/30 space-y-6 text-slate-300 text-xs sm:text-sm leading-relaxed font-sans">
+          {record.anomalousFindings.map((finding, idx) => {
+            if (typeof finding === "string") {
+              return <p key={idx}>{finding}</p>;
+            }
+            return (
+              <div
+                key={idx}
+                className="space-y-3 pt-6 first:pt-0 border-t first:border-t-0 border-purple-500/20"
+              >
+                <h3 className="font-orbitron font-bold text-base text-purple-300">
+                  {finding.title}
+                </h3>
+                {finding.description && <p>{finding.description}</p>}
+                {finding.resultHeader && (
+                  <p className="font-bold text-slate-200">{finding.resultHeader}</p>
+                )}
+                {finding.bullets && finding.bullets.length > 0 && (
+                  <ul className="space-y-1.5 pl-4 text-slate-300">
+                    {finding.bullets.map((b, bIdx) => (
+                      <li key={bIdx} className="flex items-start space-x-2">
+                        <span className="text-purple-400 font-bold">•</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {finding.notes && finding.notes.length > 0 && (
+                  <div className="space-y-2 pt-1">
+                    {finding.notes.map((note, nIdx) => (
+                      <p key={nIdx}>{note}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -480,9 +528,17 @@ export default async function OperationalRecordPage({ params }: PageProps) {
         <h2 className="font-orbitron font-extrabold text-3xl sm:text-4xl text-white text-gradient-cyan">
           {record.finalAssessment.verdict}
         </h2>
-        <p className="text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed font-sans font-light">
-          {record.finalAssessment.description}
-        </p>
+        {Array.isArray(record.finalAssessment.description) ? (
+          <div className="space-y-2 text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed font-sans font-light">
+            {record.finalAssessment.description.map((line, idx) => (
+              <p key={idx}>{line}</p>
+            ))}
+          </div>
+        ) : (
+          <p className="text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed font-sans font-light whitespace-pre-line">
+            {record.finalAssessment.description}
+          </p>
+        )}
         <div className="inline-block px-4 py-2 rounded-lg bg-cyan-accent/15 border border-cyan-accent/40 font-orbitron font-bold text-sm text-cyan-accent tracking-widest">
           {record.finalAssessment.conclusion}
         </div>

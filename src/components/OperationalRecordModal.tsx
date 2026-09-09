@@ -16,6 +16,7 @@ import {
   Compass,
   Wrench,
   Globe,
+  Sparkles,
 } from "lucide-react";
 import { soundEngine } from "@/utils/soundEngine";
 import { OperationalRecord } from "@/data/operationsData";
@@ -152,6 +153,29 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
               </div>
             )}
 
+            {/* Anomalous Findings Snapshot */}
+            {record.anomalousFindings && record.anomalousFindings.length > 0 && (
+              <div>
+                <h3 className="font-mono text-xs text-purple-400 tracking-widest uppercase mb-2 flex items-center">
+                  <Sparkles className="w-4 h-4 mr-2" /> Anomalous & Scientific Findings
+                </h3>
+                <div className="space-y-2">
+                  {record.anomalousFindings.map((finding, idx) => (
+                    <div key={idx} className="p-3 bg-slate-950/60 border border-purple-500/20 rounded-lg text-xs space-y-1">
+                      {typeof finding === "string" ? (
+                        <p className="text-slate-300">{finding}</p>
+                      ) : (
+                        <>
+                          <span className="font-bold text-purple-300 block">{finding.title}</span>
+                          {finding.description && <p className="text-slate-300">{finding.description}</p>}
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Incident Assessments */}
             {record.incidents && record.incidents.length > 0 && (
               <div className="p-4 rounded-xl bg-slate-950/80 border border-red-500/30 space-y-3">
@@ -234,7 +258,9 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                 {record.finalAssessment.verdict}
               </p>
               <p className="text-xs text-slate-300 max-w-2xl mx-auto">
-                {record.finalAssessment.description}
+                {Array.isArray(record.finalAssessment.description)
+                  ? record.finalAssessment.description.join(" ")
+                  : record.finalAssessment.description}
               </p>
             </div>
           </div>
