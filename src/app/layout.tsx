@@ -26,6 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://paradallax.space"),
   title: "Paradallax Initiative >> Beyond Distance.",
   description:
     "Paradallax Initiative provides advanced interstellar transportation, scientific exploration, frontier logistics, engineering, and security throughout known space.",
@@ -36,6 +37,41 @@ export const metadata: Metadata = {
     "Frontier Logistics",
     "Sci-Fi Megacorporation",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://paradallax.space",
+    siteName: "Paradallax Initiative",
+    title: "Paradallax Initiative >> Beyond Distance.",
+    description:
+      "Paradallax Initiative provides advanced interstellar transportation, scientific exploration, frontier logistics, engineering, and security throughout known space.",
+    images: [
+      {
+        url: "/media/hero/hero-parallax-transit.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Paradallax Initiative Interstellar Transit Gateway",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paradallax Initiative >> Beyond Distance.",
+    description:
+      "Paradallax Initiative provides advanced interstellar transportation, scientific exploration, frontier logistics, engineering, and security throughout known space.",
+    images: ["/media/hero/hero-parallax-transit.jpg"],
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
