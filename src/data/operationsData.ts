@@ -46,6 +46,7 @@ export interface OperationalRecord {
     | "RESTRICTED"
     | "UNDER REVIEW"
     | "ACTIVE"
+    | "TRANSIT CONTINUING"
     | "MISSION SUCCESSFUL"
     | "OBJECTIVE ACHIEVED"
     | "COMPLETE — RESTRICTED INTERNAL DISTRIBUTION";
@@ -80,6 +81,341 @@ export interface OperationalRecord {
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0105",
+    slug: "pd-0105",
+    title: "Cargo Without Manifest",
+    status: "TRANSIT CONTINUING",
+    location: "Southern Transit Corridor — Nebuch to Star Shard Approach",
+    detailedLocation:
+      "Southern Transit Corridor — Nebuch to Star Shard Approach",
+    type: "LOGISTICS",
+    classification: "LOGISTICS ARCHIVE // TRANSIT CONTINUING",
+    summary:
+      "Following departure from Nebuch toward the Star Shard, Paradallax personnel confront an undeclared juvenile owlbear concealed by Chief Security Marshal Reggie after a fatal encounter with external broker Boris. The expedition stabilizes the dependent organism 'Mouse', recovers a transformation-lattice rook and an unstable energetic amplification core from secured puzzle modules, and integrates newly attached specialist Gabriel.",
+    metaDescription:
+      "Paradallax Initiative Operational Record PD-0105: An overland logistics transit toward the Star Shard uncovers undeclared xenofauna 'Mouse', recovers two secured artifacts, and integrates specialist Gabriel.",
+    fullMissionSummary: [
+      "Following departure from Nebuch at first light, Paradallax Initiative personnel began an estimated six-to-seven-day southbound surface transit toward the Star Shard. Chief Operations Officer Flint Duskbourne assumed direct control of the expedition hauler and its STEEL traction platform while the remainder of the team used the extended travel period for research, training, technical work and personnel integration.",
+      "Gabriel, recently attached to the expedition, was incorporated into normal operations without significant disruption. Quill Varon continued refining simultaneous low-output field manipulation techniques while periodically deploying the ABU reconnaissance platform ahead of the convoy. Fenn and Cass devoted transit hours to two secured puzzle-containment modules whose internal locking systems had previously resisted conventional access. Kant supplied intermittent technical corrections with his customary preference for being helpful only when a problem had become sufficiently interesting.",
+      "The convoy's first overnight halt produced a more complicated personnel issue. During an otherwise successful field-provisioning exercise, discussion concerning legal authority, individual ethics and the Initiative's previous acquisition practices became increasingly direct. Flint maintained that operational personnel remain subject to the laws of the territories through which the Initiative operates, regardless of disagreements with those laws. Fenn and Cass noted several historical inconsistencies in the organization's practical application of that principle.",
+      "Flint clarified that discretionary interpretation would cease where illegal activity threatened Initiative personnel or the Children. No formal disciplinary action resulted from the discussion, although the exchange established a substantially less theoretical context when Reggie later requested a private meeting with Gabriel.",
+      "Reggie disclosed that he had removed a juvenile owlbear from the custody of an outside handler without authorization. During the incident, the handler had assaulted him and subsequently died in the resulting struggle. Reggie had concealed both the animal and the circumstances of its acquisition, primarily out of fear regarding the response of senior personnel and, by his own admission, his father.",
+      "Gabriel advised disclosure rather than continued concealment and accompanied Reggie during his subsequent confession to Flint. Flint's response was severe but measured. He expressed both anger and disappointment, reiterated the legal and operational implications of the incident, and deferred a final decision until the actual condition of the animal could be established.",
+      "The following morning demonstrated why complete cargo declarations remain recommended.",
+      "Reggie destroyed the portable containment ring in which the organism had been stored. The first material recovered from the collapsed storage field was the partially consumed body of the deceased handler, subsequently identified as Boris. The juvenile owlbear emerged immediately afterward.",
+      "Onix implemented an expedited biological-material reclamation procedure on the remains before objections could develop into a formal disposal plan. The resulting reduction in evidence volume was operationally efficient and has been logged separately for compliance purposes.",
+      "The terrified animal immediately sought cover beneath the expedition hauler. Reggie attempted to fit it with a newly manufactured restraint collar, provoking a defensive bite and escalating the animal's distress. Cass attempted redirection with an improvised enrichment object while Flint temporarily immobilized the creature using a command-field interface. Reggie then attempted physical restraint.",
+      "Fenn intervened after establishing direct empathic communication with the organism and determined that its behavior was driven primarily by fear, hunger and unfamiliarity rather than aggression. She instructed personnel to remove the collar, reduce direct pressure and allow the juvenile to retreat.",
+      "The revised procedure produced significantly better results.",
+      "Over the following days Reggie supplied the animal with food without forcing further contact. Gabriel assisted with behavioral reinforcement, while Kant provided occasional technical guidance regarding approach and containment strategy. The owlbear gradually stopped displaying threat behavior, began voluntarily following the convoy and eventually rode atop the expedition hauler. Reggie designated the specimen Mouse.",
+      "No formal domestication classification has yet been approved.",
+      "Concurrent with the xenobiological incident, Fenn and Cass completed access procedures on both secured puzzle modules.",
+      "The first contained a rook-shaped object built around an active transformation lattice. Preliminary scans indicate that the object can alter or reconfigure material states through a mechanism not yet fully understood.",
+      "The second contained a bright-blue octagonal containment vessel surrounding an unstable high-density energetic core. Fenn's analysis suggests that the device can significantly amplify directed anomalous output—potentially approaching a twofold increase under ideal conditions—but repeated use may produce energetic backlash, structural failure or containment loss.",
+      "For once, personnel elected not to immediately test this hypothesis.",
+      "The device was secured for later study.",
+      "During the remaining transit, Quill briefed Gabriel on his specialization in adaptive field techniques and his practice of reproducing observed anomalous processes. He also reviewed an earlier expedition in which an apparently ordinary surface collapse deposited the team into the subterranean region known as the Underdark. Gabriel continued documenting Initiative procedures and confirmed his intention to remain with the expedition.",
+      "Route planning was subsequently reviewed. The team elected not to divert toward the Remnant. Priority remains the Star Shard, with the Dragon Scale Ruins designated as the next intended operation once the Star Shard objective permits reassignment.",
+      "At record close, the convoy remained southbound.",
+      "Mouse remained aboard."
+    ],
+    personnelList: [
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer",
+        duty: "Expedition command, surface transit, operational discipline"
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations",
+        duty: "Communications, behavioral mediation, artifact analysis support"
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions",
+        duty: "Secure-object access, artifact recovery and technical problem solving"
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer",
+        duty: "Anomalous systems research, remote reconnaissance, field analysis"
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer",
+        duty: "Vehicle support, systems optimization, technical intervention"
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research",
+        duty: "Biological assessment, specimen handling, organic-material reclamation"
+      },
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal",
+        duty: "Convoy security and temporary xenofauna custody"
+      }
+    ],
+    associatedPersonnel: [
+      {
+        name: "Gabriel",
+        role: "Attached Specialist / Expedition Associate",
+        duty: "Attached specialist and newly integrated expeditionary associate. Provided field provisioning, ethical counsel and personnel mediation throughout the transit."
+      },
+      {
+        name: "“Mouse”",
+        role: "Xenobiological Asset / Provisional Dependent",
+        duty: "Juvenile owlbear-class organism. Initially undocumented cargo; later provisionally tolerated as an expeditionary dependent pending behavioral assessment."
+      }
+    ],
+    timeline: [
+      {
+        time: "T+00",
+        title: "Departure from Nebuch",
+        event: "Paradallax personnel begin the multi-day southbound transit. Gabriel formally joins the active expedition complement. Flint assumes control of the expedition hauler."
+      },
+      {
+        time: "T+01",
+        title: "Transit Research Cycle",
+        event: "Quill conducts field-control exercises. Fenn and Cass begin systematic access work on two secured puzzle-containment modules. ABU reconnaissance identifies local wildlife and a distant occupied campsite."
+      },
+      {
+        time: "T+01",
+        title: "Personnel Ethics Dispute",
+        event: "An evening discussion regarding territorial law, acquisition practices and acceptable operational discretion escalates into a broader internal debate. Flint establishes stricter expectations regarding conduct that could endanger personnel or the Children."
+      },
+      {
+        time: "T+01",
+        title: "Security Disclosure",
+        event: "Reggie privately informs Gabriel of the unauthorized acquisition of a juvenile owlbear and the death of its previous handler. Gabriel facilitates disclosure to Flint."
+      },
+      {
+        time: "T+02",
+        title: "Containment Failure / Boris Recovery",
+        event: "Reggie destroys the portable storage device containing the animal. Boris's partially consumed remains are recovered immediately before the juvenile organism exits containment. Onix performs rapid organic reclamation."
+      },
+      {
+        time: "T+02",
+        title: "Xenofauna Handling Incident",
+        event: "An attempted collaring and restraint procedure causes the juvenile to panic. Fenn identifies fear and hunger as the primary behavioral drivers and establishes a lower-pressure handling protocol."
+      },
+      {
+        time: "T+03–06",
+        title: "Behavioral Stabilization",
+        event: "Reggie feeds the juvenile consistently over several days. The specimen gradually accepts the convoy, follows personnel voluntarily and begins riding on the expedition hauler. The designation “Mouse” becomes operationally permanent despite the absence of committee approval."
+      },
+      {
+        time: "T+Transit",
+        title: "Artifact Access & Route Confirmation",
+        event: "Fenn and Cass open both puzzle modules, recovering a transformation-lattice rook and an unstable energetic amplification core. The expedition elects to continue toward the Star Shard rather than divert to the Remnant, with the Dragon Scale Ruins scheduled afterward."
+      }
+    ],
+    notableFindings: [
+      {
+        title: "Transformation-Lattice Rook",
+        description: "A rook-shaped artifact recovered from the first secured puzzle module.",
+        bullets: [
+          "Initial analysis indicates an active transmutation or matter-reconfiguration field.",
+          "Its exact purpose, control architecture and operational limits remain unknown."
+        ],
+        notes: [
+          "Disposition: Secured for scientific analysis."
+        ]
+      },
+      {
+        title: "Octagonal Energetic Amplification Core",
+        description:
+          "A high-output anomalous power source housed within a bright-blue octagonal transparent containment structure.",
+        bullets: [
+          "Preliminary analysis indicates that coupling the core to compatible field systems may produce approximately double their normal offensive energy output.",
+          "Identified risk: energetic backlash",
+          "Identified risk: containment degradation",
+          "Identified risk: structural fracture",
+          "Identified risk: uncontrolled discharge",
+          "Identified risk: loss of the core",
+          "Identified risk: loss of whichever employee insisted on proving the previous five concerns were exaggerated"
+        ],
+        notes: [
+          "No live test was authorized during transit.",
+          "Disposition: Secured."
+        ]
+      },
+      {
+        title: "Xenobiological Specimen “Mouse”",
+        description: "Juvenile owlbear-class organism.",
+        bullets: [
+          "extreme fear response",
+          "defensive aggression when physically restrained",
+          "strong food motivation",
+          "rapid behavioral adaptation",
+          "willingness to remain near familiar personnel once threat pressure decreased",
+          "The specimen demonstrated significant improvement after coercive handling was replaced with voluntary conditioning.",
+          "By the end of the observation period, Mouse tolerated close proximity to the expedition, followed the convoy voluntarily and regularly occupied the upper cargo surface of the hauler."
+        ],
+        notes: [
+          "Current Classification: Provisional expeditionary dependent",
+          "Formal Ownership Status: Unresolved",
+          "Security Marshal's Opinion: Presumed obvious",
+          "Compliance Department's Opinion: Pending"
+        ]
+      }
+    ],
+    incidents: [
+      {
+        title: "Unauthorized Xenofauna Acquisition",
+        severity: "Elevated // Extralegal Acquisition",
+        details: [
+          "Chief Security Marshal Reggie acknowledged removing a juvenile owlbear from an external handler without authorization.",
+          "The handler, Boris, died during a physical confrontation associated with the acquisition. Available testimony indicates Boris initiated the assault, after which the confrontation escalated unintentionally.",
+          "The event had not previously been reported.",
+          "Internal review remains warranted."
+        ]
+      },
+      {
+        title: "Boris Recovery",
+        severity: "Critical // Irregular Remains Disposal",
+        details: [
+          "The remains of Boris were recovered from the same portable containment space used to conceal the juvenile organism.",
+          "The condition of the remains indicates postmortem feeding by the specimen during confinement.",
+          "Onix subsequently processed the remains through a xenobiological biomass-reclamation capability before a conventional forensic or burial procedure could be established.",
+          "This decision significantly simplified transport requirements.",
+          "It did not simplify the report."
+        ]
+      },
+      {
+        title: "Handling Injury",
+        severity: "Minor // Defensive Contact",
+        details: [
+          "Reggie sustained a minor hand injury when Mouse bit him during an attempted collaring procedure.",
+          "No lasting impairment was observed.",
+          "The animal's response has been classified as defensive rather than predatory."
+        ]
+      }
+    ],
+    propertyDamage: {
+      items: [
+        "Single-user portable dimensional containment ring destroyed during extraction.",
+        "Fabricated restraint collar damaged and removed following adverse behavioral response.",
+        "Expedition hauler upper cargo deck adapted for ongoing xenofauna transit."
+      ],
+      outcome:
+        "Dimensional containment hardware total loss; hauler propulsion and traction systems fully operational."
+    },
+    personnelNotes: [
+      {
+        name: "Chief Security Marshal Reggie",
+        note: [
+          "The Security Marshal's unusually withdrawn behavior during departure from Nebuch was subsequently attributed to his concealment of the Mouse incident.",
+          "Following disclosure, Reggie displayed substantial concern regarding the consequences of his actions but accepted responsibility for the animal's welfare.",
+          "His initial handling strategy relied excessively on dominance and physical control. Once directed toward a patient conditioning approach, he demonstrated sustained commitment and successfully established a measurable degree of trust with the animal.",
+          "Further review of both the original acquisition and subsequent concealment is justified.",
+          "So is recognition that Mouse is still alive largely because Reggie remained committed to caring for it.",
+          "Both statements may be true simultaneously."
+        ]
+      },
+      {
+        name: "Gabriel",
+        note: [
+          "Gabriel integrated rapidly into Initiative operations and demonstrated useful capability in field provisioning, interpersonal mediation and ethical consultation.",
+          "His intervention was instrumental in persuading Reggie to disclose the concealed incident before it created a more significant operational problem.",
+          "He has continued documenting the Initiative's activities despite receiving increasingly comprehensive evidence regarding what those activities actually involve.",
+          "Retention prospects appear favorable."
+        ]
+      },
+      {
+        name: "Chief Operations Officer Flint Duskbourne",
+        note: [
+          "Flint maintained command authority throughout the transit and made his expectations regarding compliance unusually explicit.",
+          "His handling of Reggie's confession balanced personal anger, operational discipline and recognition that the underlying circumstances were more complex than the initial offense suggested.",
+          "The incident appears likely to influence future enforcement standards within the expedition."
+        ]
+      },
+      {
+        name: "Vice President Fenn",
+        note: [
+          "Fenn's successful communication with Mouse prevented further escalation and materially improved the specimen's welfare and long-term manageability.",
+          "Her contribution reinforces the continuing corporate observation that communication frequently resolves problems after containment, coercion and physical intervention have already made them worse."
+        ]
+      }
+    ],
+    diplomaticConsequences: [
+      "Extralegal acquisition of the juvenile organism within Nebuch jurisdiction remains an unresolved liability, mitigated operationally by the total consumption and expedited reclamation of external broker Boris's remains.",
+      "Flint Duskbourne established strict command boundaries prohibiting external territorial law violations that could jeopardize expedition personnel or Gwynplaine's Children.",
+      "Expedition opted against diverting toward the Remnant, preserving diplomatic and operational focus exclusively on the Star Shard and subsequent Dragon Scale Ruins."
+    ],
+    complianceNotes: [
+      "Undocumented organisms should not be transported inside pocket-containment devices.",
+      "Human remains should not be stored alongside undocumented organisms.",
+      "Human remains should ideally be declared before being consumed by senior research staff.",
+      "Newly acquired xenofauna should undergo behavioral assessment before application of restraints.",
+      "Unstable energetic amplification devices should remain inactive during overland transport.",
+      "The fact that all personnel ultimately arrived at these conclusions independently is considered encouraging.",
+      "A review of field cargo declaration procedures has been recommended."
+    ],
+    anomalousFindings: [
+      {
+        title: "Active Transformation Lattice",
+        description: "A rook-shaped artifact recovered from the first secured puzzle module.",
+        bullets: [
+          "Initial analysis indicates an active transmutation or matter-reconfiguration field capable of altering material states.",
+          "Exact purpose, control architecture, and operational limits remain unknown.",
+          "Device secured for specialized laboratory evaluation."
+        ]
+      },
+      {
+        title: "Octagonal Energetic Amplification Core",
+        description:
+          "A high-output anomalous power source housed within a bright-blue octagonal transparent containment structure.",
+        bullets: [
+          "Preliminary analysis suggests potential twofold amplification of directed anomalous output under ideal conditions.",
+          "Significant operational hazards include energetic backlash, structural failure, containment loss, and catastrophic discharge.",
+          "Live firing deferred during overland transit."
+        ]
+      },
+      {
+        title: "Adaptive Field Systems & Subterranean Precedents",
+        description:
+          "Chief Science Officer Quill Varon briefed Gabriel on field-control techniques and adaptive reproduction of observed anomalous phenomena.",
+        notes: [
+          "Analysis incorporates precedents from prior involuntary surface collapse into the Underdark.",
+          "Expedition reaffirmed priority routing toward the Star Shard, with Dragon Scale Ruins scheduled afterward."
+        ]
+      }
+    ],
+    captainsLog: {
+      author: "Flint Duskbourne, Chief Operations Officer",
+      text: [
+        "We spent most of the week moving south.",
+        "That should have made this one of the simpler operations.",
+        "Instead, I learned that my Security Marshal had been carrying a stolen owlbear and a dead man in a ring, Onix disposed of the dead man before anyone had finished deciding what to do with him, Fenn negotiated with the owlbear more successfully than any of us did with each other, and Cass opened a container holding something capable of making our weapons substantially more dangerous.",
+        "We made the correct decision and did not test it.",
+        "I want that entered into the record because it may be the most improbable part of the entire journey.",
+        "Reggie told the truth eventually. Mouse appears to trust him.",
+        "For now, that will have to be enough.",
+        "The Star Shard is still ahead of us."
+      ]
+    },
+    finalAssessment: {
+      verdict: "PARTIAL SUCCESS",
+      description: [
+        "Primary transit remains incomplete, with the expedition continuing south toward the Star Shard at record close.",
+        "Secondary operational results were substantial:",
+        "• Gabriel successfully integrated into the expedition.",
+        "• A concealed personnel incident was disclosed before further escalation.",
+        "• Juvenile xenofauna Mouse was stabilized without permanent restraint.",
+        "• Two secured artifact modules were successfully opened.",
+        "• A transformation-lattice object was recovered.",
+        "• A potentially high-value energetic amplification core was identified and secured.",
+        "• The Remnant diversion was rejected in favor of maintaining Star Shard priority.",
+        "• The Dragon Scale Ruins were designated as the intended subsequent destination.",
+        "No personnel suffered injuries beyond minor severity.",
+        "The convoy remains operational.",
+        "The cargo manifest is now believed to be more accurate."
+      ],
+      conclusion: "PARADALLAX INITIATIVE // WE GO FORWARD."
+    }
+  },
   {
     id: "PD-0104",
     slug: "pd-0104",

@@ -109,7 +109,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
         <div className={`inline-flex items-center space-x-2 px-3 py-1 rounded bg-space-darkest/90 border font-mono text-xs tracking-widest uppercase ${
           isClassified ? "border-purple-500/40 text-purple-300" : "border-cyan-accent/30 text-cyan-accent"
         }`}>
-          <span>CLASSIFIED REPORT // {record.id}</span>
+          <span>{isClassified ? "CLASSIFIED REPORT" : "OPERATIONAL RECORD"} // {record.id}</span>
         </div>
       </div>
 
