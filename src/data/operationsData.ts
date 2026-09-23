@@ -49,7 +49,8 @@ export interface OperationalRecord {
     | "TRANSIT CONTINUING"
     | "MISSION SUCCESSFUL"
     | "OBJECTIVE ACHIEVED"
-    | "COMPLETE — RESTRICTED INTERNAL DISTRIBUTION";
+    | "COMPLETE — RESTRICTED INTERNAL DISTRIBUTION"
+    | "ONGOING";
   statusBadge?: string;
   location: string;
   detailedLocation?: string;
@@ -81,6 +82,378 @@ export interface OperationalRecord {
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0106",
+    slug: "pd-0106",
+    title: "The Tower Beyond the Veil",
+    status: "ONGOING",
+    statusBadge: "ONGOING",
+    location: "Barren Exclusion Field / Emergent Tower Complex",
+    detailedLocation: "Barren Exclusion Field / Emergent Tower Complex",
+    type: "EXPLORATION",
+    classification: "EXPLORATION ARCHIVE // ONGOING",
+    classificationFootnote:
+      "* Investigation continues. Expedition personnel remain dispersed within active tower complex.",
+    summary:
+      "Reconnaissance of an artificial biological exclusion zone exposed a previously concealed tower complex. Following entry, Paradallax personnel were dispersed throughout a network of recursive rooms, dimensional transit systems, anomalous containment spaces, and constructed realities.",
+    metaDescription:
+      "Paradallax Initiative Operational Record PD-0106: Reconnaissance of an artificial exclusion zone exposes an emergent tower complex, dispersing personnel into recursive and dimensional environments.",
+    fullMissionSummary: [
+      "Following five days of overland transit, Paradallax personnel suspended convoy operations upon reaching a region whose biological boundary displayed statistically improbable precision. Established tree cover terminated along an effectively geometric line, beyond which extended an apparently ordinary field devoid of any visible animal activity.",
+      "The transport platform was left outside the zone while a reconnaissance team continued on foot and by aerial observation.",
+      "ABU conducted an initial high-altitude survey and identified a single isolated concentration of plant growth approximately one kilometer inside the field. Environmental measurements collected during the approach produced increasingly anomalous results. Vegetation height remained exceptionally uniform, ambient temperature showed negligible variation, and no insects, birds, terrestrial fauna, or comparable biological activity were observed.",
+      "Vice President Fenn's spectral survey subsequently detected hundreds of silver-gray energetic filaments suspended throughout the area. The structures drifted through local space without corresponding particulate matter or conventional electromagnetic origin.",
+      "Chief Security Marshal Reggie independently reported a brief tactile sensation comparable to passing through a thin membrane despite environmental sensors detecting no physical obstruction.",
+      "The team proceeded to the isolated vegetation cluster under aerial overwatch from Director Cass.",
+      "At its center personnel discovered a shallow crater containing an extreme localized gravitational distortion. Initial testing was conducted using expendable food material, a projectile, and a directed energy discharge. Each object was immediately pulled toward the center of the depression with force greatly exceeding local gravity.",
+      "ABU was subsequently directed into the affected zone and became immobilized.",
+      "Fenn initiated a field-disruption procedure against the energetic convergence point.",
+      "The result was immediate.",
+      "The suspended filaments fractured outward in a broad energetic shockwave. Local gravity returned to baseline. The vegetation surrounding the crater simultaneously ceased to exist rather than collapsing, burning, or otherwise undergoing conventional destruction.",
+      "Seconds later, a previously absent tower-scale structure became visible southeast of the crater.",
+      "Paradallax considers the sequence strong evidence that the field, vegetation cluster, gravitational anomaly, and concealed structure formed components of a unified spatial masking system.",
+      "Personnel advanced toward the newly exposed facility.",
+      "Two humanoid sentries stationed at the entrance acknowledged the team in perfect synchronization and directed personnel through the open doors. Fenn identified both entities as projected or otherwise nonphysical constructs.",
+      "Upon full team entry, the doors sealed without external intervention.",
+      "An illuminated staircase activated shortly thereafter. Contact with the structure initiated uncontrolled point-to-point relocation, scattering Paradallax personnel throughout separate regions of the tower.",
+      "The facility has subsequently demonstrated architecture inconsistent with its apparent external dimensions, autonomous environmental reconstruction, interdimensional access, biological containment, remote observation capabilities, and repeated use of structured problem-solving environments.",
+      "Whether these spaces constitute security systems, experiments, behavioral evaluations, entertainment, or some combination thereof remains undetermined.",
+      "Communication and physical reunification of the expedition remain incomplete."
+    ],
+    personnelList: [
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer",
+        duty: "Expedition command; direct physical investigation and interaction testing in recursive residential chamber."
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer",
+        duty: "Scientific analysis; documentation of anomalous containment chests and Draconic symbology in storage gallery."
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations",
+        duty: "Spectral filament detection, disruption of external concealment field, reality-overlap environmental monitoring."
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions",
+        duty: "Aerial reconnaissance overwatch, storage-volume anomaly exploration, transit mechanism recovery."
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer",
+        duty: "Engineering assessment of spatial relocation mechanics and environmental reset architecture."
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research",
+        duty: "Xenobiological analysis; progressive engagement with autonomous strategic chessboard puzzle."
+      },
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal",
+        duty: "Membrane anomaly detection, dimensional transit sequence navigation, recovery of spiked biological object."
+      },
+      {
+        name: "Gabriel",
+        role: "Attached Field Operative",
+        duty: "Attached field operations, reality-overlap environmental observation, structural barrier durability testing."
+      },
+      {
+        name: "Toast",
+        role: "Caravan Logistics Affiliate",
+        duty: "Caravan logistics affiliate; observed asleep within the reality-overlap anomaly."
+      },
+      {
+        name: "ABU",
+        role: "Remote Reconnaissance Asset",
+        duty: "Assigned to Chief Science Officer Varon; high-altitude aerial survey, crater reconnaissance, expendable probe deployment."
+      }
+    ],
+    timeline: [
+      {
+        time: "01",
+        title: "EXCLUSION BOUNDARY IDENTIFIED",
+        event:
+          "Paradallax personnel encounter an unnaturally precise termination of local tree cover and enter a uniform biological exclusion zone lacking detectable fauna."
+      },
+      {
+        time: "02",
+        title: "ANOMALOUS FIELD MAPPED",
+        event:
+          "ABU identifies an isolated vegetation cluster. Fenn detects extensive silver-gray energetic filaments throughout the area while Reggie experiences apparent membrane contact."
+      },
+      {
+        time: "03",
+        title: "GRAVITATIONAL NODE DISRUPTED",
+        event:
+          "A crater within the vegetation exhibits extreme localized gravity. Following controlled testing, Fenn destabilizes the associated field architecture."
+      },
+      {
+        time: "04",
+        title: "CONCEALED STRUCTURE MANIFESTS",
+        event:
+          "The vegetation cluster phases out and a tower-scale facility becomes visible nearby. Projected sentries admit the expedition."
+      },
+      {
+        time: "05",
+        title: "PERSONNEL DISPERSED",
+        event:
+          "An illuminated internal transit structure activates and relocates personnel into separate tower environments."
+      },
+      {
+        time: "06",
+        title: "INDEPENDENT TRIAL ENVIRONMENTS ENCOUNTERED",
+        event:
+          "Teams encounter spatial storage systems, recursive architecture, autonomous puzzles, hostile organisms, hazardous containers, dimensional transit nodes, and constructed realities."
+      },
+      {
+        time: "07",
+        title: "EXIT ROUTE NOT ESTABLISHED",
+        event:
+          "Several personnel advance through individual environments, but no reliable method of regrouping or exiting the structure has been confirmed."
+      }
+    ],
+    notableFindings: [],
+    incidents: [
+      {
+        title: "Spatial Containment Contact",
+        severity: "Moderate",
+        details: [
+          "Personnel: Cass",
+          "A hostile organism located within an anomalous storage volume seized the Director of Special Acquisitions and attempted forced containment transfer. Cass escaped without external assistance.",
+          "The container was not retained.",
+          "This decision has been provisionally classified as \"appropriate restraint.\""
+        ]
+      },
+      {
+        title: "Recursive Chamber Contact",
+        severity: "Minor to Moderate",
+        details: [
+          "Personnel: Flint Duskbourne, Kant Vixit",
+          "An unidentified organism concealed beneath a suspended bed attacked both personnel.",
+          "Direct retaliation against the room's furnishings triggered a complete environmental reset.",
+          "No lasting structural damage could therefore be documented.",
+          "Property Damage has recorded the event as self-resolving."
+        ]
+      },
+      {
+        title: "Thermal Containment Discharge",
+        severity: "Moderate",
+        details: [
+          "Personnel: Quill Varon | Equipment: ABU",
+          "Remote opening of a containment unit resulted in an energetic thermal event.",
+          "The incident confirms that remote manipulation significantly improves experimental survivability while offering no guarantee of comfort."
+        ]
+      }
+    ],
+    propertyDamage: {
+      items: [
+        "Recursive residential chamber furnishings penetrated during entity contact.",
+        "Instantaneous chamber reset restored all damaged furnishings to baseline state."
+      ],
+      outcome: "Property Damage has recorded the event as self-resolving."
+    },
+    personnelNotes: [
+      {
+        name: "Flint Duskbourne",
+        note: "Continues direct physical investigation of the recursive residential chamber. Demonstrated that the environment responds more strongly to interaction than passive observation."
+      },
+      {
+        name: "Quill Varon",
+        note: "Has begun documenting individual containment anomalies and the Draconic marking discovered within the storage gallery."
+      },
+      {
+        name: "Fenn",
+        note: "Successfully disrupted the external concealment field but has been unable to reproduce that result against the tower's internal transit architecture."
+      },
+      {
+        name: "Cass",
+        note: "Survived hostile extradimensional containment and subsequently located a mechanism enabling further movement through the facility."
+      },
+      {
+        name: "Kant Vixit",
+        note: "Confirmed that the tower's internal transportation and perceptual systems employ deliberate spatial and illusion-like manipulation rather than conventional mechanical architecture."
+      },
+      {
+        name: "Onix",
+        note: "Remains engaged with a rules-based strategic environment controlled by animated constructs."
+      },
+      {
+        name: "Reggie",
+        note: "Successfully navigated a multi-destination dimensional transit sequence and returned with an unregistered biological object."
+      },
+      {
+        name: "Gabriel",
+        note: "Confirmed that at least one tower window possesses impact resistance exceeding requirements for ordinary architectural glazing."
+      },
+      {
+        name: "Toast",
+        note: [
+          "Current evidence suggests Toast remains physically associated with the caravan while simultaneously observable from within the tower environment.",
+          "Toast does not appear to consider this noteworthy because Toast does not know it is happening."
+        ]
+      }
+    ],
+    complianceNotes: [
+      "Entry into the facility was voluntary until the entrance ceased providing an exit.",
+      "External sentries were nonphysical and therefore cannot currently be interviewed.",
+      "Acquisition of the spiked biological object occurred during an active hostile-environment assessment.",
+      "Further testing of anomalous storage containers should employ remote equipment whenever possible.",
+      "Personnel are reminded that labels applied by unknown entities do not constitute validated safety certification.",
+      "Recursive rooms should not be considered an unlimited substitute for property insurance.",
+      "No personnel are authorized to classify the tower as \"haunted\" in formal documentation until Science has exhausted at least three more expensive explanations."
+    ],
+    anomalousFindings: [
+      {
+        title: "Concealment Field",
+        description:
+          "The initial exclusion zone appears to have been deliberately constructed or maintained.",
+        resultHeader: "Observed characteristics included:",
+        bullets: [
+          "geometrically abrupt biological boundaries",
+          "perfectly regulated vegetation",
+          "near-constant ambient temperature",
+          "complete absence of normal fauna",
+          "suspended filamentary energy structures",
+          "a localized gravitational well",
+          "false or transient plant matter",
+          "large-scale structural concealment"
+        ],
+        notes: [
+          "The tower's appearance immediately following disruption of the gravitational node indicates that the crater may have acted as an anchor, regulator, or access point for a larger masking system.",
+          "The disappearance of surrounding vegetation suggests at least some observed matter was projected, phase-displaced, or conditionally instantiated rather than conventionally biological."
+        ]
+      },
+      {
+        title: "Internal Spatial Architecture",
+        description:
+          "Chief Engineering Officer Kant determined that the tower's illuminated stair system employs randomized spatial relocation behavior comparable to controlled short-range dimensional transfer.",
+        notes: [
+          "Observed internal dimensions and environments are not consistent with the tower's exterior profile.",
+          "Individual chambers can also restore themselves to earlier configurations following specific interactions.",
+          "The mechanism responsible for these resets has not been identified."
+        ]
+      },
+      {
+        title: "Recursive Residential Chamber",
+        description:
+          "Flint, Kant, and later Cass occupied a luxurious residential chamber containing:",
+        bullets: [
+          "an unsupported floating bed",
+          "portraiture exhibiting apparent observational behavior",
+          "a text whose contents continuously reorganized",
+          "a concealed organism beneath the bed",
+          "a symbolic control altar",
+          "five carved symbols in the sequence: sun, leaf, snowflake, moon, leaf"
+        ],
+        notes: [
+          "Disturbance of the bed exposed personnel to a hostile entity capable of attacking from beneath the visible architecture.",
+          "When Flint penetrated the mattress during the encounter, the entire chamber returned instantaneously to its previous configuration.",
+          "Later attempts to manipulate major room elements caused similar resets.",
+          "The room therefore appears capable of restoring both objects and environmental state from a stored reference condition."
+        ]
+      },
+      {
+        title: "Storage-Volume Anomaly",
+        description:
+          "Director Cass was initially relocated into a storage environment containing numerous containers whose internal volume exceeded their external dimensions.",
+        notes: [
+          "Opening one container resulted in immediate contact with a large, emaciated organism possessing elongated claws. The entity seized Cass and attempted to pull him through the container boundary.",
+          "Cass extracted himself and remained operational despite sustained lacerations.",
+          "Subsequent inspection produced an antique oil-burning lamp and an additional container emitting yellow light. Interaction with the luminescent anomaly caused the local transit system to become accessible and relocated Cass from the chamber.",
+          "The biological ecosystem, if any, existing within the storage spaces remains unknown.",
+          "Further unsupervised entry into volumetrically inconsistent containers is not recommended.",
+          "This recommendation is advisory until Special Acquisitions acknowledges receipt."
+        ]
+      },
+      {
+        title: "Autonomous Strategic Environment",
+        description:
+          "Director Onix was relocated into a chamber constructed around an oversized chessboard.",
+        notes: [
+          "Four stone-like winged sentinels occupied the perimeter while individual game pieces responded to movement according to an internally consistent ruleset.",
+          "Onix elected to engage with the apparent puzzle rather than provoke the sentinels and successfully progressed through portions of the environment.",
+          "The chamber's ultimate function and completion state remain unresolved."
+        ]
+      },
+      {
+        title: "Hazardous Containment Gallery",
+        description:
+          "Chief Science Officer Quill Varon encountered a chamber containing numerous storage chests, several accompanied by reassurances regarding their allegedly non-predatory nature. Varon appropriately declined to consider the signage sufficient evidence. Remote manipulation was used for initial access.",
+        resultHeader: "Container contents included:",
+        bullets: [
+          "reflective particulate material resembling glitter",
+          "pressurized water",
+          "rapidly expanding thorned vegetation",
+          "a significant thermal discharge",
+          "spoiled dairy material",
+          "decomposing biological tissue",
+          "miscellaneous anomalous contents"
+        ],
+        notes: [
+          "The thermal discharge caused moderate injury to Varon and damaged ABU.",
+          "One container possessed a gold-lined interior bearing a Draconic symbol. Varon documented the marking rather than disturbing it further.",
+          "The relationship between the symbol and the tower remains unknown."
+        ]
+      },
+      {
+        title: "Dimensional Transit Array",
+        description:
+          "Chief Security Marshal Reggie encountered a dark chamber containing multiple illuminated blue floor symbols. Activation transported him through a sequence of physically distinct environments.",
+        resultHeader: "Observed destinations included:",
+        bullets: [
+          "Three-Sun Biosphere — A lush cliffside ecosystem beneath three visible stellar bodies, consistent with regions previously designated under the Feywild classification.",
+          "Deep-Space Platform — An isolated rocky body surrounded by open space.",
+          "Hellscape Environment — A barren red region containing three winged, red-skinned juvenile organisms positioned around a large spiked egg."
+        ],
+        notes: [
+          "Reggie observed the pattern of transitions, identified a viable return sequence, acquired the egg, and successfully returned to the tower chamber without further incident.",
+          "The recovered biological object remains in his possession pending secure transfer and xenobiological examination.",
+          "The Director of Xenobiology has already been informed that \"we found an egg\" is not an approved chain-of-custody description."
+        ]
+      },
+      {
+        title: "Reality-Overlap Environment",
+        description:
+          "Fenn and Gabriel were relocated into what appeared to be an ordinary outdoor campsite despite remaining physically inside the tower. They discovered Toast asleep within the environment.",
+        notes: [
+          "Toast perceived himself as occupying the caravan's normal campsite and demonstrated no awareness of the tower, the anomalous field, or the expedition's relocation.",
+          "Evidence indicates that the chamber is not merely an illusion. Instead, it may overlap, reproduce, intercept, or selectively share information with another physical location.",
+          "Fenn attempted to disrupt the transit system but was unable to overcome the active field.",
+          "Gabriel attempted a more traditional structural-access procedure using a warhammer.",
+          "The window remained undamaged.",
+          "With no verified exit mechanism and no immediate threat present, both personnel elected to conserve resources and continue observation."
+        ]
+      }
+    ],
+    captainsLog: {
+      author: "Flint Duskbourne, Chief Operations Officer",
+      text: [
+        "The official description will probably call this a distributed evaluation complex.",
+        "It separated us the moment we entered.",
+        "Every room seems to have its own rules. Some punish curiosity. Some require it. One of them apparently connects to places that should not be anywhere near this planet, and another is showing two of our people a campsite containing someone who believes he is still outside.",
+        "The building watches. It resets. It relocates us when it decides we have done something correctly.",
+        "That last part concerns me more than the creatures.",
+        "It means there is a correct answer.",
+        "And somewhere inside this place, something knows what it is."
+      ]
+    },
+    finalAssessment: {
+      verdict: "INVESTIGATION CONTINUES",
+      description: [
+        "The original reconnaissance objective has expanded following confirmation of a concealed anomalous structure possessing active spatial, environmental, and interdimensional systems.",
+        "Paradallax personnel remain dispersed throughout the complex but operational.",
+        "No stable extraction route has been identified.",
+        "Multiple chambers have demonstrated structured progression criteria, suggesting that continued advancement may provide access to deeper portions of the facility or restore personnel convergence.",
+        "The tower represents a substantial scientific and exploratory opportunity and an equally substantial violation of several assumptions previously considered fundamental to architecture.",
+        "The operation will continue."
+      ],
+      conclusion: "AXIOM IV — PROGRESS REQUIRES UNCERTAINTY."
+    }
+  },
   {
     id: "PD-0105",
     slug: "pd-0105",

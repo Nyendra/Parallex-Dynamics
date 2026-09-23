@@ -276,51 +276,53 @@ export default async function OperationalRecordPage({ params }: PageProps) {
       </section>
 
       {/* SECTION 4: NOTABLE FINDINGS */}
-      <section className="space-y-6">
-        <div className="flex items-center space-x-2 border-b border-white/10 pb-3">
-          <Compass className="w-5 h-5 text-cyan-accent" />
-          <h2 className="font-orbitron font-bold text-xl sm:text-2xl text-white tracking-wide">
-            NOTABLE FINDINGS
-          </h2>
-        </div>
+      {record.notableFindings && record.notableFindings.length > 0 && (
+        <section className="space-y-6">
+          <div className="flex items-center space-x-2 border-b border-white/10 pb-3">
+            <Compass className="w-5 h-5 text-cyan-accent" />
+            <h2 className="font-orbitron font-bold text-xl sm:text-2xl text-white tracking-wide">
+              NOTABLE FINDINGS
+            </h2>
+          </div>
 
-        <div className={`grid grid-cols-1 ${record.notableFindings.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"} gap-6`}>
-          {record.notableFindings.map((finding, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-space-darkest/80 border border-cyan-accent/30 space-y-4 flex flex-col justify-between"
-            >
-              <div className="space-y-3">
-                <h3 className="font-orbitron font-bold text-lg text-white">
-                  {finding.title}
-                </h3>
-                {finding.description && (
-                  <p className="text-xs text-slate-300 font-sans leading-relaxed">
-                    {finding.description}
-                  </p>
-                )}
-                {finding.bullets && finding.bullets.length > 0 && (
-                  <ul className="space-y-1.5 pt-2 border-t border-white/10 text-xs font-sans text-slate-300">
-                    {finding.bullets.map((bullet, bIdx) => (
-                      <li key={bIdx} className="flex items-start space-x-2">
-                        <span className="text-cyan-accent font-bold">&gt;</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {finding.notes && finding.notes.length > 0 && (
-                  <div className="space-y-1.5 pt-2 border-t border-white/10 text-xs font-sans text-slate-300">
-                    {finding.notes.map((note, nIdx) => (
-                      <p key={nIdx}>{note}</p>
-                    ))}
-                  </div>
-                )}
+          <div className={`grid grid-cols-1 ${record.notableFindings.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"} gap-6`}>
+            {record.notableFindings.map((finding, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-space-darkest/80 border border-cyan-accent/30 space-y-4 flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  <h3 className="font-orbitron font-bold text-lg text-white">
+                    {finding.title}
+                  </h3>
+                  {finding.description && (
+                    <p className="text-xs text-slate-300 font-sans leading-relaxed">
+                      {finding.description}
+                    </p>
+                  )}
+                  {finding.bullets && finding.bullets.length > 0 && (
+                    <ul className="space-y-1.5 pt-2 border-t border-white/10 text-xs font-sans text-slate-300">
+                      {finding.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx} className="flex items-start space-x-2">
+                          <span className="text-cyan-accent font-bold">&gt;</span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {finding.notes && finding.notes.length > 0 && (
+                    <div className="space-y-1.5 pt-2 border-t border-white/10 text-xs font-sans text-slate-300">
+                      {finding.notes.map((note, nIdx) => (
+                        <p key={nIdx}>{note}</p>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* SECTION 5: INCIDENT REPORTS */}
       <section className="space-y-6">
