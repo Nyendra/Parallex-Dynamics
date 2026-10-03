@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     "Paradallax Initiative operational archive record.";
 
   const canonicalPath = `/operations/${record.slug}`;
+  const ogImageUrl = record.ogImage || "/media/broadcast/broadcast-parallax-public.jpg";
 
   return {
     title: pageTitle,
@@ -68,7 +69,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Paradallax Initiative",
       images: [
         {
-          url: "/media/broadcast/broadcast-parallax-public.jpg",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: `${record.title} — Paradallax Operational Record ${record.id}`,
@@ -79,7 +80,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: pageTitle,
       description: pageDescription,
-      images: ["/media/broadcast/broadcast-parallax-public.jpg"],
+      images: [ogImageUrl],
     },
   };
 }

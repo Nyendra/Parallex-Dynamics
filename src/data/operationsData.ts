@@ -50,7 +50,8 @@ export interface OperationalRecord {
     | "MISSION SUCCESSFUL"
     | "OBJECTIVE ACHIEVED"
     | "COMPLETE — RESTRICTED INTERNAL DISTRIBUTION"
-    | "ONGOING";
+    | "ONGOING"
+    | "INVESTIGATION CONTINUES";
   statusBadge?: string;
   location: string;
   detailedLocation?: string;
@@ -59,6 +60,7 @@ export interface OperationalRecord {
   classificationFootnote?: string;
   summary: string;
   metaDescription?: string;
+  ogImage?: string;
   fullMissionSummary: string[];
   personnelList: PersonnelEntry[];
   associatedPersonnel?: PersonnelEntry[];
@@ -82,6 +84,285 @@ export interface OperationalRecord {
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0107",
+    slug: "pd-0107",
+    title: "The Rooms That Remember",
+    status: "INVESTIGATION CONTINUES",
+    statusBadge: "INVESTIGATION CONTINUES",
+    location: "Unidentified Tower Complex — Segmented Interior Environments",
+    detailedLocation: "Unidentified Tower Complex — Segmented Interior Environments",
+    type: "EXPLORATION",
+    classification: "EXPLORATION ARCHIVE // INVESTIGATION CONTINUES",
+    classificationFootnote:
+      "* Investigation continues. First recursive barrier cleared; multiple personnel remain contained within active trials.",
+    summary:
+      "Continued investigation of the unidentified tower complex revealed that its internal architecture does not conform to a single contiguous space. Parallax personnel became distributed across isolated environments with recursive transit behavior, while Chief Security Marshal Reggie achieves the operation's first confirmed traversal beyond a recursive barrier.",
+    metaDescription:
+      "Paradallax Initiative Operational Record PD-0107: Continued investigation of the unidentified tower complex reveals recursive segmented environments and yields the expedition's first confirmed traversal beyond a spatial barrier.",
+    ogImage: "/media/operations/pd-0107.jpg",
+    fullMissionSummary: [
+      "Continued investigation of the unidentified tower complex revealed that its internal architecture does not conform to a single contiguous physical space.",
+      "Parallax personnel became distributed across several self-contained environments, each exhibiting independent spatial rules, recursive transit behavior, and apparent solution conditions. Conventional attempts to ascend the structure repeatedly returned personnel to their point of origin, suggesting that vertical movement is conditional rather than geographical.",
+      "Director Cass and Chief Engineer Kant Vixit were isolated inside a furnished residential chamber where the physical environment and its reflected image disagreed on several measurable details. The room's mirror displayed objects that were absent from local reality, including personal-care items and a chamber vessel whose state did not correspond to its physical counterpart.",
+      "Testing demonstrated that specific objects introduced into the reflected environment could influence a separate arrangement of symbolic light sources. A recovered sequence — leaf, snowflake, leaf, crescent moon, sun — enabled Cass and Kant to manipulate these sources in the correct order and interrupt one component of the chamber's periodic reset process.",
+      "This did not restore conventional access to the staircase.",
+      "Further inspection revealed that unstable written material became legible when viewed exclusively through the mirror, strongly suggesting that the reflected state was not an optical illusion but a parallel informational layer with greater local persistence.",
+      "Investigation of the bed produced less academic results.",
+      "Cass detected faint respiratory sounds originating beneath it despite an area of impenetrable darkness. Chief Operations Officer Flint Duskbourne subsequently performed a direct structural test using a sword. The bed responded by deploying concealed spikes.",
+      "The attack was successfully deflected.",
+      "The chamber immediately reset.",
+      "Parallax Engineering has formally classified this sequence as an unproductive but highly reproducible diagnostic procedure.",
+      "Elsewhere in the structure, Chief Security Marshal Reggie encountered a chain of environments with substantially different characteristics. The first resembled a high-altitude cliff containing an abandoned nest and an unidentified egg. A second consisted of an isolated platform suspended within a stellar environment.",
+      "Astronomical patterns visible from the platform corresponded to constellations previously observed within the tower, but appeared spatially compressed. By mapping their relationships, Reggie extracted what appeared to be an embedded instruction set describing the purification of corruption through biological influence and the reuse of material from a dying world as a substrate for new creation.",
+      "Material was subsequently recovered from an apparently terminal planetary body and dispersed within the stellar environment.",
+      "New stars formed immediately.",
+      "The egg left at the cliffside site simultaneously underwent extensive biological alteration, developing a green, living surface. After exposure to the remaining recovered material, it hatched.",
+      "The resulting organism resembled a winged humanoid infant with green pigmentation, branch-like horns, and ocular structures containing what observers described as visible starfields. The organism indicated a direction behind Reggie before departing into the surrounding stellar environment.",
+      "Following the indicated vector required stepping from the platform into open space.",
+      "Reggie complied.",
+      "Rather than falling, he exited the recursive environment and reached a previously inaccessible level of the tower: a stone chamber lined with softly luminescent crystalline formations.",
+      "This represents the operation's first confirmed successful traversal beyond one of the tower's recursive barriers.",
+      "Vice President Fenn and Gabriel were meanwhile contained within an environment presenting as an outdoor campsite. Local associate Toast demonstrated an unusual perceptual exclusion effect: where Parallax personnel observed enclosing architecture and a staircase, Toast perceived only an open field and his tent.",
+      "A nearby well also exhibited recursive geometry. Descending through it returned personnel to the surface rather than providing access to a lower level.",
+      "An anomalous-field survey performed by Fenn identified spatial-manipulation signatures associated with the staircase and several otherwise ordinary objects, including tableware, cheese, and a backpack. Neutralization of two affected objects caused them to cease existing locally, although this did not disable the staircase.",
+      "An attempt to physically transport Toast through the anomalous boundary produced complete non-interaction between his body and Gabriel's. Both occupied overlapping space without collision before separating normally.",
+      "Toast reported no concern beyond the unexplained disappearance of his meal.",
+      "At a fourth site, Director Onix and Chief Science Officer Quill encountered a large autonomous chess installation monitored by stationary gargoyle-like constructs. Game pieces moved independently and resolved captures through actual physical violence before removing defeated pieces from the board by instantaneous displacement.",
+      "Onix initiated play and began systematically advancing through the match.",
+      "The board remained active when the operation was suspended.",
+      "Taken collectively, the environments indicate that the tower is not merely trapping personnel through spatial recursion. Each chamber appears to impose an internally consistent conceptual problem whose resolution alters access permissions within the greater structure.",
+      "The facility may therefore be less accurately described as a building than as a sequence of tests.",
+      "Paradallax Initiative has not determined who is administering them."
+    ],
+    personnelList: [
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer",
+        duty: "Expedition command; structural evaluation and interaction testing in recursive residential chamber."
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer",
+        duty: "Scientific observation; monitoring of autonomous strategic chess installation."
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations",
+        duty: "Field survey of anomalous spatial signatures; object neutralization and boundary testing in campsite environment."
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions",
+        duty: "Investigation of reflected-state environmental inconsistencies and mirror-based information systems."
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer",
+        duty: "Engineering analysis of parallel informational layers and environmental reset mechanisms."
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research",
+        duty: "Direct strategic engagement with autonomous lethal chess installation."
+      },
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal",
+        duty: "Astronomical pattern mapping, cosmological material dispersal, and successful traversal of first recursive barrier."
+      },
+      {
+        name: "Gabriel",
+        role: "Attached Expeditionary Specialist",
+        duty: "Attached expeditionary support, campsite environmental observation, and boundary transit testing."
+      },
+      {
+        name: "Toast",
+        role: "Civilian / Local Associate",
+        duty: "Perceptual exclusion observation and non-interaction boundary testing subject."
+      }
+    ],
+    timeline: [
+      {
+        time: "01",
+        title: "Personnel Segmentation",
+        event:
+          "Expedition members are distributed across multiple isolated internal environments. Conventional stair access proves recursively self-returning."
+      },
+      {
+        time: "02",
+        title: "Reflected-State Analysis",
+        event:
+          "Cass and Kant identify material differences between a residential chamber and its mirror image. A symbolic sequence is recovered and used to interrupt the chamber's reset mechanism."
+      },
+      {
+        time: "03",
+        title: "Unscheduled Furniture Evaluation",
+        event:
+          "Flint conducts direct testing of an anomalous bed. The furniture deploys defensive spikes and restores the chamber to its previous state."
+      },
+      {
+        time: "04",
+        title: "Stellar Instruction Recovered",
+        event:
+          "Reggie identifies compressed astronomical patterns containing an apparent procedural message concerning ecological purification and planetary renewal."
+      },
+      {
+        time: "05",
+        title: "Genesis Event Observed",
+        event:
+          "Recovered terminal-world material generates new stellar bodies and accelerates development of an unidentified egg. A winged juvenile entity emerges and provides navigational guidance."
+      },
+      {
+        time: "06",
+        title: "First Recursive Barrier Cleared",
+        event:
+          "Reggie follows the entity's indicated route and reaches a previously inaccessible crystal-lined chamber."
+      },
+      {
+        time: "07",
+        title: "Campsite Boundary Testing",
+        event:
+          "Fenn and Gabriel identify multiple anomalously anchored objects and confirm that Toast does not perceive or physically interact with portions of the tower's architecture."
+      },
+      {
+        time: "08",
+        title: "Autonomous Strategic Trial Initiated",
+        event:
+          "Onix engages an active chess installation whose pieces use lethal force to resolve captures. Trial remains incomplete at suspension of operations."
+      }
+    ],
+    notableFindings: [],
+    incidents: [
+      {
+        title: "INCIDENT 107-A — Defensive Furnishing Activation",
+        severity: "None",
+        details: [
+          "Chief Operations Officer Flint Duskbourne physically struck an anomalous bed after indications of an unidentified presence beneath it.",
+          "The furnishing generated an immediate spike deployment.",
+          "Attack successfully intercepted.",
+          "Injury Severity: None | Equipment Loss: None | Operational Benefit: Disputed"
+        ]
+      },
+      {
+        title: "INCIDENT 107-B — Unregulated Cosmological Seeding",
+        severity: "Pending Review",
+        details: [
+          "Chief Security Marshal Reggie dispersed unknown planetary residue across an artificial or extradimensional stellar environment.",
+          "Resulting phenomena included spontaneous stellar formation, rapid biological development, and the emergence of an unidentified sapient or semi-sapient entity.",
+          "No containment protocol was available.",
+          "The entity departed independently.",
+          "Compliance determination: Retroactive review pending."
+        ]
+      }
+    ],
+    personnelNotes: [
+      {
+        name: "Cass / Kant Vixit",
+        note:
+          "Demonstrated effective paired analysis of cross-state environmental inconsistencies. Continued investigation of reflected information systems is authorized, preferably without involving additional furniture."
+      },
+      {
+        name: "Reggie",
+        note: [
+          "Successfully resolved the first known traversal condition within the tower and established access to a new internal sector.",
+          "Security Marshal Reggie's willingness to step voluntarily into apparent open space following directions supplied by a newborn extradimensional organism has been recorded without further comment."
+        ]
+      },
+      {
+        name: "Fenn / Gabriel",
+        note:
+          "Confirmed that not all occupants experience the tower through the same physical framework. Further tests involving Toast should prioritize observation over forced transit."
+      },
+      {
+        name: "Onix / Quill Varon",
+        note:
+          "Strategic trial remains in progress. Scientific observation is authorized. Personnel are advised not to stand on the board."
+      }
+    ],
+    complianceNotes: [
+      "The following actions occurred before formal hazard characterization could be completed: insertion of equipment into an unidentified reflective anomaly; deliberate activation of concealed defensive mechanisms; handling of material recovered from a dying planetary body; deliberate creation of new stellar objects; incubation of an unidentified organism; traversal into apparent open space; direct participation in an autonomous lethal board game.",
+      "The absence of a suitable pre-existing compliance category should not be interpreted as approval.",
+      "A suitable category is being developed."
+    ],
+    anomalousFindings: [
+      {
+        title: "Reflected Persistence Layer",
+        description:
+          "The residential chamber's mirror does not consistently display the physical state of the room. Several objects exist only within the reflected representation, while unstable written information becomes fixed and readable when viewed through it.",
+        resultHeader: "Current interpretations include:",
+        bullets: [
+          "a parallel local state",
+          "temporal persistence",
+          "selective reality overlap",
+          "informational correction by an external system"
+        ],
+        notes: [
+          "Classification remains provisional."
+        ]
+      },
+      {
+        title: "Recursive Architecture",
+        description:
+          "Multiple routes, including staircases and a well, return personnel to their point of origin despite uninterrupted forward travel.",
+        notes: [
+          "At least one recursive barrier was bypassed only after completion of a chamber-specific sequence.",
+          "This supports the hypothesis that movement through the tower is governed by authorization conditions rather than physical distance."
+        ]
+      },
+      {
+        title: "Stellar Substrate Event",
+        description:
+          "Material collected from a dying planetary body generated new stellar objects when dispersed within the cosmic chamber.",
+        notes: [
+          "The same substance contributed to the rapid transformation and hatching of an unidentified organism.",
+          "The substance has not been recovered in sufficient quantity for controlled analysis.",
+          "This is considered fortunate by Compliance."
+        ]
+      },
+      {
+        title: "Perceptual Exclusion",
+        description:
+          "Toast appears unable to perceive selected structural elements of the tower and cannot be forcibly transported across at least one affected boundary.",
+        notes: [
+          "Whether the phenomenon is caused by the tower, Toast, or a categorical distinction imposed upon him is unknown."
+        ]
+      },
+      {
+        title: "Autonomous Chess System",
+        description:
+          "The chess installation interprets standard captures literally. Captured pieces are physically destroyed before being removed through short-range displacement.",
+        notes: [
+          "No personnel have volunteered to determine whether identical rules apply to players."
+        ]
+      }
+    ],
+    captainsLog: {
+      author: "Internal expedition note, attribution withheld",
+      text: [
+        "Every room in this place seems to want something.",
+        "Not necessarily something sensible.",
+        "One wants the room arranged correctly. Another apparently wants someone to finish creating a universe. Somewhere else, a man cannot see the walls we're trapped inside. Onix is playing chess with pieces that murder each other, and Flint discovered that the bed fights back.",
+        "The worrying part isn't that the tower is dangerous.",
+        "We've dealt with dangerous.",
+        "The worrying part is that Reggie solved his room.",
+        "He did exactly what it wanted, stepped into empty space, and the tower let him continue.",
+        "That means there is a logic here.",
+        "And if there's a logic, there's probably an intended destination."
+      ]
+    },
+    finalAssessment: {
+      verdict: "INVESTIGATION CONTINUES",
+      description: [
+        "The operation confirmed that the tower's recursive environments can be bypassed under specific chamber-dependent conditions.",
+        "One previously inaccessible sector has been reached.",
+        "Multiple personnel remain contained within unresolved trials.",
+        "The origin, purpose, and administrator of the structure remain unknown.",
+        "Further ascent is authorized."
+      ],
+      conclusion: "AXIOM IV — PROGRESS REQUIRES UNCERTAINTY."
+    }
+  },
   {
     id: "PD-0106",
     slug: "pd-0106",
