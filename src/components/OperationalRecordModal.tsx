@@ -23,6 +23,21 @@ import { OperationalRecord } from "@/data/operationsData";
 
 export type { OperationalRecord };
 
+function renderFormattedText(text: string): React.ReactNode {
+  if (!text || !text.includes("**")) return text;
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-white">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 interface ModalProps {
   record: OperationalRecord | null;
   onClose: () => void;
@@ -99,7 +114,7 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                 <FileText className="w-4 h-4 mr-2" /> Briefing Summary
               </h3>
               <p className="leading-relaxed bg-slate-950/40 p-4 rounded-lg border border-slate-800/80 text-xs sm:text-sm">
-                {record.summary}
+                {renderFormattedText(record.summary)}
               </p>
             </div>
 
@@ -130,7 +145,7 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                     <span className="font-mono text-xs text-cyan-300 block">
                       PHASE {item.time} {item.title ? `// ${item.title}` : ""}
                     </span>
-                    <p className="text-slate-300 text-xs leading-relaxed">{item.event}</p>
+                    <p className="text-slate-300 text-xs leading-relaxed">{renderFormattedText(item.event)}</p>
                   </div>
                 ))}
               </div>
@@ -189,9 +204,9 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                         {incident.title} {incident.severity ? `(${incident.severity})` : ""}
                       </span>
                       {Array.isArray(incident.details) ? (
-                        <p className="text-slate-300">{incident.details[0]}</p>
+                        <p className="text-slate-300">{renderFormattedText(incident.details[0])}</p>
                       ) : (
-                        <p className="text-slate-300">{incident.details}</p>
+                        <p className="text-slate-300">{renderFormattedText(incident.details)}</p>
                       )}
                     </div>
                   ))}
@@ -243,7 +258,7 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                 </h4>
                 <div className="italic text-slate-300 text-xs leading-relaxed space-y-1.5">
                   {record.captainsLog.text.slice(0, 3).map((line, idx) => (
-                    <p key={idx}>"{line}"</p>
+                    <p key={idx}>"{renderFormattedText(line)}"</p>
                   ))}
                 </div>
               </div>
@@ -258,9 +273,11 @@ export const OperationalRecordModal: React.FC<ModalProps> = ({ record, onClose }
                 {record.finalAssessment.verdict}
               </p>
               <p className="text-xs text-slate-300 max-w-2xl mx-auto">
-                {Array.isArray(record.finalAssessment.description)
-                  ? record.finalAssessment.description.join(" ")
-                  : record.finalAssessment.description}
+                {renderFormattedText(
+                  Array.isArray(record.finalAssessment.description)
+                    ? record.finalAssessment.description.join(" ")
+                    : record.finalAssessment.description
+                )}
               </p>
             </div>
           </div>

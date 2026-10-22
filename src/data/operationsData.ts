@@ -1,7 +1,7 @@
 export interface PersonnelEntry {
   name: string;
   role: string;
-  duty: string;
+  duty?: string;
 }
 
 export interface TimelineEntry {
@@ -84,6 +84,349 @@ export interface OperationalRecord {
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0108",
+    slug: "pd-0108",
+    title: "A Tower Without Floors",
+    status: "INVESTIGATION CONTINUES",
+    statusBadge: "INVESTIGATION CONTINUES",
+    location: "Unregistered Tower Complex // Interior Spatial Anomaly",
+    detailedLocation: "Unregistered Tower Complex // Interior Spatial Anomaly",
+    type: "EXPLORATION",
+    classification: "EXPLORATION ARCHIVE // INVESTIGATION CONTINUES",
+    classificationFootnote:
+      "* Investigation continues. Structure remains active; internal topology unresolved; continued ascent authorized.",
+    summary:
+      "Paradallax Initiative personnel entered an anomalous vertical structure whose internal geometry rapidly proved incompatible with conventional architecture, shared spatial reference, and several accepted definitions of a floor. Personnel entering apparently identical stairways were repeatedly routed into separate environmental modules featuring independent logic, linguistic, and behavioral tests.",
+    metaDescription:
+      "Paradallax Initiative Operational Record PD-0108 documents an expedition through a spatially inconsistent tower where architecture, perception, and personnel scale refuse to remain reliable.",
+    ogImage: "/media/operations/pd-0108.jpg",
+    fullMissionSummary: [
+      "Paradallax Initiative personnel entered an anomalous vertical structure whose internal geometry rapidly proved incompatible with conventional architecture, shared spatial reference, and several accepted definitions of a floor.",
+      "Personnel entering apparently identical stairways were repeatedly routed into separate environmental modules, with team members occupying spaces that could not be reconciled with one another through ordinary geometry. Some chambers appeared to reproduce familiar locations or domestic settings. Others functioned as elaborate logic, linguistic, or behavioral tests. Repeated ascent did not reliably reunite separated personnel, and several environments appeared capable of existing in multiple independent instances simultaneously.",
+      "Chief Science Officer Quill Varon was initially routed into an archival chamber containing numerous sealed storage containers. Their interiors contained fragments of an unfamiliar symbolic sequence, while a concealed inscription provided enough comparative information to establish a working alphabetic and numeric cipher. The containers themselves were eventually determined to constitute part of the mechanism rather than simply its contents.",
+      "Elsewhere, Chief Security Marshal Reggie encountered a chamber dominated by crystalline structures arranged around a much larger central formation. The smaller crystalline units responded to physical interaction by changing state. Chief Operations Officer Flint Duskbourne later arrived in the same environment, and the pair established that progression required more than visual synchronization. By matching the resonant frequency of the smaller units to the central crystal, personnel caused the chamber's active systems to disengage and revealed further access.",
+      "A separate module presented itself as a furnished sleeping chamber occupied by a dark, dormant entity beneath the bed. Director Cass, Chief Engineering Officer Kant Vixit, and Duskbourne discovered that the environment responded not to forced entry or technical override, but to the completion of a highly specific behavioral sequence.",
+      "A concealed set of instructions described what appeared to be an evening routine.",
+      "Personnel therefore implemented the routine.",
+      "The procedure included conditioning an anomalous illustrated text with steam, physically stimulating the dormant entity until it woke, grooming it, reading to it, providing sanitation access, and bathing it. The entity was designated **Prometheus** for operational convenience. Final access was achieved by extinguishing a set of lights according to a seasonal sequence.",
+      "Paradallax notes that no pre-mission training module addressed this scenario.",
+      "Completion opened another route upward, although the Tower immediately separated the participating personnel again. Reggie later encountered an independent instance of the same sleeping chamber and successfully reconstructed the required procedure using discrepancies visible through a reflective surface to locate otherwise concealed objects. The existence of apparently simultaneous or sequential duplicate chambers remains unexplained.",
+      "Vice President Fenn, Gabriel, and Cass were subsequently routed into an environment almost indistinguishable from the expedition's exterior campsite. Toast was present and asleep within the simulation. Critically, Toast perceived the same location as an open field and showed no awareness of the enclosing structure experienced by the other personnel.",
+      "Cass performed a limited cognitive verification procedure and confirmed that Toast was genuinely present rather than a fabricated replica. The finding established that the Tower was capable not merely of projecting false environments, but of presenting different spatial realities to individuals sharing the same apparent location.",
+      "Personnel elected to use the environment's apparent safety to conduct an extended recovery cycle. Following rest, participating personnel reported unusually complete physical restoration accompanied by heightened short-term combat readiness. Whether this effect was medical, neurological, temporal, or merely another property of the simulation remains undetermined.",
+      "Cass and Kant subsequently entered a highly ordered chamber distinguished by extensive gold surfaces and an unidentified, well-dressed humanoid with amber-colored eyes. The individual displayed prior knowledge of the chamber's requirements and instructed both personnel to occupy precise positions. The purpose, affiliation, and nature of this individual remain unresolved.",
+      "On another route, Flint and Director of Xenobiology & Medical Research Onix entered a chamber dominated by an oversized strategic game board. Interaction with a control position caused Onix to undergo extreme dimensional reduction and become incorporated directly into the game environment as a mobile piece.",
+      "The board's defensive systems activated concurrently.",
+      "While Onix completed the strategic sequence from within the board, Flint defended him against animated stone constructs and hostile game pieces. Several constructs were destroyed through a combination of high-energy field effects and direct physical intervention. Once Onix completed the game, the board reset to its original configuration, released the personnel involved, and permitted continued ascent.",
+      "Gabriel independently encountered an armory containing weapons and inscriptions representing numerous linguistic traditions. Attempting to return one weapon to a storage rack activated an armored autonomous defense construct. Gabriel engaged and destroyed the system after a short confrontation, producing significant thermal damage to the construct but no lasting interruption to his progression through the facility.",
+      "The archival chamber was ultimately resolved when Fenn joined Quill and recognized that the storage containers themselves had to be ordered according to physical scale. Fenn also identified an error in Quill's initial translation of one symbol.",
+      "When arranged from largest to smallest, the recovered symbols produced the statement:",
+      "**MIMICS ARE NOT TRULY REAL**",
+      "The operational significance of this message remains uncertain.",
+      "The facility nevertheless accepted the answer.",
+      "Illuminated access stairs appeared, permitting Fenn and Quill to continue upward.",
+      "At the conclusion of the available record, Paradallax personnel had successfully traversed multiple independent test environments and established several repeatable rules governing the Tower's internal systems. They had not identified the structure's origin, controlling intelligence, overall height, external dimensions, or ultimate purpose.",
+      "The expedition therefore continued."
+    ],
+    personnelList: [
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer",
+        duty: "Expedition command; multi-module operational support, harmonic crystal synchronization, and defensive construct neutralization."
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer",
+        duty: "Symbolic sequence decoding, archival linguistic analysis, and collaborative cipher verification."
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations",
+        duty: "Lateral analytical verification, container physical scale ordering, and cipher translation error correction."
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions",
+        duty: "Behavioral ritual execution, cognitive verification of campsite divergence, and ordered chamber positioning."
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer",
+        duty: "Technical evaluation of domestic behavioral sequence and ordered chamber positioning."
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research",
+        duty: "Direct strategic game completion while subjected to extreme dimensional miniaturization."
+      },
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal",
+        duty: "Harmonic frequency synchronization and independent reconstruction of duplicate chamber ritual via reflective observation."
+      },
+      {
+        name: "Gabriel",
+        role: "Field Operative",
+        duty: "Expedition field support, campsite reality observation, and autonomous armored defense construct destruction."
+      },
+      {
+        name: "Toast",
+        role: "Expeditionary Associate",
+        duty: "Campsite presence and non-consensus spatial perception subject."
+      },
+      {
+        name: "Prometheus",
+        role: "Unclassified Entity",
+        duty: "Unclassified indigenous or constructed entity; designation assigned in the field."
+      },
+      {
+        name: "Amber-Eyed Host",
+        role: "Unidentified Humanoid",
+        duty: "Unidentified humanoid encountered within the facility; instructed personnel positioning in gold chamber."
+      }
+    ],
+    timeline: [
+      {
+        time: "01",
+        title: "Spatial Separation",
+        event:
+          "Personnel enter the Tower and are distributed across mutually inconsistent interior environments despite using apparently continuous access routes."
+      },
+      {
+        time: "02",
+        title: "Harmonic Chamber",
+        event:
+          "Reggie and Flint synchronize a network of crystalline devices with a central resonator, shutting down the chamber and opening onward access."
+      },
+      {
+        time: "03",
+        title: "Prometheus Protocol",
+        event:
+          "Cass, Kant, and Flint discover that a domestic simulation requires completion of a prescribed evening ritual involving an unidentified dormant entity. Successful completion unlocks further ascent."
+      },
+      {
+        time: "04",
+        title: "Recursive Environment Confirmed",
+        event:
+          "Reggie encounters an independent version of the same domestic chamber and independently completes the required procedure, demonstrating that Tower environments can repeat without behaving as ordinary shared locations."
+      },
+      {
+        time: "05",
+        title: "Campsite Reality Divergence",
+        event:
+          "Fenn, Gabriel, and Cass locate Toast inside a reconstruction of the expedition campsite. Cognitive verification establishes that Toast occupies the same apparent space while perceiving an entirely different environment."
+      },
+      {
+        time: "06",
+        title: "Strategic Board Incident",
+        event:
+          "Onix is physically reduced and incorporated into an oversized game system. Flint neutralizes defensive constructs while Onix completes the board's strategic objective."
+      },
+      {
+        time: "07",
+        title: "Armory Defense Activation",
+        event:
+          "Gabriel inadvertently activates an autonomous armored security unit while interacting with the Tower's weapons archive and destroys the construct."
+      },
+      {
+        time: "08",
+        title: "Archive Cipher Resolved",
+        event:
+          "Fenn and Quill arrange encoded storage containers by size, correct a translation error, and produce the phrase MIMICS ARE NOT TRULY REAL, opening the route to the Tower's next level."
+      }
+    ],
+    notableFindings: [],
+    incidents: [
+      {
+        title: "Animated Defensive Systems",
+        details: [
+          "Multiple chambers deployed autonomous hostile constructs following specific interactions.",
+          "Flint destroyed several stone defensive entities and intervened against an animated game piece during the strategic board event.",
+          "Gabriel destroyed an autonomous armored construct inside the armory.",
+          "These systems appear reactive rather than continuously hostile, suggesting that violence may constitute either a failure state or an intended component of individual chamber tests.",
+          "Personnel are advised not to assume this distinction will matter operationally."
+        ]
+      },
+      {
+        title: "Temporary Personnel Miniaturization",
+        severity: "Moderate",
+        details: [
+          "Onix was reduced to game-piece scale and incorporated directly into an active strategic simulation.",
+          "Condition resolved following successful completion of the board.",
+          "Incident severity: Moderate",
+          "Long-term effects: None observed",
+          "Scientific interest: Excessive"
+        ]
+      },
+      {
+        title: "Spatial Team Fragmentation",
+        severity: "Moderate",
+        details: [
+          "Tower transitions repeatedly separated expedition personnel without warning.",
+          "No reliable method of selecting the destination of an internal staircase has yet been identified.",
+          "Incident severity: Moderate",
+          "Operational concern remains elevated."
+        ]
+      }
+    ],
+    personnelNotes: [
+      {
+        name: "Quill Varon",
+        note: [
+          "Quill successfully reconstructed a substantial portion of an unfamiliar symbolic system from limited evidence and correctly identified that the archive contained a coherent cipher.",
+          "A subsequent translation error was corrected by Fenn.",
+          "Chief Science Office documentation describes this as \"collaborative verification.\"",
+          "No amendment is required."
+        ]
+      },
+      {
+        name: "Fenn",
+        note: [
+          "Fenn demonstrated strong lateral problem-solving ability during the archive event, identifying both the physical ordering mechanism and the mistranslated symbol required to complete the test.",
+          "This constitutes a useful reminder that Corporate Relations personnel may occasionally be deployed against problems that cannot be solved by either negotiation or weaponry."
+        ]
+      },
+      {
+        name: "Reggie",
+        note: [
+          "Reggie independently completed an environment previously solved by several other senior personnel and made effective use of reflective inconsistencies to locate concealed objects.",
+          "Security classification remains unchanged."
+        ]
+      },
+      {
+        name: "Flint Duskbourne",
+        note: [
+          "Flint provided direct support across multiple anomalous modules and successfully protected Onix during the strategic board incident.",
+          "Damage to hostile constructs has been classified as appropriate use of Initiative resources.",
+          "The board itself appears to have repaired or reset automatically.",
+          "Accordingly, Property has elected not to open a claim."
+        ]
+      },
+      {
+        name: "Cass",
+        note: [
+          "Cass's cognitive examination of Toast provided the operation's strongest evidence that the campsite environment involved individualized perception rather than simple visual illusion.",
+          "Standard consent documentation was unavailable at the time.",
+          "The result has nevertheless been retained."
+        ]
+      },
+      {
+        name: "Onix",
+        note: [
+          "Onix completed an unfamiliar strategic simulation while physically incorporated into it at extreme miniature scale.",
+          "Xenobiology has requested access to all future dimensional-reduction environments.",
+          "Operations has not yet approved this request."
+        ]
+      }
+    ],
+    complianceNotes: [
+      "CN-108-A: Cognitive verification conducted by Director Cass occurred under anomalous-field conditions in which conventional consent procedures were operationally impractical.",
+      "CN-108-B: Temporary bathing of an unclassified entity was undertaken solely to satisfy facility access requirements and should not be interpreted as establishment of an animal-care precedent.",
+      "CN-108-C: The illustrated material involved in the domestic chamber has been classified as environmental puzzle infrastructure rather than recovered research literature.",
+      "CN-108-D: Personnel are reminded that an apparently comfortable campsite discovered inside an impossible extradimensional structure should not automatically be considered an approved rest facility.",
+      "The restorative effects have nevertheless been noted for future expeditions."
+    ],
+    anomalousFindings: [
+      {
+        title: "Non-Consensus Spatial Reality",
+        description:
+          "The Tower can present different environments to individuals occupying what appears to be the same physical location.",
+        notes: [
+          "Toast's campsite encounter provides the clearest observed example. Paradallax personnel perceived an enclosed reconstruction of the expedition camp, while Toast perceived open terrain.",
+          "This suggests the structure manipulates cognition, local geometry, dimensional topology, or some combination thereof."
+        ]
+      },
+      {
+        title: "Recursive Interior Architecture",
+        description:
+          "At least one environmental module was encountered more than once under circumstances inconsistent with normal architectural reuse.",
+        notes: [
+          "The duplicate sleeping chamber responded independently to personnel actions and retained the same broad behavioral logic while requiring separate completion.",
+          "The Tower should therefore not be mapped under the assumption that any chamber represents a unique physical location."
+        ]
+      },
+      {
+        title: "Behavioral Access Systems",
+        description:
+          "Several Tower environments appear deliberately designed to test comprehension rather than simple technical competence.",
+        resultHeader: "Observed access mechanisms have included:",
+        bullets: [
+          "linguistic decoding",
+          "spatial ordering",
+          "harmonic synchronization",
+          "behavioral ritual",
+          "strategic game completion",
+          "reflective observation",
+          "controlled physical confrontation"
+        ],
+        notes: [
+          "The variety suggests either a multi-disciplinary evaluation architecture or a controlling intelligence with unusually broad criteria for acceptable personnel performance."
+        ]
+      },
+      {
+        title: "Restorative Environment",
+        description:
+          "Personnel resting inside the campsite module experienced unusually complete recovery and temporary performance enhancement.",
+        notes: [
+          "No visible medical machinery was identified.",
+          "Future use of similar environments should be considered potentially beneficial and potentially experimental.",
+          "These classifications are not mutually exclusive."
+        ]
+      },
+      {
+        title: "Dimensional Reduction",
+        description:
+          "Onix underwent temporary extreme reduction in apparent physical scale while interacting with the strategic board.",
+        notes: [
+          "The effect was reversible upon completion of the chamber's objective.",
+          "No persistent physiological abnormalities were reported."
+        ]
+      },
+      {
+        title: "Encoded Statement",
+        description:
+          "The archival chamber produced the phrase: MIMICS ARE NOT TRULY REAL",
+        resultHeader: "Paradallax has not determined whether this represents:",
+        bullets: [
+          "an instructional statement,",
+          "a philosophical proposition,",
+          "a security warning,",
+          "a diagnostic test,",
+          "deliberate misinformation,",
+          "or commentary directed specifically at expedition personnel."
+        ],
+        notes: [
+          "Chief Science Officer Varon has requested that the statement remain in the active research file.",
+          "Request approved."
+        ]
+      }
+    ],
+    captainsLog: {
+      author: "Expeditionary Command Addendum",
+      text: [
+        "There are buildings that are larger inside than outside.",
+        "This isn't that.",
+        "The Tower seems less interested in containing rooms than in deciding which room a person is supposed to experience.",
+        "We have seen the same place twice, shared a campsite with someone who wasn't in the same campsite, turned a department director into a chess piece, tucked an unknown creature into bed, fought architecture that became angry when touched incorrectly, and received a message claiming that mimics do not actually exist.",
+        "The stairs still go up.",
+        "At this point, that may be the least reassuring thing we've learned."
+      ]
+    },
+    finalAssessment: {
+      verdict: "INVESTIGATION CONTINUES",
+      description: [
+        "Paradallax personnel successfully traversed all encountered environmental modules, maintained expeditionary cohesion despite repeated spatial separation, and established several working models for the Tower's access systems.",
+        "The structure remains active.",
+        "Its origin remains unknown.",
+        "Its internal topology remains unresolved.",
+        "Its upper boundary has not been identified.",
+        "Continued ascent is authorized.",
+        "In this case, apparently, it is another staircase."
+      ],
+      conclusion: "Axiom I: There is always something beyond the horizon."
+    }
+  },
   {
     id: "PD-0107",
     slug: "pd-0107",

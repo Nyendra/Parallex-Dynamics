@@ -30,6 +30,21 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+function renderFormattedText(text: string): React.ReactNode {
+  if (!text || !text.includes("**")) return text;
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-white">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 export function generateStaticParams() {
   return CANONICAL_OPERATIONAL_RECORDS.map((rec) => ({
     id: rec.slug,
@@ -188,9 +203,11 @@ export default async function OperationalRecordPage({ params }: PageProps) {
                 </span>
                 <span className="font-mono text-xs text-cyan-accent">{p.role}</span>
               </div>
-              <p className="text-xs text-slate-300 font-sans leading-relaxed">
-                {p.duty}
-              </p>
+              {p.duty ? (
+                <p className="text-xs text-slate-300 font-sans leading-relaxed">
+                  {p.duty}
+                </p>
+              ) : null}
             </div>
           ))}
         </div>
@@ -236,7 +253,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
 
         <div className="p-8 rounded-3xl glass-panel border border-white/10 space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed font-sans font-light">
           {record.fullMissionSummary.map((para, idx) => (
-            <p key={idx}>{para}</p>
+            <p key={idx}>{renderFormattedText(para)}</p>
           ))}
         </div>
       </section>
@@ -267,7 +284,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
                     )}
                   </div>
                   <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed pt-1">
-                    {item.event}
+                    {renderFormattedText(item.event)}
                   </p>
                 </div>
               </div>
@@ -354,12 +371,12 @@ export default async function OperationalRecordPage({ params }: PageProps) {
               {Array.isArray(incident.details) ? (
                 <div className="space-y-2 text-xs text-slate-300 font-sans leading-relaxed">
                   {incident.details.map((d, dIdx) => (
-                    <p key={dIdx}>{d}</p>
+                    <p key={dIdx}>{renderFormattedText(d)}</p>
                   ))}
                 </div>
               ) : (
                 <p className="text-xs text-slate-300 font-sans leading-relaxed">
-                  {incident.details}
+                  {renderFormattedText(incident.details)}
                 </p>
               )}
             </div>
@@ -416,12 +433,12 @@ export default async function OperationalRecordPage({ params }: PageProps) {
               {Array.isArray(pn.note) ? (
                 <div className="space-y-2 text-xs text-slate-300 font-sans leading-relaxed">
                   {pn.note.map((p, pIdx) => (
-                    <p key={pIdx}>{p}</p>
+                    <p key={pIdx}>{renderFormattedText(p)}</p>
                   ))}
                 </div>
               ) : (
                 <p className="text-xs text-slate-300 font-sans leading-relaxed whitespace-pre-line">
-                  {pn.note}
+                  {renderFormattedText(pn.note)}
                 </p>
               )}
             </div>
@@ -443,7 +460,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
             {record.complianceNotes.map((note, idx) => (
               <li key={idx} className="flex items-start space-x-2.5">
                 <span className="text-amber-400 font-bold">•</span>
-                <span className="leading-relaxed">{note}</span>
+                <span className="leading-relaxed">{renderFormattedText(note)}</span>
               </li>
             ))}
           </ul>
@@ -462,7 +479,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
 
           <div className="p-6 sm:p-8 rounded-3xl glass-panel border border-cyan-accent/20 space-y-4 text-slate-300 text-xs sm:text-sm leading-relaxed font-sans font-light">
             {record.diplomaticConsequences.map((para, idx) => (
-              <p key={idx}>{para}</p>
+              <p key={idx}>{renderFormattedText(para)}</p>
             ))}
           </div>
         </section>
@@ -480,7 +497,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
         <div className="p-8 rounded-3xl bg-space-darkest/90 border border-purple-accent/30 space-y-6 text-slate-300 text-xs sm:text-sm leading-relaxed font-sans">
           {record.anomalousFindings.map((finding, idx) => {
             if (typeof finding === "string") {
-              return <p key={idx}>{finding}</p>;
+              return <p key={idx}>{renderFormattedText(finding)}</p>;
             }
             return (
               <div
@@ -490,16 +507,16 @@ export default async function OperationalRecordPage({ params }: PageProps) {
                 <h3 className="font-orbitron font-bold text-base text-purple-300">
                   {finding.title}
                 </h3>
-                {finding.description && <p>{finding.description}</p>}
+                {finding.description && <p>{renderFormattedText(finding.description)}</p>}
                 {finding.resultHeader && (
-                  <p className="font-bold text-slate-200">{finding.resultHeader}</p>
+                  <p className="font-bold text-slate-200">{renderFormattedText(finding.resultHeader)}</p>
                 )}
                 {finding.bullets && finding.bullets.length > 0 && (
                   <ul className="space-y-1.5 pl-4 text-slate-300">
                     {finding.bullets.map((b, bIdx) => (
                       <li key={bIdx} className="flex items-start space-x-2">
                         <span className="text-purple-400 font-bold">•</span>
-                        <span>{b}</span>
+                        <span>{renderFormattedText(b)}</span>
                       </li>
                     ))}
                   </ul>
@@ -507,7 +524,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
                 {finding.notes && finding.notes.length > 0 && (
                   <div className="space-y-2 pt-1">
                     {finding.notes.map((note, nIdx) => (
-                      <p key={nIdx}>{note}</p>
+                      <p key={nIdx}>{renderFormattedText(note)}</p>
                     ))}
                   </div>
                 )}
@@ -532,7 +549,7 @@ export default async function OperationalRecordPage({ params }: PageProps) {
           </span>
           <div className="space-y-3 italic text-slate-200 text-sm sm:text-base leading-relaxed font-sans border-l-2 border-cyan-accent/50 pl-4">
             {record.captainsLog.text.map((line, idx) => (
-              <p key={idx}>"{line}"</p>
+              <p key={idx}>"{renderFormattedText(line)}"</p>
             ))}
           </div>
         </div>
@@ -549,16 +566,16 @@ export default async function OperationalRecordPage({ params }: PageProps) {
         {Array.isArray(record.finalAssessment.description) ? (
           <div className="space-y-2 text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed font-sans font-light">
             {record.finalAssessment.description.map((line, idx) => (
-              <p key={idx}>{line}</p>
+              <p key={idx}>{renderFormattedText(line)}</p>
             ))}
           </div>
         ) : (
           <p className="text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed font-sans font-light whitespace-pre-line">
-            {record.finalAssessment.description}
+            {renderFormattedText(record.finalAssessment.description)}
           </p>
         )}
         <div className="inline-block px-4 py-2 rounded-lg bg-cyan-accent/15 border border-cyan-accent/40 font-orbitron font-bold text-sm text-cyan-accent tracking-widest">
-          {record.finalAssessment.conclusion}
+          {renderFormattedText(record.finalAssessment.conclusion)}
         </div>
       </section>
 
