@@ -3,7 +3,39 @@
 import React from "react";
 import Link from "next/link";
 import { LogoBadge } from "./LogoBadge";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ExternalLink } from "lucide-react";
+
+interface SocialChannel {
+  name: string;
+  href: string;
+  ariaLabel: string;
+  icon: React.ComponentType<{ className?: string; size?: number | string }>;
+}
+
+const BlueskyIcon: React.FC<{ className?: string; size?: number | string }> = ({
+  className = "w-3.5 h-3.5",
+  size = 14,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="currentColor"
+    aria-hidden="true"
+    className={className}
+  >
+    <path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.567 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.309-6.755-3.37C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026z" />
+  </svg>
+);
+
+const OFFICIAL_COMMUNICATIONS: SocialChannel[] = [
+  {
+    name: "Bluesky",
+    href: "https://bsky.app/profile/paradallax.space",
+    ariaLabel: "Paradallax Initiative on Bluesky",
+    icon: BlueskyIcon,
+  },
+];
 
 export const Footer: React.FC = () => {
   return (
@@ -28,6 +60,37 @@ export const Footer: React.FC = () => {
               Advanced interstellar transportation, frontier logistics, scientific exploration, 
               defense systems, and planetary engineering throughout known space.
             </p>
+
+            {/* Official Communications */}
+            <div className="pt-2">
+              <span className="block font-mono text-[11px] uppercase tracking-widest text-slate-400 font-medium mb-2.5">
+                OFFICIAL COMMUNICATIONS
+              </span>
+              <ul className="flex flex-wrap items-center gap-3">
+                {OFFICIAL_COMMUNICATIONS.map((channel) => {
+                  const Icon = channel.icon;
+                  return (
+                    <li key={channel.name}>
+                      <a
+                        href={channel.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={channel.ariaLabel}
+                        className="group inline-flex items-center gap-2 px-2.5 py-1.5 rounded border border-white/10 bg-white/[0.02] hover:bg-cyan-accent/[0.08] hover:border-cyan-accent/40 text-xs font-mono text-slate-300 hover:text-cyan-accent transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan-accent focus-visible:border-cyan-accent"
+                      >
+                        <Icon className="w-3.5 h-3.5 text-cyan-accent/80 group-hover:text-cyan-accent transition-colors shrink-0" />
+                        <span className="tracking-wide">{channel.name}</span>
+                        <ExternalLink
+                          size={11}
+                          className="text-slate-500 group-hover:text-cyan-accent/90 transition-colors shrink-0"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
 
           {/* Corporate Navigation Column */}
