@@ -46,6 +46,7 @@ export interface OperationalRecord {
     | "RESTRICTED"
     | "UNDER REVIEW"
     | "ACTIVE"
+    | "ACTIVE — HOSTILE CONTACT UNRESOLVED"
     | "TRANSIT CONTINUING"
     | "MISSION SUCCESSFUL"
     | "OBJECTIVE ACHIEVED"
@@ -84,6 +85,294 @@ export interface OperationalRecord {
 }
 
 export const CANONICAL_OPERATIONAL_RECORDS: OperationalRecord[] = [
+  {
+    id: "PD-0109",
+    slug: "pd-0109",
+    title: "Where the Staircase Ends",
+    status: "ACTIVE — HOSTILE CONTACT UNRESOLVED",
+    statusBadge: "ACTIVE — HOSTILE CONTACT UNRESOLVED",
+    location: "Uncatalogued Ruin Complex / Crater Transfer Zone",
+    detailedLocation: "Uncatalogued Ruin Complex / Crater Transfer Zone",
+    type: "EXPLORATION",
+    classification: "EXPLORATION ARCHIVE // ACTIVE",
+    classificationFootnote:
+      "* Active hostile contact unresolved. Perimeter containment compromised; destination environment anomalously altered.",
+    summary:
+      "A multi-stage facility survey culminates in involuntary transfer to an environmentally transformed crater and first contact with an invisible hostile organism.",
+    metaDescription:
+      "A multi-stage Paradallax facility survey culminates in an involuntary transfer into a transformed crater and contact with an invisible hostile organism.",
+    ogImage: "/media/operations/pd-0109.jpg",
+    fullMissionSummary: [
+      "Continued survey of the unidentified structure required Paradallax personnel to progress through several isolated chambers, each governed by an independent access protocol. Despite major differences in presentation, every chamber demonstrated the same underlying design principle: advancement was conditional upon a specific sequence of apparently symbolic actions.",
+      "Fenn and Gabriel encountered the first such mechanism inside an armory containing four culturally indexed weapon mounts. Initial interaction activated dormant armored defense units, requiring personnel to conduct a brief but energetic troubleshooting procedure before continuing. Analysis established that the mounts corresponded to Elvish, Common, Orcish, and Dwarvish traditions. Correct placement of an Elvish bow, copper mace, Orcish greatsword, and Dwarvish double-headed hand axe completed the sequence. Onix joined the team before the final placement. Upon validation, the chamber generated a previously nonexistent shimmering stairway.",
+      "Chief Security Marshal Reggie encountered a considerably less martial access protocol in a residential suite. The chamber required completion of an unusually specific occupant routine involving grooming, reading, bathing, and the sequential extinguishing of four illuminated altar markers. The accepted sequence — leaf, snowflake, leaf, sun/moon — caused a concealed route to open. Whether the system was intended as authentication, psychological profiling, ritual reenactment, or an excessively opinionated domestic automation platform remains under review.",
+      "Elsewhere, Chief Science Officer Quill surveyed an archive containing twenty-four anomalously active books, twelve apparently blank scroll substrates, and a necrotic skeletal organism designated **Scourgeclaw**. Limited interaction with the collection produced several nonstandard information-storage effects, including physical extrusion of numeral forms, spontaneous high-volume acoustic signals, and temporary tentacular growth. Gabriel later joined Quill and identified a numerical pattern embedded in the titles of twelve volumes. Ordering those volumes according to their encoded values successfully initiated another route to the upper level.",
+      "During these parallel activities, Onix maintained the exterior campsite with Toast and reactivated three tentacled skeletal organisms as temporary field assets. Following a recovery interval, Onix attempted to traverse the structure's anomalous stair network. The route briefly produced contradictory directional results before permitting successful reentry to the main team.",
+      "Reggie, Flint, Kant, Cass, Onix, and Fenn ultimately converged on an ornate gold-finished chamber at the structure's highest accessible level. A visually indistinct but highly articulate humanoid entity was waiting inside. The entity instructed personnel to occupy specific positions around the chamber. Compliance was provisional and, as subsequent events demonstrated, inadequately risk-assessed.",
+      "When Kant occupied the requested position, the entity manifested an additional ocular structure containing what appeared to be a luminous stellar fragment. An immediate high-energy event followed. Reggie, Flint, Kant, Cass, and Fenn disappeared from the chamber and were transferred without observable transit time to the nearby crater.",
+      "The crater no longer matched previous environmental observations. Personnel arrived in a rain-swept, lifeless landscape under dense fog. Initial perimeter testing by Reggie identified an invisible boundary or field within the obscured terrain. Moments later the team was attacked by an enormous organism that was itself visually undetectable.",
+      "Cass conducted rapid threat analysis and established that the entity possessed exceptional physical endurance and significant resistance to conventional kinetic impact, cryogenic exposure, thermal attack, and electrical discharge, along with complete tolerance for ordinary toxic agents. The organism was assigned the field designation **GORISTRO**.",
+      "Flint deployed a suppression effect capable of producing a severe behavioral inhibition response, temporarily fixing the creature's position despite its visual concealment. Fenn supplemented containment by releasing a dense autonomous bio-swarm into the engagement zone. Reggie conducted repeated close-range strikes while Kant provided ballistic support and deployed his field medical platform.",
+      "The containment interval eventually failed.",
+      "GORISTRO resumed movement and charged through the formation with sufficient force to throw both Kant and Cass to the ground. An attempted follow-up restraint against Cass was unsuccessful. Both personnel remained active at the last confirmed telemetry interval.",
+      "At the same time, Quill and Gabriel successfully reached the gold chamber above, placing additional personnel at the transfer point while the crater engagement remained unresolved.",
+      "Exploration objectives have therefore produced substantial results: multiple facility access systems were decoded, a significant anomalous archive was documented, the upper chamber was reached, and a previously unknown transfer mechanism was activated.",
+      "Paradallax Initiative acknowledges that being forcibly transported into an environmentally transformed crater and immediately attacked by invisible megafauna represents a nonstandard interpretation of the phrase **successful access**."
+    ],
+    personnelList: [
+      {
+        name: "Flint Duskbourne",
+        role: "Chief Operations Officer"
+      },
+      {
+        name: "Quill Varon",
+        role: "Chief Science Officer"
+      },
+      {
+        name: "Fenn",
+        role: "Vice President of Corporate Relations"
+      },
+      {
+        name: "Cass",
+        role: "Director of Special Acquisitions"
+      },
+      {
+        name: "Kant Vixit",
+        role: "Chief Engineering Officer"
+      },
+      {
+        name: "Onix",
+        role: "Director of Xenobiology & Medical Research"
+      },
+      {
+        name: "Reggie",
+        role: "Chief Security Marshal"
+      },
+      {
+        name: "Gabriel",
+        role: "Associated Field Operative"
+      },
+      {
+        name: "Toast",
+        role: "Companion field asset assigned to Onix"
+      }
+    ],
+    timeline: [
+      {
+        time: "01",
+        title: "Armory Access Protocol",
+        event:
+          "Fenn and Gabriel identified four culturally indexed weapon mounts. Incorrect interaction activated dormant armored defense units. With Onix later present, the correct four-weapon configuration generated an anomalous staircase."
+      },
+      {
+        time: "02",
+        title: "Residential Authentication Sequence",
+        event:
+          "Reggie completed an elaborate occupant routine and extinguished altar markers in the sequence leaf / snowflake / leaf / sun-moon, revealing a concealed route."
+      },
+      {
+        time: "03",
+        title: "Archive Survey",
+        event:
+          "Quill catalogued twenty-four anomalous volumes, twelve blank scroll substrates, and the necrotic skeletal organism Scourgeclaw. Several books demonstrated active physical or acoustic effects."
+      },
+      {
+        time: "04",
+        title: "Numerical Archive Solution",
+        event:
+          "Gabriel identified numerical information embedded within twelve book titles. Correct ordering of the selected volumes unlocked access to the upper level."
+      },
+      {
+        time: "05",
+        title: "Exterior Asset Activity",
+        event:
+          "Onix reactivated three tentacled skeletal organisms near the campsite before traversing the structure's inconsistent stair network and rejoining the expedition."
+      },
+      {
+        time: "06",
+        title: "Upper Chamber Contact",
+        event:
+          "Personnel encountered an indistinct humanoid entity inside a gilded chamber. Positioning Kant as instructed caused the entity to manifest a star-like third ocular structure."
+      },
+      {
+        time: "07",
+        title: "Forced Crater Transfer",
+        event:
+          "Reggie, Flint, Kant, Cass, and Fenn were instantaneously relocated into the crater. The crater exhibited severe atmospheric and environmental changes together with an invisible perimeter obstruction."
+      },
+      {
+        time: "08",
+        title: "GORISTRO Contact",
+        event:
+          "An enormous visually concealed organism ambushed the transferred personnel. Initial containment succeeded temporarily before the entity broke suppression and charged the formation. Engagement remained active as Quill and Gabriel reached the upper chamber."
+      }
+    ],
+    notableFindings: [],
+    incidents: [
+      {
+        title: "Armory Defensive Activation",
+        details:
+          "Two additional armored defense units activated following an incorrect weapon placement. Units were neutralized without preventing continued exploration."
+      },
+      {
+        title: "Stairway Navigation Failure",
+        details:
+          "Onix experienced temporary route inversion or spatial misdirection while traversing anomalous stairs. Normal navigation subsequently resumed."
+      },
+      {
+        title: "Unscheduled Personnel Transfer",
+        details: [
+          "Five senior Paradallax personnel were relocated from the upper chamber without prior authorization, destination confirmation, safety review, or meaningful opportunity to decline.",
+          "The event has been provisionally classified as **involuntary transportation** rather than kidnapping pending clarification of the blurred gentleman's contractual status."
+        ]
+      },
+      {
+        title: "GORISTRO Ambush",
+        details: [
+          "Crater personnel were attacked shortly after arrival. Kant and Cass were knocked from their positions during a direct charge but remained operational at the last recorded point.",
+          "No terminal personnel losses had been confirmed when the record interval ended."
+        ]
+      }
+    ],
+    personnelNotes: [
+      {
+        name: "Fenn",
+        note: "Fenn demonstrated that Corporate Relations remains capable of deploying considerably more insects than its title traditionally implies."
+      },
+      {
+        name: "Quill",
+        note: "Quill successfully resisted the immediate removal of twenty-four anomalous books from an inadequately secured archive. This restraint has been noted for annual review purposes."
+      },
+      {
+        name: "Reggie",
+        note: "Reggie completed both a highly exacting domestic ritual and first-contact threat testing using improvised debris during the same operational period."
+      },
+      {
+        name: "Kant",
+        note: "Kant maintained engineering, ranged-support, and field-medical functions during direct megafaunal contact."
+      },
+      {
+        name: "Cass",
+        note: "Cass provided rapid resistance profiling of GORISTRO while under active threat conditions."
+      },
+      {
+        name: "Onix",
+        note: "Onix successfully maintained several reanimated biological field assets before rejoining the expedition. Their continued legal classification as equipment remains contested."
+      }
+    ],
+    complianceNotes: [
+      "No established Paradallax hazardous-transition procedure currently addresses staircases that materialize only after completion of culturally specific weapon-placement puzzles.",
+      "This absence should not be interpreted as approval.",
+      "Axiom IV states that **Progress requires uncertainty**.",
+      "For avoidance of doubt, Axiom IV is not itself a waiver of dimensional-transfer safety requirements."
+    ],
+    anomalousFindings: [
+      {
+        title: "Conditional Architecture",
+        description:
+          "Multiple physically separated areas appear to require symbolic or behavioral solutions before generating or exposing routes onward.",
+        notes: [
+          "The access systems vary dramatically in subject matter but display a shared capacity to observe user behavior, evaluate completion conditions, and reconfigure local architecture.",
+          "This suggests the puzzles are not independent mechanical curiosities but interfaces belonging to a common facility-level control system."
+        ]
+      },
+      {
+        title: "Archive Media",
+        description: "Twenty-four anomalous books were identified.",
+        resultHeader: "Observed effects included:",
+        bullets: [
+          "Physical manifestation of numerical symbols.",
+          "Sudden high-intensity acoustic output.",
+          "Temporary organic or tentacular structures.",
+          "Encoded numerical relationships between otherwise unrelated titles."
+        ],
+        notes: [
+          "Twelve blank scroll-like substrates were also present. Their function remains undetermined.",
+          "Removal testing is deferred pending a better understanding of whether the archive distinguishes between **research acquisition** and **theft**.",
+          "Director Cass has requested that this distinction remain technically unresolved."
+        ]
+      },
+      {
+        title: "Scourgeclaw",
+        description:
+          "A necrotic skeletal organism was identified within the archive and assigned the designation **Scourgeclaw**.",
+        notes: [
+          "Its connection to the books, facility, or previous occupants has not been established."
+        ]
+      },
+      {
+        title: "Stellar Ocular Structure",
+        description:
+          "The humanoid entity encountered in the upper chamber manifested a third ocular feature incorporating a luminous object resembling a stellar fragment. The manifestation immediately preceded the forced relocation event.",
+        resultHeader: "Current evidence therefore supports a functional relationship between:",
+        bullets: [
+          "1. personnel positioning,",
+          "2. the entity,",
+          "3. the stellar ocular structure,",
+          "4. and the crater transfer mechanism."
+        ],
+        notes: [
+          "Causality beyond that sequence remains speculative."
+        ]
+      },
+      {
+        title: "Crater Environmental Shift",
+        description: "The destination crater exhibited conditions inconsistent with prior observations:",
+        bullets: [
+          "pervasive fog,",
+          "continuous rainfall,",
+          "apparent biological die-off,",
+          "substantially reduced visibility,",
+          "and at least one invisible barrier or field."
+        ],
+        notes: [
+          "Whether personnel were transported to the crater's present location, an altered state of the same location, or a spatially coincident environment remains unknown."
+        ]
+      },
+      {
+        title: "GORISTRO",
+        description: "The crater contains an enormous hostile organism currently designated **GORISTRO**.",
+        resultHeader: "Confirmed characteristics include:",
+        bullets: [
+          "visual concealment or optical exclusion,",
+          "extreme physical resilience,",
+          "reduced vulnerability to conventional kinetic, thermal, cryogenic, and electrical attack,",
+          "tolerance to ordinary toxic agents,",
+          "considerable mass and impact force,",
+          "and temporary susceptibility to behavioral or neuropsychological suppression."
+        ],
+        notes: [
+          "Its relationship to the crater transformation is unknown."
+        ]
+      }
+    ],
+    captainsLog: {
+      author: "Flint Duskbourne, Chief Operations Officer",
+      text: [
+        "The official sequence says we solved the building.",
+        "That may be backwards.",
+        "Every room asked a question. We answered with weapons, routines, books, positions — whatever it wanted — and every correct answer took us somewhere deeper.",
+        "Then the gentleman upstairs asked us to stand exactly where he wanted.",
+        "We got that answer right too.",
+        "Five people vanished.",
+        "Now they're standing in dead rain, inside a boundary nobody can see, fighting something else nobody can see.",
+        "At some point we should consider the possibility that the staircase was never a reward.",
+        "It was an invitation."
+      ]
+    },
+    finalAssessment: {
+      verdict: "INVESTIGATION CONTINUES",
+      description: [
+        "Facility access achieved.",
+        "Archive partially characterized.",
+        "Upper control chamber reached.",
+        "Transfer mechanism confirmed.",
+        "Destination environment anomalously altered.",
+        "Hostile contact unresolved."
+      ],
+      conclusion: "We go forward."
+    }
+  },
   {
     id: "PD-0108",
     slug: "pd-0108",
