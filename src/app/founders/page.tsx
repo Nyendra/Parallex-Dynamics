@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { soundEngine } from "@/utils/soundEngine";
 import { ModalPortal } from "@/components/ModalPortal";
+import { MVPPersonnelSection } from "@/components/MVPPersonnelSection";
 import { AlertCircle, X } from "lucide-react";
 
 interface Founder {
@@ -258,6 +259,9 @@ export default function FoundersPage() {
           {FOUNDERS_ROW_2.map(renderFounderCard)}
         </div>
       </div>
+
+      {/* M.V.P. PERSONNEL RECOGNITION PROGRAM */}
+      <MVPPersonnelSection />
 
       {/* FOUNDER EXPANDED DETAILS MODAL */}
       <ModalPortal
